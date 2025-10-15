@@ -8,14 +8,19 @@
 import UIKit
 
 class ABuseController:  UITabBarController, UITabBarControllerDelegate {
-
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.tabBar.layer.cornerRadius = 16
+        self.tabBar.layer.masksToBounds = true
+        self.tabBar.frame = CGRect.init(x: 22, y:UIScreen.main.bounds.height - 65 - 25 , width: UIScreen.main.bounds.width - 44, height: 65)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
         setupTabBarAppearance()
         setupViewControllers()
-//        setValue(CustomTabBar(), forKey: "tabBar")
-//        setupCenterStageButton()
+
     }
 
     private func setupViewControllers() {
@@ -66,24 +71,14 @@ class ABuseController:  UITabBarController, UITabBarControllerDelegate {
     
     private func setupTabBarAppearance() {
             // 设置背景颜色
+        
         tabBar.backgroundColor = UIColor(red: 0.22, green: 0.22, blue: 0.2, alpha: 1)
-            tabBar.barTintColor = UIColor(red: 0.22, green: 0.22, blue: 0.2, alpha: 1)
-            // 设置选中颜色
-            tabBar.tintColor = .systemPink
-            // 设置未选中颜色
-            tabBar.unselectedItemTintColor = .gray
-            // 移除默认的顶部线条
-            tabBar.backgroundImage = UIImage()
-            tabBar.shadowImage = UIImage()
+            
+        tabBar.barTintColor = UIColor(red: 0.22, green: 0.22, blue: 0.2, alpha: 1)
 
-            // 调整 tabBar 高度（例如高度为 80，凸出中间按钮）
-            let tabBarHeight: CGFloat = 80
-            var newFrame = tabBar.frame
-            newFrame.size.height = tabBarHeight
-            newFrame.origin.y = view.frame.height - tabBarHeight
-            tabBar.frame = newFrame
-            tabBar.layer.cornerRadius = 20
-            tabBar.layer.masksToBounds = true
-            tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner] // 圆角仅顶部
+        tabBar.layer.cornerRadius = 20
+        tabBar.layer.masksToBounds = true
+        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        // 圆角仅顶部
         }
 }
