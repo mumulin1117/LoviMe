@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpotlightReelController" customModule="Streperfoforming" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKu-YD-p9G">
+                    <rect key="frame" x="171.66666666666666" y="767" width="50" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="3jU-GP-3YJ"/>
+                        <constraint firstAttribute="width" constant="50" id="gYf-wJ-1RV"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="streetGroove"/>
+                    <connections>
+                        <action selector="creativeAuraFlow:" destination="-1" eventType="touchUpInside" id="yDc-pV-O1g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTD-X2-H10">
+                    <rect key="frame" x="151.66666666666666" y="529" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="QgO-Rm-FG1"/>
+                        <constraint firstAttribute="width" constant="90" id="XS8-du-5od"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="sinterFlao"/>
+                    <connections>
+                        <action selector="performEnergy:" destination="-1" eventType="touchUpInside" id="D83-ag-KPg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ec-CL-boD">
+                    <rect key="frame" x="151.66666666666666" y="373" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="JNn-SZ-8D8"/>
+                        <constraint firstAttribute="height" constant="90" id="zNw-fA-Cr1"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="sceneVibe"/>
+                    <connections>
+                        <action selector="creativeEnergy:" destination="-1" eventType="touchUpInside" id="NwN-aS-T3U"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
+            <constraints>
+                <constraint firstItem="OKu-YD-p9G" firstAttribute="top" secondItem="LTD-X2-H10" secondAttribute="bottom" constant="148" id="9sf-OP-4g1"/>
+                <constraint firstItem="LTD-X2-H10" firstAttribute="top" secondItem="8Ec-CL-boD" secondAttribute="bottom" constant="66" id="TUo-7B-68f"/>
+                <constraint firstItem="OKu-YD-p9G" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZtK-f1-6kc"/>
+                <constraint firstItem="LTD-X2-H10" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bHY-yp-on8"/>
+                <constraint firstItem="OKu-YD-p9G" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-15" id="enG-kj-6rp"/>
+                <constraint firstItem="8Ec-CL-boD" firstAttribute="centerX" secondItem="LTD-X2-H10" secondAttribute="centerX" id="u45-Lb-d6U"/>
+            </constraints>
+            <point key="canvasLocation" x="119.84732824427481" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sceneVibe" width="90" height="90"/>
+        <image name="sinterFlao" width="90" height="90"/>
+        <image name="streetGroove" width="50" height="36"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
