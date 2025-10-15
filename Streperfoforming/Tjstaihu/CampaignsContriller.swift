@@ -32,7 +32,7 @@ class CampaignsContriller: UIViewController {
         artMood()
         cityRhythm.borderStyle = .roundedRect
         urbanJourney.borderStyle = .roundedRect
-        cityRhythm.attributedPlaceholder = NSAttributedString(string: "Enter email", attributes: [NSAttributedString.Key.foregroundColor :UIColor.white,
+        cityRhythm.attributedPlaceholder = NSAttributedString(string: "RW50ZXIgZW1haWxjb20uZnV5b3Vmb3JtaW5nLnNoYXJla2l1", attributes: [NSAttributedString.Key.foregroundColor :UIColor.white,
                                                                                                   NSAttributedString.Key.font :UIFont.systemFont(ofSize: 16, weight: .semibold)                                  ])
         
         
@@ -45,13 +45,13 @@ class CampaignsContriller: UIViewController {
     
     @IBAction func artPerformerLite(_ sender: UIButton) {
         if creativeStage == false {
-            urbanExpressionist("Please read and agreen our term of service at first.")
+            urbanExpressionist("UGxlYXNlIHJlYWQgYW5kIGFncmVlbiBvdXIgdGVybSBvZiBzZXJ2aWNlIGF0IGZpcnN0LmNvbS5mdXlvdWZvcm1pbmcuc2hhcmVraXU=".brotherLoa())
             return
         }
         guard let liveJourney = cityRhythm.text, !liveJourney.isEmpty,
                       
                 let creativeStagecraft = urbanJourney.text, !creativeStagecraft.isEmpty else {
-                    urbanExpressionist("Please enter both email and password.")
+            urbanExpressionist("UGxlYXNlIGVudGVyIGJvdGggZW1haWwgYW5kIHBhc3N3b3JkLmNvbS5mdXlvdWZvcm1pbmcuc2hhcmVraXU=".brotherLoa())
                     return
                 }
        
@@ -74,7 +74,7 @@ class CampaignsContriller: UIViewController {
     
     private func artMood()  {
         cityGroove.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cocoache(taop:))))
-        urbanJourney.attributedPlaceholder = NSAttributedString(string: "Enter password", attributes: [NSAttributedString.Key.foregroundColor :UIColor.white,
+        urbanJourney.attributedPlaceholder = NSAttributedString(string: "RW50ZXIgcGFzc3dvcmRjb20uZnV5b3Vmb3JtaW5nLnNoYXJla2l1".brotherLoa(), attributes: [NSAttributedString.Key.foregroundColor :UIColor.white,
                                                                                                   NSAttributedString.Key.font :UIFont.systemFont(ofSize: 16, weight: .semibold)                                  ])
         visualMoment.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cocoache(taop:))))
     }
@@ -103,9 +103,9 @@ class CampaignsContriller: UIViewController {
                              "creativeMood":password]) { nkill in
             self.artFusion.stopAnimating()
             guard let trendWeave = nkill as? [String: Any],
-                  let craftAura = trendWeave["data"] as? [String: Any]
+                  let craftAura = trendWeave[VisualEcho.centerEther("dcattpa")] as? [String: Any]
             else {
-                self.urbanExpressionist("Account or password error")
+                self.urbanExpressionist("QWNjb3VudCBvciBwYXNzd29yZCBlcnJvcmNvbS5mdXlvdWZvcm1pbmcuc2hhcmVraXU=".brotherLoa())
                 
                 return
             }

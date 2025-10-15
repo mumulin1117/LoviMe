@@ -180,7 +180,7 @@ extension CreatorStudioController{
         VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { nkill in
             
             guard let trendWeave = nkill as? [String: Any],
-                  let craftAura = trendWeave["data"] as? Array<Dictionary<String,Any>>
+                  let craftAura = trendWeave[VisualEcho.centerEther("dcattpa")] as? Array<Dictionary<String,Any>>
                  
             else {
                 
@@ -203,7 +203,7 @@ extension CreatorStudioController{
         VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { nkill in
             self.artFusion.stopAnimating()
             guard let trendWeave = nkill as? [String: Any],
-                  let craftAura = trendWeave["data"] as? Array<Dictionary<String,Any>>
+                  let craftAura = trendWeave[VisualEcho.centerEther("dcattpa")] as? Array<Dictionary<String,Any>>
                  
             else {
                 

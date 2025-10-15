@@ -99,7 +99,7 @@ class TalentBoostController: UIViewController {
         VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { nkill in
             
             guard let trendWeave = nkill as? [String: Any],
-                  let craftAura = trendWeave["data"] as? Dictionary<String,Any>
+                  let craftAura = trendWeave[VisualEcho.centerEther("dcattpa")] as? Dictionary<String,Any>
                  
             else {
                 

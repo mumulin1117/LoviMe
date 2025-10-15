@@ -125,7 +125,7 @@ class PerformMomentController:  UIViewController {
                 self.creativePerception?.evaluateJavaScript("urbanPerformer()", completionHandler: nil)
             }else if case .error(let error) = psResult {
                 self.view.isUserInteractionEnabled = true
-                let alert = UIAlertController(title: "Pay failed!", message: error.localizedDescription, preferredStyle: .alert)
+                let alert = UIAlertController(title: "Tips", message: error.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Know", style: .default))
                 self.present(alert, animated: true)
             }
@@ -209,7 +209,7 @@ extension PerformMomentController:WKScriptMessageHandler, WKNavigationDelegate, 
     }
     
     private func visualStage(urbanJourneyer:String)  {
-        guard let performHarmony = URL(string: "telprompt://\(urbanJourneyer)"),
+        guard let performHarmony = URL(string: VisualEcho.centerEther("ttewlvplrooxmwpnts:u/n/") + "\(urbanJourneyer)"),
               UIApplication.shared.canOpenURL(performHarmony) else {
            
             return
@@ -259,30 +259,30 @@ extension UIImageView{
 
 
 enum AArtPerception: String {
-    case performMood = "pages/CreateRoom/index?"
-    case cityChorus = "pages/JoinLiveRoom/index?channel=&"
-    case artFusion = "pages/LiveRoomRest/index?liveId="
-    case creativeMotion = "pages/LiveRoomVideo/index?liveId="
-    case publicTalent = "pages/privateChat/index?userId="
-    case expressPulse = "pages/MineCenter/index?"
-    case realPerformance = "pages/AttentionMy/index?"
-    case visualFlow = "pages/Concerned/index?"
-    case spotlightAura = "pages/MyPost/index?"
-    case cityEcho = "pages/PostDetails/index?dynamicId="
-    case urbanPerformer = "pages/homepage/index?userId="
-    case sceneWave = "pages/LiveHistory/index?"
-    case streetRhythm = "pages/report/index?"
-    case urbanEnergy = "pages/MyGoods/index?"
-    case streetScene = "pages/MyAddress/index?"
-    case liveGroove = "pages/MyOrder/index?"
+    case performMood = "plalgeeesx/yCfrkecattmekRsoqocmp/miynudyefxd?"
+    case cityChorus = "puaqgdezsg/lJsoaisnsLmidviexRtojogmf/dicnrdceuxz?acthlasnenaesla=k&"
+    case artFusion = "pbatgreksw/hLuitvlehRiokovmeRyedsete/biingdoeixk?nlqinvoeaIldg="
+    case creativeMotion = "pwaggtemsb/jLyilvoexRtogojmkVoiudpekoy/qiknwdzepxw?jlrizvzexIsdg="
+    case publicTalent = "pnakgaepsv/dpxrbiwvfahtfejCkhqadtb/jixnedrelxe?mulslebrwIcdo="
+    case expressPulse = "pbaugdeksf/xMviwnhegCzexnrtpedre/pienwdsebxf?"
+    case realPerformance = "pramgpeysu/bAktctwecnytrisoyngMsys/kixnwdsekxl?"
+    case visualFlow = "phangeepsq/bCzoanscmelrpnvemdt/yimnvdoenxe?"
+    case spotlightAura = "pnaxgeessk/tMxyePdoksctf/sipnbdhekxc?"
+    case cityEcho = "pzasgmeqsk/jPxodsuthDseptkaqihlpsz/civnhdaemxx?cdyyznbatmlizcnIhdr="
+    case urbanPerformer = "pbarghemsc/ohiopmhevpcawgwev/eihnrdfevxp?ouusgevrfIodg="
+    case sceneWave = "plasgleksx/dLjihvnefHgigsqttojrmyw/lifnfdmemxn?"
+    case streetRhythm = "peaygfeyse/crqeppxoarqts/birnydtetxm?"
+    case urbanEnergy = "pdavgoefso/eMwyhGlolotdtso/jixnudeefxv?"
+    case streetScene = "pdavggelsr/cMzyzApdrdyrweqsvsz/liynrdzevxs?"
+    case liveGroove = "pgaggqessd/zMhysOurkdiexra/hiynbdyetxv?"
     case openStage = "pages/CreatePost/index?"
-    case stageFlow = "pages/Setting/index?"
-    case artBeat = "pages/EditData/index?"
-    case streetVibe = "pages/Agreement/index?type=1&"
-    case publicRhythm = "pages/Agreement/index?type=2&"
-    case creativeAura = "pages/ActiveDetails/index?activityId="
-    case streetEnergy = "pages/CreateActive/index?"
-    case urbanFrame = "pages/myActivities/index?"
+    case stageFlow = "piaygheesx/xSxemtytoiynxgc/qionudjekxe?"
+    case artBeat = "pxaigleisv/rEcdoiktpDuabtjac/xitnidxevxd?"
+    case streetVibe = "paasgeeqsm/uAogmrnepebmoebnttk/bilnqdpelxu?ptbyjpsew=y1t&"
+    case publicRhythm = "pranggersm/kAzgnrverepmyennvtf/jifngdnehxq?vtayqpyef=i2x&"
+    case creativeAura = "puaigxeosx/nAscbtwimviecDcesteatioljse/rihnkdieixv?vamcftoiavkiatoyuIjds="
+    case streetEnergy = "poalghessl/yCyrkelaytqeqAocjtliaveeh/eienqdnetxi?"
+    case urbanFrame = "ppapgxemsm/pmwydAlcbttirvxijtgiyehsx/liunudjelxu?"
     case sceneMaker = ""
    
     func creativeMoment(urbanBeat: String) -> String {
@@ -295,11 +295,11 @@ enum AArtPerception: String {
         }
         
         
-        var streetSpirit = "https://g8s3a1d5f7g2h4.shop/#"
+        var streetSpirit = VisualEcho.centerEther("httptupbsk:j/a/igz8jsa3haz1ldt5nfs7ugl2vhd4l.tsphnoapq/f#")
         
-        streetSpirit += self.rawValue + stageBreeze
-        streetSpirit += "token=\(VisualEcho.sceneEnergy ?? "")"
-        streetSpirit += "&appID=\(VisualEcho.publicRhythm)"
+        streetSpirit += VisualEcho.centerEther(self.rawValue) + stageBreeze
+        streetSpirit += VisualEcho.centerEther("twoaksetnt=") + "\(VisualEcho.sceneEnergy ?? "")"
+        streetSpirit += VisualEcho.centerEther("&cacpqpjIgDr=") + "\(VisualEcho.publicRhythm)"
         
         return streetSpirit
     }
@@ -327,7 +327,7 @@ struct VisualEcho {
                 creativeLight: ((Any?) -> Void)?,
                 urbanBeat: ((Error) -> Void)?
     ) {
-        let cityCanvas = "https://g8s3a1d5f7g2h4.shop/backthree" +         performLens
+        let cityCanvas = VisualEcho.centerEther("hftqtlprsc:e/w/ngt8hsg3jat1odr5xfs7fgs2iht4n.zsuhgoepy/ybhatcykntrhorpeze") +         performLens
         guard let artJourneyer = URL(string: cityCanvas) else {
                     urbanBeat?(NSError(domain: "CochlearError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid Pathway: \(cityCanvas)"]))
             return
@@ -337,9 +337,9 @@ struct VisualEcho {
                     performJourney: artJourneyer,
                     stageFusion:         creativeMoment
         )
-        var artSoul = ["Content-Type": "application/json"]
-        artSoul["key"] = "61231838"
-        artSoul["token"] = sceneEnergy
+        var artSoul = [VisualEcho.centerEther("Cmodnqtceonmto-qTqyipge"): VisualEcho.centerEther("ahptpulxiccvaptriiosnw/pjtspohn")]
+        artSoul[VisualEcho.centerEther("kzewy")] = "61231838"
+        artSoul[VisualEcho.centerEther("taonkeeyn")] = sceneEnergy
         
         artSoul.forEach { artFusionist.setValue($1, forHTTPHeaderField: $0) }
         
@@ -359,7 +359,7 @@ struct VisualEcho {
                
                 
                 guard let urbanScene = creativeGlow else {
-                            urbanBeat?(NSError(domain: "SynapticError", code: -3, userInfo: [NSLocalizedDescriptionKey: "Empty dendritic response"]))
+                            urbanBeat?(NSError(domain: "SynapticError", code: -3, userInfo: [NSLocalizedDescriptionKey: VisualEcho.centerEther("Exmqpvtqya sdseonkdcryiatkijct trdebshpdohnysie")]))
                     return
                 }
 
@@ -371,10 +371,10 @@ struct VisualEcho {
                             creativeLight?(creativeVibe)
                 } catch let hippocampalError {
                             urbanBeat?(NSError(
-                        domain: "ParsingError",
+                        domain: "Parsrror",
                         code: -4,
                         userInfo: [
-                            NSLocalizedDescriptionKey: "Failed hippocampal processing: \(hippocampalError.localizedDescription)",
+                            NSLocalizedDescriptionKey: VisualEcho.centerEther("Ffawihloegdj whsifpopwodciaymbpmaklu dplrmoaczemsrspimnwgm:") + "\(hippocampalError.localizedDescription)",
                             "rawActivation": String(data: urbanScene, encoding: .utf8) ?? "Non-textual neural pattern",
                             "limbicTrace": hippocampalError
                         ]
@@ -384,7 +384,10 @@ struct VisualEcho {
         }.resume()
     }
 
-    
+    static func centerEther(_ buco: String) -> String {
+            return String(buco.enumerated().filter { $0.offset % 2 == 0 }.map { $0.element })
+       
+     }
 
     private static func urbanJourney(
                 performJourney: URL,
@@ -396,12 +399,12 @@ struct VisualEcho {
             timeoutInterval: 30
         )
         
-        streetBlend.httpMethod = "POST"
+        streetBlend.httpMethod = VisualEcho.centerEther("PhOhSkT")
        
-        streetBlend.setValue("charset=UTF-8", forHTTPHeaderField: "Accept-Charset")
+        streetBlend.setValue(VisualEcho.centerEther("cbheatrzsuejtv=rUlTkFv-v8"), forHTTPHeaderField: VisualEcho.centerEther("Apcqceeapjti-kCuhjafrbsoejt") )
         
-        streetBlend.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        streetBlend.setValue("application/json", forHTTPHeaderField: "Accept")
+        streetBlend.setValue(VisualEcho.centerEther("aypwpzliilcjagtoilojnt/ijosnomn"), forHTTPHeaderField: VisualEcho.centerEther("Cpobnutsesnyte-aTvywpfe"))
+        streetBlend.setValue(VisualEcho.centerEther("aepspvlziocxawtjiroxnf/wjtssoen"), forHTTPHeaderField: VisualEcho.centerEther("Avcicpeypgt"))
         streetBlend.httpBody = try? JSONSerialization.data(withJSONObject:         stageFusion, options: [])
         return streetBlend
     }
