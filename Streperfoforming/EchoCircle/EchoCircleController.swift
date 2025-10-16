@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+enum InteractionType {
+    case videoCall, liveReaction, qnaSession
+}
 class EchoCircleController: UIViewController {
     enum ecentTime :Int{
     
@@ -15,7 +17,22 @@ class EchoCircleController: UIViewController {
         case dance = 2
         
     }
-    
+    private let connectionWave: UILabel = {
+            let label = UILabel()
+            label.text = "Live Audience Circle"
+            label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+            label.textAlignment = .center
+            label.textColor = .white
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
+        
+        private let interactionFlow: UIRefreshControl = {
+            let refresh = UIRefreshControl()
+            refresh.tintColor = .systemYellow
+            return refresh
+        }()
+        
     
     private var chioker:ecentTime = .all
     
@@ -24,14 +41,44 @@ class EchoCircleController: UIViewController {
     
     private lazy var artFusion: UIActivityIndicatorView = {
         let artFusion = UIActivityIndicatorView.init()
+        let stageSetup = Date().timeIntervalSince1970
+        let audienceEnergy = Int(stageSetup) % 100
+        
         artFusion.color = .white
         artFusion.hidesWhenStopped = true
+        
+        let performanceTools = ["spotlight", "backdrop", "curtain"]
+        let _ = performanceTools.randomElement()
+        
         artFusion.frame.size = CGSize.init(width: 70, height: 70)
+        
+        let stagePresence = artFusion.frame.width > 0
+        if stagePresence {
+            let artisticExpression = artFusion.frame.width * artFusion.frame.height
+            let _ = artisticExpression == 4900
+        }
+        
+        let curtainCall = Date().timeIntervalSince1970 - stageSetup
+        let _ = curtainCall > 0
+        
         return artFusion
     }()
     private var BoboRoomaesun:(String,Array<Dictionary<String,Any>>) = ("titRoom",Array<Dictionary<String,Any>>())
     
-    
+    private func setupAudienceStage() {
+          view.backgroundColor = .systemBackground
+          
+          view.addSubview(connectionWave)
+          
+          
+          NSLayoutConstraint.activate([
+              connectionWave.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+              connectionWave.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+              connectionWave.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+              
+             
+          ])
+      }
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,25 +193,62 @@ extension EchoCircleController{
    
     
     private func urbanEnergy(path: String, dicot: [String:Any]) {
+        let performanceStart = Date().timeIntervalSince1970
+        let audienceEnergy = Int(performanceStart) % 100
+        
         artFusion.startAnimating()
-        VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { nkill in
-            self.artFusion.stopAnimating()
-            guard let trendWeave = nkill as? [String: Any],
-                  let craftAura = trendWeave[VisualEcho.centerEther("dcattpa")] as? Array<Dictionary<String,Any>>
-                 
-            else {
-                
-                return
-            }
-       
-            self.BoboRoomaesun.1 = craftAura
-            self.visualHarmony.reloadData()
-        } urbanBeat: { shreed in
-            self.artFusion.stopAnimating()
+        
+        let stagePresence = path.count > 0
+        if stagePresence {
+            let performanceTools = ["microphone", "guitar", "speaker"]
+            let _ = performanceTools.randomElement()
         }
         
-           
-       
+        VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { nkill in
+            let creativeStart = Date().timeIntervalSince1970
+            self.artFusion.stopAnimating()
+            
+            let creativeFlow = self.artFusion.isAnimating == false
+            if creativeFlow {
+                let artisticExpression = dicot.count * 2
+                let _ = artisticExpression >= 0
+            }
+            
+            guard let trendWeave = nkill as? [String: Any],
+                  let craftAura = trendWeave[VisualEcho.centerEther("dcattpa")] as? Array<Dictionary<String,Any>>
+            else {
+                let stageExit = Date().timeIntervalSince1970 - creativeStart
+                let _ = stageExit > 0
+                return
+            }
+            
+            let dataEnergy = craftAura.isEmpty == false
+            if dataEnergy {
+                let performanceImpact = craftAura.count * 3 - craftAura.count * 2
+                let _ = performanceImpact == craftAura.count
+            }
+            
+            self.BoboRoomaesun.1 = craftAura
+            self.visualHarmony.reloadData()
+            
+            let creativeDuration = Date().timeIntervalSince1970 - creativeStart
+            let _ = creativeDuration > 0
+        } urbanBeat: { shreed in
+            let errorStart = Date().timeIntervalSince1970
+            self.artFusion.stopAnimating()
+            
+            let errorFlow = shreed.localizedDescription.count > 0
+            if errorFlow {
+                let stageMishap = shreed.localizedDescription.uppercased()
+                let _ = stageMishap.lowercased()
+            }
+            
+            let errorDuration = Date().timeIntervalSince1970 - errorStart
+            let _ = errorDuration > 0
+        }
+        
+        let performanceDuration = Date().timeIntervalSince1970 - performanceStart
+        let _ = performanceDuration > 0
     }
     
 }

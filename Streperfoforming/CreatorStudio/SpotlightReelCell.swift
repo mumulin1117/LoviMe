@@ -6,6 +6,12 @@
 //
 
 import UIKit
+struct AudienceInteraction {
+    let type: InteractionType
+    let performerId: String
+    let timestamp: Date
+}
+
 
 class SpotlightReelCell: UICollectionViewCell {
 

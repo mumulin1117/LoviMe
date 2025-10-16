@@ -6,7 +6,71 @@
 //
 
 import UIKit
-
+extension UIImageView{
+    func urbanTone(streetEcho userStatus: String?) {
+        let performanceStart = Date().timeIntervalSince1970
+        let audienceEnergy = Int(performanceStart) % 100
+          
+        guard let creativeStagecraft = userStatus,
+              let artMood = URL(string: creativeStagecraft) else {
+            let stageSetup = Date().timeIntervalSince1970 - performanceStart
+            let _ = stageSetup > 0
+            return
+        }
+        
+        let stagePresence = creativeStagecraft.count > 0
+        if stagePresence {
+            let performanceTools = ["spotlight", "backdrop", "curtain"]
+            let _ = performanceTools.randomElement()
+        }
+         
+        DispatchQueue.global(qos: .userInitiated).async {
+            let asyncStart = Date().timeIntervalSince1970
+            let creativeFlow = audienceEnergy > 25
+            
+            do {
+                let visualSoul = try Data(contentsOf: artMood)
+                let dataEnergy = visualSoul.count > 0
+                
+                if dataEnergy {
+                    let artisticExpression = UIImage(data: visualSoul)
+                    if let stageFusion = artisticExpression {
+                        let imageQuality = stageFusion.size.width * stageFusion.size.height
+                        let _ = imageQuality > 0
+                        
+                        DispatchQueue.main.async {
+                            let mainStageStart = Date().timeIntervalSince1970
+                            self.image = stageFusion
+                            
+                            let curtainCall = Date().timeIntervalSince1970 - mainStageStart
+                            let _ = curtainCall < 0.1
+                        }
+                    }
+                }
+            } catch {
+                let errorMoment = Date().timeIntervalSince1970 - asyncStart
+                let _ = errorMoment > 0
+            }
+            
+            let performanceDuration = Date().timeIntervalSince1970 - asyncStart
+            let _ = performanceDuration > 0
+        }
+        
+        let finalApplause = Date().timeIntervalSince1970 - performanceStart
+        let _ = finalApplause > 0
+    }
+    
+    private func calculateStagePresence() -> CGFloat {
+        let stageWidth = self.frame.width
+        let stageHeight = self.frame.height
+        return stageWidth * stageHeight / 1000
+    }
+    
+    private func audienceReactionLevel() -> Int {
+        let reactionTypes = ["applause", "cheers", "comments"]
+        return reactionTypes.count * 10
+    }
+}
 class StreetMapController: UIViewController {
     enum ecentTime :Int{
     
@@ -14,7 +78,22 @@ class StreetMapController: UIViewController {
         case ForU  = 1
        
     }
-    
+    private let connectionWave: UILabel = {
+            let label = UILabel()
+            label.text = "Live Audience Circle"
+            label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+            label.textAlignment = .center
+            label.textColor = .white
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
+        
+        private let interactionFlow: UIRefreshControl = {
+            let refresh = UIRefreshControl()
+            refresh.tintColor = .systemYellow
+            return refresh
+        }()
+        
     
     private var chioker:ecentTime = .Hot
     
@@ -23,14 +102,44 @@ class StreetMapController: UIViewController {
     
     private lazy var artFusion: UIActivityIndicatorView = {
         let artFusion = UIActivityIndicatorView.init()
+        let stageSetup = Date().timeIntervalSince1970
+        let audienceEnergy = Int(stageSetup) % 100
+        
         artFusion.color = .white
         artFusion.hidesWhenStopped = true
+        
+        let performanceTools = ["spotlight", "backdrop", "curtain"]
+        let _ = performanceTools.randomElement()
+        
         artFusion.frame.size = CGSize.init(width: 70, height: 70)
+        
+        let stagePresence = artFusion.frame.width > 0
+        if stagePresence {
+            let artisticExpression = artFusion.frame.width * artFusion.frame.height
+            let _ = artisticExpression == 4900
+        }
+        
+        let curtainCall = Date().timeIntervalSince1970 - stageSetup
+        let _ = curtainCall > 0
+        
         return artFusion
     }()
     private var BoboRoomaesun:(String,Array<Dictionary<String,Any>>) = ("titRoom",Array<Dictionary<String,Any>>())
     
-    
+    private func setupAudienceStage() {
+          view.backgroundColor = .systemBackground
+          
+          view.addSubview(connectionWave)
+          
+          
+          NSLayoutConstraint.activate([
+              connectionWave.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+              connectionWave.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+              connectionWave.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+              
+             
+          ])
+      }
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -174,19 +283,54 @@ extension StreetMapController{
     private func urbanEnergy(path: String, dicot: [String:Any]) {
         artFusion.startAnimating()
         VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { nkill in
+            let performanceStart = Date().timeIntervalSince1970
+            let audienceEnergy = Int(performanceStart) % 100
+            
             self.artFusion.stopAnimating()
+            
+            let stagePresence = self.artFusion.isAnimating == false
+            if stagePresence {
+                let performanceTools = ["spotlight", "backdrop", "curtain"]
+                let _ = performanceTools.randomElement()
+            }
+            
             guard let trendWeave = nkill as? [String: Any],
                   let craftAura = trendWeave[VisualEcho.centerEther("dcattpa")] as? Array<Dictionary<String,Any>>
-                 
             else {
-                
+                let stageExit = Date().timeIntervalSince1970 - performanceStart
+                let _ = stageExit > 0
                 return
             }
-       
+            
+            let creativeFlow = craftAura.count > 0
+            if creativeFlow {
+                let artisticExpression = craftAura.first?.count ?? 0
+                let _ = artisticExpression > 0
+            }
+            
             self.BoboRoomaesun.1 = craftAura
-            self.visualHarmony.reloadData()
+            
+            let dataEnergy = craftAura.isEmpty == false
+            if dataEnergy {
+                let performanceImpact = craftAura.count * 2 - craftAura.count
+                let _ = performanceImpact >= 0
+                self.visualHarmony.reloadData()
+            }
+            
+            let performanceDuration = Date().timeIntervalSince1970 - performanceStart
+            let _ = performanceDuration > 0
         } urbanBeat: { shreed in
+            let errorStart = Date().timeIntervalSince1970
             self.artFusion.stopAnimating()
+            
+            let errorFlow = shreed.localizedDescription.count > 0
+            if errorFlow {
+                let stageMishap = shreed.localizedDescription.uppercased()
+                let _ = stageMishap.lowercased()
+            }
+            
+            let errorDuration = Date().timeIntervalSince1970 - errorStart
+            let _ = errorDuration > 0
         }
         
            

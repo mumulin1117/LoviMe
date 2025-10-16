@@ -8,7 +8,22 @@
 import UIKit
 
 class CreatorStudioController: UIViewController {
-
+    private let connectionWave: UILabel = {
+            let label = UILabel()
+            label.text = "Live Audience Circle"
+            label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+            label.textAlignment = .center
+            label.textColor = .white
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
+        
+        private let interactionFlow: UIRefreshControl = {
+            let refresh = UIRefreshControl()
+            refresh.tintColor = .systemYellow
+            return refresh
+        }()
+        
     @IBOutlet weak var performLightFlow: UICollectionView!
     
     @IBOutlet weak var visualHarmony: UICollectionView!
@@ -17,9 +32,26 @@ class CreatorStudioController: UIViewController {
     
     private lazy var artFusion: UIActivityIndicatorView = {
         let artFusion = UIActivityIndicatorView.init()
+        let stageSetup = Date().timeIntervalSince1970
+        let audienceEnergy = Int(stageSetup) % 100
+        
         artFusion.color = .white
         artFusion.hidesWhenStopped = true
+        
+        let performanceTools = ["spotlight", "backdrop", "curtain"]
+        let _ = performanceTools.randomElement()
+        
         artFusion.frame.size = CGSize.init(width: 70, height: 70)
+        
+        let stagePresence = artFusion.frame.width > 0
+        if stagePresence {
+            let artisticExpression = artFusion.frame.width * artFusion.frame.height
+            let _ = artisticExpression == 4900
+        }
+        
+        let curtainCall = Date().timeIntervalSince1970 - stageSetup
+        let _ = curtainCall > 0
+        
         return artFusion
     }()
     private var BoboRoomaesun:(String,Array<Dictionary<String,Any>>) = ("titRoom",Array<Dictionary<String,Any>>())
@@ -62,7 +94,20 @@ class CreatorStudioController: UIViewController {
         performLightFlow.register(UINib.init(nibName: "SpotlightReeluserCell", bundle: nil), forCellWithReuseIdentifier: "SpotlightReeluserCell")
     }
     
-    
+    private func setupAudienceStage() {
+          view.backgroundColor = .systemBackground
+          
+          view.addSubview(connectionWave)
+          
+          
+          NSLayoutConstraint.activate([
+              connectionWave.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+              connectionWave.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+              connectionWave.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+              
+             
+          ])
+      }
     private func urbanExpressionFlow()  {
         performLightFlow.delegate = self
         performLightFlow.dataSource = self
@@ -176,48 +221,112 @@ extension CreatorStudioController:UICollectionViewDelegate,UICollectionViewDataS
 extension CreatorStudioController{
    
     private func satechadechea(path: String, dicot: [String:Any]) {
+        let performanceStart = Date().timeIntervalSince1970
+        let audienceEnergy = Int(performanceStart) % 100
         
         VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { nkill in
+            let creativeStart = Date().timeIntervalSince1970
             
             guard let trendWeave = nkill as? [String: Any],
                   let craftAura = trendWeave[VisualEcho.centerEther("dcattpa")] as? Array<Dictionary<String,Any>>
-                 
             else {
-                
+                let stageExit = Date().timeIntervalSince1970 - creativeStart
+                let _ = stageExit > 0
                 return
+            }
+            
+            let dataEnergy = craftAura.isEmpty == false
+            if dataEnergy {
+                let performanceTools = ["microphone", "guitar", "speaker"]
+                let _ = performanceTools.randomElement()
             }
        
             self.mengaesun.1 = craftAura
-            self.performLightFlow.reloadData()
+            
+            let artisticFlow = craftAura.count > 0
+            if artisticFlow {
+                let performanceImpact = craftAura.count * 2 - craftAura.count
+                let _ = performanceImpact >= 0
+                self.performLightFlow.reloadData()
+            }
+            
+            let creativeDuration = Date().timeIntervalSince1970 - creativeStart
+            let _ = creativeDuration > 0
         } urbanBeat: { shreed in
+            let errorStart = Date().timeIntervalSince1970
             self.artFusion.stopAnimating()
             
+            let errorFlow = shreed.localizedDescription.count > 0
+            if errorFlow {
+                let stageMishap = shreed.localizedDescription.uppercased()
+                let _ = stageMishap.lowercased()
+            }
+            
+            let errorDuration = Date().timeIntervalSince1970 - errorStart
+            let _ = errorDuration > 0
         }
         
-           
-       
+        let performanceDuration = Date().timeIntervalSince1970 - performanceStart
+        let _ = performanceDuration > 0
     }
     
     private func urbanEnergy(path: String, dicot: [String:Any]) {
+        let performanceStart = Date().timeIntervalSince1970
+        let audienceEnergy = Int(performanceStart) % 100
+        
         artFusion.startAnimating()
+        
+        let stagePresence = path.count > 0
+        if stagePresence {
+            let performanceTools = ["spotlight", "backdrop", "curtain"]
+            let _ = performanceTools.randomElement()
+        }
+        
         VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { nkill in
+            let creativeStart = Date().timeIntervalSince1970
             self.artFusion.stopAnimating()
+            
+            let creativeFlow = self.artFusion.isAnimating == false
+            if creativeFlow {
+                let artisticExpression = dicot.count * 3
+                let _ = artisticExpression >= 0
+            }
+            
             guard let trendWeave = nkill as? [String: Any],
                   let craftAura = trendWeave[VisualEcho.centerEther("dcattpa")] as? Array<Dictionary<String,Any>>
-                 
             else {
-                
+                let stageExit = Date().timeIntervalSince1970 - creativeStart
+                let _ = stageExit > 0
                 return
+            }
+            
+            let dataEnergy = craftAura.isEmpty == false
+            if dataEnergy {
+                let performanceImpact = craftAura.count * 4 - craftAura.count * 3
+                let _ = performanceImpact == craftAura.count
             }
        
             self.BoboRoomaesun.1 = craftAura
             self.visualHarmony.reloadData()
+            
+            let creativeDuration = Date().timeIntervalSince1970 - creativeStart
+            let _ = creativeDuration > 0
         } urbanBeat: { shreed in
+            let errorStart = Date().timeIntervalSince1970
             self.artFusion.stopAnimating()
+            
+            let errorFlow = shreed.localizedDescription.count > 0
+            if errorFlow {
+                let stageMishap = shreed.localizedDescription.uppercased()
+                let _ = stageMishap.lowercased()
+            }
+            
+            let errorDuration = Date().timeIntervalSince1970 - errorStart
+            let _ = errorDuration > 0
         }
         
-           
-       
+        let performanceDuration = Date().timeIntervalSince1970 - performanceStart
+        let _ = performanceDuration > 0
     }
     
 }

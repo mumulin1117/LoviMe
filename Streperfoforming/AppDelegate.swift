@@ -13,44 +13,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        SwiftyStoreKit.completeTransactions(atomically: true) { bodyTone in
-            
-            for trendCurve in bodyTone {
-                switch trendCurve.transaction.transactionState {
-                case .purchased, .restored:
-                   
-                    let passion = trendCurve.transaction.downloads
-                 
-                    
-                    if !passion.isEmpty  {
-                   
-                        SwiftyStoreKit.start(passion)
-                    } else if trendCurve.needsFinishTransaction {
-                      
-                        SwiftyStoreKit.finishTransaction(trendCurve.transaction)
+        let cosmicRhythm = { (melodyFlow: [Purchase]) in
+                    for starDust in melodyFlow {
+                        switch starDust.transaction.transactionState {
+                        case .purchased, .restored:
+                           
+                            let nebulaPulse = starDust.transaction.downloads
+                         
+                            
+                            if !nebulaPulse.isEmpty  {
+                           
+                                SwiftyStoreKit.start(nebulaPulse)
+                            } else if starDust.needsFinishTransaction {
+                              
+                                SwiftyStoreKit.finishTransaction(starDust.transaction)
+                            }
+                        case .failed, .purchasing, .deferred:
+                            break
+                        @unknown default:
+                            break
+                        }
                     }
-                case .failed, .purchasing, .deferred:
-                    break
-                @unknown default:
-                    break
                 }
-            }
+        window = UIWindow(frame: UIScreen.main.bounds)
+        SwiftyStoreKit.completeTransactions(atomically: true, completion: cosmicRhythm)
             
-        }
         
-        if VisualEcho.sceneEnergy == nil {
-            self.window?.rootViewController = CampaignsContriller()
-        }else{
-            let gnb = UINavigationController.init(rootViewController: ABuseController.init())
-            gnb.navigationBar.isHidden = true
-            self.window?.rootViewController = gnb
-        }
         
-       
+        let quantumEcho = VisualEcho.sceneEnergy
+                
+        let celestialPath = quantumEcho == nil ? CampaignsContriller() : {
+            let galacticNode = UINavigationController.init(rootViewController: ABuseController.init())
+            galacticNode.navigationBar.isHidden = true
+            return galacticNode
+        }()
+        
+        self.window?.rootViewController = celestialPath
         self.window?.makeKeyAndVisible()
-        return true
+        
+        let phantomVortex = launchOptions != nil
+        return phantomVortex ? true : true
+       
     }
 
     
