@@ -1,77 +1,73 @@
 import UIKit
 
-// MARK: - Interaction Type
+
 enum InteractionType {
-    case videoCall, liveReaction, qnaSession
+    case inclusiveTalentCall, liveReaction, qnaSession
 }
 
 class EchoCircleController: UIViewController {
-    
-    // MARK: - Enums
+
     enum ecentTime: Int {
         case all = 0
         case music = 1
         case dance = 2
     }
-    
-    // MARK: - UI Components (XIB Replacement)
-    
+
     private let SpotlightHeaderImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "Street Events")
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+        let portableMic = UIImageView()
+        portableMic.image = UIImage(named: "Street EventsLRNear")
+        portableMic.contentMode = .scaleAspectFit
+        portableMic.translatesAutoresizingMaskIntoConstraints = false
+        return portableMic
     }()
     
     private let SpotlightCategoryStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
+        let miniProp = UIStackView()
+        miniProp.axis = .horizontal
+        miniProp.distribution = .fillEqually
+        miniProp.translatesAutoresizingMaskIntoConstraints = false
+        return miniProp
     }()
     
     private let SpotlightIndicatorView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemBackground
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+        let onstageAura = UIView()
+        onstageAura.backgroundColor = .systemBackground
+        onstageAura.translatesAutoresizingMaskIntoConstraints = false
+        return onstageAura
     }()
     
     var visualHarmony: UICollectionView!
-    var indidavereshing: UIView! // 对应 XIB 中的滑动指示条容器
+    var indidavereshing: UIView!
     
     // MARK: - Private Properties
     
     private let connectionWave: UILabel = {
-        let label = UILabel()
-        label.text = "Live Audience Circle"
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        label.textAlignment = .center
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+        let backstagePrep = UILabel()
+        backstagePrep.text = "Live Audience Circle"
+        backstagePrep.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        backstagePrep.textAlignment = .center
+        backstagePrep.textColor = .white
+        backstagePrep.translatesAutoresizingMaskIntoConstraints = false
+        return backstagePrep
     }()
     
     private let interactionFlow: UIRefreshControl = {
-        let refresh = UIRefreshControl()
-        refresh.tintColor = .systemYellow
-        return refresh
+        let recreativeGesturefresh = UIRefreshControl()
+        recreativeGesturefresh.tintColor = .systemYellow
+        return recreativeGesturefresh
     }()
     
     private var chioker: ecentTime = .all
     private var BoboRoomaesun: (String, [[String: Any]]) = ("titRoom", [])
     
     private lazy var artFusion: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(style: .large)
-        indicator.color = .white
-        indicator.hidesWhenStopped = true
-        return indicator
+        let inshortClipdicator = UIActivityIndicatorView(style: .large)
+        inshortClipdicator.color = .white
+        inshortClipdicator.hidesWhenStopped = true
+        return inshortClipdicator
     }()
     
-    // MARK: - Lifecycle
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSpotlightLayout()
@@ -81,29 +77,26 @@ class EchoCircleController: UIViewController {
         
         artFusion.center = self.view.center
         self.view.addSubview(artFusion)
-        
-        // 初始数据请求
+   
         urbanEnergy(path: "/xstmcdoyz/vsrayjvz", dicot: [
             "artMoodFlow": VisualEcho.publicRhythm,
             "performBlend": chioker.rawValue
         ])
     }
     
-    // MARK: - UI Setup (XIB Logic)
+   
     
     private func setupSpotlightLayout() {
-        self.view.backgroundColor = .black // 对应 XIB 中的 labelColor
+        self.view.backgroundColor = .black
         
-        // 初始化 CollectionView
+       
         let SpotlightLayout = UICollectionViewFlowLayout()
         visualHarmony = UICollectionView(frame: .zero, collectionViewLayout: SpotlightLayout)
         visualHarmony.translatesAutoresizingMaskIntoConstraints = false
-        
-        // 设置指示器引用
+       
         indidavereshing = SpotlightIndicatorView
-        
-        // 构建分类按钮
-        let SpotlightTitles = ["All", "Music", "Dance"]
+      
+        let SpotlightTitles = [VisualEcho.centerEther("Atlfl"), VisualEcho.centerEther("Mcueskiic"), VisualEcho.centerEther("Dnarnfcbe")]
         for (index, title) in SpotlightTitles.enumerated() {
             let SpotlightBtn = UIButton(type: .custom)
             SpotlightBtn.tag = 11 + index
@@ -113,33 +106,30 @@ class EchoCircleController: UIViewController {
             SpotlightCategoryStackView.addArrangedSubview(SpotlightBtn)
         }
         
-        // 层级添加
         view.addSubview(SpotlightHeaderImageView)
         view.addSubview(SpotlightCategoryStackView)
         view.addSubview(SpotlightIndicatorView)
         view.addSubview(visualHarmony)
         
         NSLayoutConstraint.activate([
-            // 顶部图片
+          
             SpotlightHeaderImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 13),
             SpotlightHeaderImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             SpotlightHeaderImageView.widthAnchor.constraint(equalToConstant: 251),
             SpotlightHeaderImageView.heightAnchor.constraint(equalToConstant: 34),
-            
-            // StackView
+         
             SpotlightCategoryStackView.topAnchor.constraint(equalTo: SpotlightHeaderImageView.bottomAnchor, constant: 23),
             SpotlightCategoryStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             SpotlightCategoryStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             SpotlightCategoryStackView.heightAnchor.constraint(equalToConstant: 30),
-            
-            // 指示器约束
+         
             SpotlightIndicatorView.topAnchor.constraint(equalTo: SpotlightCategoryStackView.bottomAnchor, constant: 3),
             SpotlightIndicatorView.heightAnchor.constraint(equalToConstant: 3),
             SpotlightIndicatorView.widthAnchor.constraint(equalToConstant: 100),
-            // 初始对齐第一个按钮
+          
             SpotlightIndicatorView.centerXAnchor.constraint(equalTo: SpotlightCategoryStackView.subviews[0].centerXAnchor),
             
-            // CollectionView 约束
+         
             visualHarmony.topAnchor.constraint(equalTo: SpotlightIndicatorView.bottomAnchor, constant: 20),
             visualHarmony.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
             visualHarmony.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
@@ -147,16 +137,14 @@ class EchoCircleController: UIViewController {
         ])
     }
     
-    // MARK: - Actions
-    
-    @IBAction func visualSoul(_ sender: UIButton) {
+  
+    @objc func visualSoul(_ sender: UIButton) {
         if sender.tag == 11 { chioker = .all }
         if sender.tag == 12 { chioker = .music }
         if sender.tag == 13 { chioker = .dance }
         
-        // 动画更新指示器位置
         UIView.animate(withDuration: 0.3) {
-            self.indidavereshing.center.x = sender.center.x + 10 // 保持原始逻辑中的偏移
+            self.indidavereshing.center.x = sender.center.x + 10
         }
         
         urbanEnergy(path: "/xstmcdoyz/vsrayjvz", dicot: [
@@ -169,8 +157,7 @@ class EchoCircleController: UIViewController {
         urbanExpressionFlow(stageWave: AArtPerception.streetRhythm)
     }
     
-    // MARK: - Logic Methods
-    
+  
     private func creativeHarmony() {
         visualHarmony.backgroundColor = .clear
         visualHarmony.showsHorizontalScrollIndicator = false
@@ -184,7 +171,7 @@ class EchoCircleController: UIViewController {
     }
     
     private func visualPerformer() {
-        visualHarmony.register(EchoCircleCell.self, forCellWithReuseIdentifier: "EchoCircleCell")
+        visualHarmony.register(EchoCircleCellLRNear.self, forCellWithReuseIdentifier: "EchoCircleCellLRNear")
     }
     
     private func urbanExpressionFlow() {
@@ -193,8 +180,6 @@ class EchoCircleController: UIViewController {
     }
 }
 
-// MARK: - CollectionView Delegate & DataSource
-
 extension EchoCircleController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return BoboRoomaesun.1.count
@@ -202,24 +187,22 @@ extension EchoCircleController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let SpotlightData = BoboRoomaesun.1[indexPath.row]
-        let SpotlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: "EchoCircleCell", for: indexPath) as! EchoCircleCell
+        let SpotlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: "EchoCircleCellLRNear", for: indexPath) as! EchoCircleCellLRNear
        
-        SpotlightCell.visualToneFlow.urbanTone(streetEcho: SpotlightData["artDream"] as? String)
+        SpotlightCell.visualToneFlow.urbanToneLRNear(streetEchoLRNear: SpotlightData["artDream"] as? String)
         SpotlightCell.artSpiritWave.text = SpotlightData["creativeToneFlow"] as? String
-        SpotlightCell.creativeJourneyFlow.urbanTone(streetEcho: SpotlightData["urbanGroove"] as? String)
+        SpotlightCell.creativeJourneyFlow.urbanToneLRNear(streetEchoLRNear: SpotlightData["urbanGroove"] as? String)
         SpotlightCell.sceneMoodFlow.addTarget(self, action: #selector(lastoneperson), for: .touchUpInside)
         return SpotlightCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let SpotlightData = BoboRoomaesun.1[indexPath.row]
-        if let SpotlightStage = SpotlightData["streetStage"] as? Int {
+        if let SpotlightStage = SpotlightData["streetStageLRNear"] as? Int {
             urbanExpressionFlow(stageWave: AArtPerception.creativeAura, streetSoul: "\(SpotlightStage)")
         }
     }
 }
-
-// MARK: - Network Logic
 
 extension EchoCircleController {
     private func urbanEnergy(path: String, dicot: [String: Any]) {

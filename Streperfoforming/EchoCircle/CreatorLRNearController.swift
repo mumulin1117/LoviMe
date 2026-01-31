@@ -1,6 +1,6 @@
 import UIKit
 extension UIImageView{
-    func urbanTone(streetEcho userStatus: String?) {
+    func urbanToneLRNear(streetEchoLRNear userStatus: String?) {
         let performanceStart = Date().timeIntervalSince1970
         let audienceEnergy = Int(performanceStart) % 100
           
@@ -64,41 +64,39 @@ extension UIImageView{
         return reactionTypes.count * 10
     }
 }
-class CreatorStudioController: UIViewController {
+class CreatorLRNearController: UIViewController {
     
-    // MARK: - UI Components (Original Outlets)
-    
+   
     private let SpotlightLogoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "LoviMe")
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+        let universalSetting = UIImageView()
+        universalSetting.image = UIImage(named: "LoviMeLRNear")
+        universalSetting.contentMode = .scaleAspectFit
+        universalSetting.translatesAutoresizingMaskIntoConstraints = false
+        return universalSetting
     }()
     
     private let SpotlightJourneyButton: UIButton = {
-        let button = UIButton(type: .custom)
-        button.setImage(UIImage(named: "visualJourney"), for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
+        let inclusiveSetting = UIButton(type: .custom)
+        inclusiveSetting.setImage(UIImage(named: "visualJourneyLRNear"), for: .normal)
+        inclusiveSetting.translatesAutoresizingMaskIntoConstraints = false
+        return inclusiveSetting
     }()
     
     var performLightFlow: UICollectionView = UICollectionView.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     var visualHarmony: UICollectionView = UICollectionView.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    // MARK: - Private UI Properties
-    
-    private let connectionWave: UILabel = {
-        let label = UILabel()
-        label.text = "Live Audience Circle"
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        label.textAlignment = .center
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+
+    private let openEnvironmenttionWave: UILabel = {
+        let accessibleEnvironment = UILabel()
+        accessibleEnvironment.text = VisualEcho.centerEther("Liikvgey tAeutdzioennncref jCiizrpcslce")
+        accessibleEnvironment.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        accessibleEnvironment.textAlignment = .center
+        accessibleEnvironment.textColor = .white
+        accessibleEnvironment.translatesAutoresizingMaskIntoConstraints = false
+        return accessibleEnvironment
     }()
     
-    private let interactionFlow: UIRefreshControl = {
+    private let communitySpacectionFlow: UIRefreshControl = {
         let refresh = UIRefreshControl()
         refresh.tintColor = .systemYellow
         return refresh
@@ -111,13 +109,11 @@ class CreatorStudioController: UIViewController {
         return indicator
     }()
     
-    // MARK: - Data Properties
-    
-    private var mengaesun: (String, [[String: Any]]) = ("titUser", [])
+  
+    private var mengaesunLRNear: (String, [[String: Any]]) = ("titUser", [])
     private var BoboRoomaesun: (String, [[String: Any]]) = ("titRoom", [])
     
-    // MARK: - Lifecycle
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSpotlightMainLayout()
@@ -139,12 +135,9 @@ class CreatorStudioController: UIViewController {
         satechadechea(path: "/pzphvz/asearhhcbof", dicot: ["streetVibe": VisualEcho.publicRhythm])
     }
     
-    // MARK: - Setup Layout (XIB Replacement)
-    
+   
     private func setupSpotlightMainLayout() {
-        self.view.backgroundColor = .black // 对应 XIB 中的 labelColor
-        
-        // 初始化 CollectionViews
+        self.view.backgroundColor = .black
         let SpotlightHorizontalLayout = UICollectionViewFlowLayout()
         performLightFlow = UICollectionView(frame: .zero, collectionViewLayout: SpotlightHorizontalLayout)
         performLightFlow.translatesAutoresizingMaskIntoConstraints = false
@@ -152,8 +145,7 @@ class CreatorStudioController: UIViewController {
         let SpotlightVerticalLayout = UICollectionViewFlowLayout()
         visualHarmony = UICollectionView(frame: .zero, collectionViewLayout: SpotlightVerticalLayout)
         visualHarmony.translatesAutoresizingMaskIntoConstraints = false
-        
-        // 层级添加
+      
         view.addSubview(SpotlightLogoImageView)
         view.addSubview(SpotlightJourneyButton)
         view.addSubview(performLightFlow)
@@ -162,25 +154,24 @@ class CreatorStudioController: UIViewController {
         SpotlightJourneyButton.addTarget(self, action: #selector(visualSoul(_:)), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            // Logo 约束
+         
             SpotlightLogoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             SpotlightLogoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
             SpotlightLogoImageView.widthAnchor.constraint(equalToConstant: 106),
             SpotlightLogoImageView.heightAnchor.constraint(equalToConstant: 34),
             
-            // 按钮约束
+          
             SpotlightJourneyButton.centerYAnchor.constraint(equalTo: SpotlightLogoImageView.centerYAnchor),
             SpotlightJourneyButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -22),
             SpotlightJourneyButton.widthAnchor.constraint(equalToConstant: 34),
             SpotlightJourneyButton.heightAnchor.constraint(equalToConstant: 34),
             
-            // 横向 CollectionView (performLightFlow)
             performLightFlow.topAnchor.constraint(equalTo: SpotlightLogoImageView.bottomAnchor, constant: 16),
             performLightFlow.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
             performLightFlow.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             performLightFlow.heightAnchor.constraint(equalToConstant: 90),
             
-            // 纵向 CollectionView (visualHarmony)
+         
             visualHarmony.topAnchor.constraint(equalTo: performLightFlow.bottomAnchor, constant: 20),
             visualHarmony.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
             visualHarmony.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
@@ -188,8 +179,7 @@ class CreatorStudioController: UIViewController {
         ])
     }
     
-    // MARK: - Logic Methods
-    
+  
     private func creativeHarmony() {
         performLightFlow.backgroundColor = .clear
         performLightFlow.showsHorizontalScrollIndicator = false
@@ -202,7 +192,7 @@ class CreatorStudioController: UIViewController {
     }
     
     private func visualPerformer() {
-        performLightFlow.register(SpotlightReeluserCell.self, forCellWithReuseIdentifier: "SpotlightReeluserCell")
+        performLightFlow.register(SpotlightReeluserCellLRNear.self, forCellWithReuseIdentifier: "SpotlightReeluserCellLRNear")
     }
     
     private func urbanExpressionFlow() {
@@ -221,7 +211,7 @@ class CreatorStudioController: UIViewController {
     }
     
     private func urbanPerception() {
-        visualHarmony.register(SpotlightReelCell.self, forCellWithReuseIdentifier: "SpotlightReelCell")
+        visualHarmony.register(SpotlightReelCellLRNear.self, forCellWithReuseIdentifier: "SpotlightReelCellLRNear")
     }
     
     private func cityExpression() {
@@ -229,8 +219,8 @@ class CreatorStudioController: UIViewController {
         visualHarmony.dataSource = self
     }
     
-    @objc @IBAction func visualSoul(_ sender: UIButton) {
-        self.navigationController?.pushViewController(PerforMainssageController(), animated: true)
+    @objc  func visualSoul(_ sender: UIButton) {
+        self.navigationController?.pushViewController(PerforLRNearMainssageController(), animated: true)
     }
     
     @objc func lastoneperson() {
@@ -238,26 +228,24 @@ class CreatorStudioController: UIViewController {
     }
 }
 
-// MARK: - UICollectionView Delegates
-
-extension CreatorStudioController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CreatorLRNearController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (collectionView == self.performLightFlow) ? mengaesun.1.count : BoboRoomaesun.1.count
+        return (collectionView == self.performLightFlow) ? mengaesunLRNear.1.count : BoboRoomaesun.1.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.performLightFlow {
-            let SpotlightData = mengaesun.1[indexPath.row]
-            let SpotlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SpotlightReeluserCell", for: indexPath) as! SpotlightReeluserCell
-            SpotlightCell.creativeTone.urbanTone(streetEcho: SpotlightData["liveGroove"] as? String)
+            let SpotlightData = mengaesunLRNear.1[indexPath.row]
+            let SpotlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SpotlightReeluserCellLRNear", for: indexPath) as! SpotlightReeluserCellLRNear
+            SpotlightCell.creativeTone.urbanToneLRNear(streetEchoLRNear: SpotlightData["liveGroove"] as? String)
             SpotlightCell.cityTone.text = SpotlightData["stageFlow"] as? String
             return SpotlightCell
         } else {
             let SpotlightData = BoboRoomaesun.1[indexPath.row]
-            let SpotlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SpotlightReelCell", for: indexPath) as! SpotlightReelCell
+            let SpotlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SpotlightReelCellLRNear", for: indexPath) as! SpotlightReelCellLRNear
             SpotlightCell.visualSoul.isHidden = !(SpotlightData["artLight"] as? Int == -1)
             SpotlightCell.streetEnergy.setTitle(" \(Int.random(in: 3...10))", for: .normal)
-            SpotlightCell.stageJourney.urbanTone(streetEcho: SpotlightData["streetSoul"] as? String)
+            SpotlightCell.stageJourney.urbanToneLRNear(streetEchoLRNear: SpotlightData["streetSoul"] as? String)
             SpotlightCell.creativeBlend.text = SpotlightData["visualHarmony"] as? String
             SpotlightCell.urbanDream.addTarget(self, action: #selector(lastoneperson), for: .touchUpInside)
             return SpotlightCell
@@ -266,7 +254,7 @@ extension CreatorStudioController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.performLightFlow {
-            let SpotlightData = mengaesun.1[indexPath.row]
+            let SpotlightData = mengaesunLRNear.1[indexPath.row]
             if let SpotlightPerformer = SpotlightData["urbanPerformer"] as? Int {
                 urbanExpressionFlow(stageWave: AArtPerception.urbanPerformer, streetSoul: "\(SpotlightPerformer)")
             }
@@ -287,16 +275,15 @@ extension CreatorStudioController: UICollectionViewDelegate, UICollectionViewDat
     }
 }
 
-// MARK: - Network Logic
 
-extension CreatorStudioController {
+extension CreatorLRNearController {
     private func satechadechea(path: String, dicot: [String: Any]) {
         VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { [weak self] SpotlightResult in
             guard let self = self,
                   let SpotlightDict = SpotlightResult as? [String: Any],
                   let SpotlightAura = SpotlightDict[VisualEcho.centerEther("dcattpa")] as? [[String: Any]] else { return }
             
-            self.mengaesun.1 = SpotlightAura
+            self.mengaesunLRNear.1 = SpotlightAura
             if SpotlightAura.count > 0 {
                 self.performLightFlow.reloadData()
             }
@@ -322,11 +309,10 @@ extension CreatorStudioController {
     }
 }
 
-// MARK: - Helper Extensions
 
 extension UIViewController {
     func urbanExpressionFlow(stageWave: AArtPerception, streetSoul: String = "") {
-        let SpotlightVC = PerformMomentController(stageWave: stageWave, streetSoul: streetSoul)
+        let SpotlightVC = ActullyLRNeartController(stageWave: stageWave, streetSoul: streetSoul)
         SpotlightVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(SpotlightVC, animated: true)
     }

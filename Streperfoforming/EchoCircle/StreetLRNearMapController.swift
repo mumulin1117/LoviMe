@@ -1,5 +1,5 @@
 //
-//  StreetMapController.swift
+//  StreetLRNearMapController.swift
 //  Streperfoforming
 //
 //  Created by  on 2025/10/13.
@@ -7,44 +7,39 @@
 
 import UIKit
 
-import UIKit
-
-class StreetMapController: UIViewController {
-    
-    // MARK: - 枚举定义
+class StreetLRNearMapController: UIViewController {
+  
     enum ecentTime: Int {
         case Hot = 0
         case ForU = 1
     }
-
-    // MARK: - UI 组件 (合并自 XIB & 原始代码)
-    
+ 
     private let connectionWave: UILabel = {
-        let label = UILabel()
-        label.text = "Live Audience Circle"
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        label.textAlignment = .center
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+        let passerbyWatch = UILabel()
+        passerbyWatch.text = VisualEcho.centerEther("Lxicvfea cAkuhdgileinhciey nCoidrccylee")
+        passerbyWatch.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        passerbyWatch.textAlignment = .center
+        passerbyWatch.textColor = .white
+        passerbyWatch.translatesAutoresizingMaskIntoConstraints = false
+        return passerbyWatch
     }()
     
     private let strrntAvatoer: UIImageView = {
-        let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
-        iv.clipsToBounds = true
-        iv.image = UIImage(named: "Creatorlogo")
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.layer.cornerRadius = 20
-        return iv
+        let passerbyWatch = UIImageView()
+        passerbyWatch.contentMode = .scaleAspectFill
+        passerbyWatch.clipsToBounds = true
+        passerbyWatch.image = UIImage(named: "CreatorlogoLRNear")
+        passerbyWatch.translatesAutoresizingMaskIntoConstraints = false
+        passerbyWatch.layer.cornerRadius = 20
+        return passerbyWatch
     }()
     
     private let stranetBaneame: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16)
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+        let passerbyWatch = UILabel()
+        passerbyWatch.font = .systemFont(ofSize: 16)
+        passerbyWatch.textColor = .white
+        passerbyWatch.translatesAutoresizingMaskIntoConstraints = false
+        return passerbyWatch
     }()
     
     
@@ -53,57 +48,57 @@ class StreetMapController: UIViewController {
         stranetBaneame.text = UserDefaults.standard.object(forKey: "artPerception") as? String
     }
     private let stageTitleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Street Stage"
-        label.font = .systemFont(ofSize: 20)
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+        let realTimeMagic = UILabel()
+        realTimeMagic.text = VisualEcho.centerEther("Sntyryenejtz tSxtlangke")
+        realTimeMagic.font = .systemFont(ofSize: 20)
+        realTimeMagic.textColor = .white
+        realTimeMagic.translatesAutoresizingMaskIntoConstraints = false
+        return realTimeMagic
     }()
     
     private let hubHeaderImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.contentMode = .scaleAspectFit
-        iv.image = UIImage(named: "Performer Hub🎸✨")
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        return iv
+        let spontaneousCreativity = UIImageView()
+        spontaneousCreativity.contentMode = .scaleAspectFit
+        spontaneousCreativity.image = UIImage(named: "Performer Hub🎸✨")
+        spontaneousCreativity.translatesAutoresizingMaskIntoConstraints = false
+        return spontaneousCreativity
     }()
     
     private let categoryStackView: UIStackView = {
-        let sv = UIStackView()
-        sv.axis = .horizontal
-        sv.distribution = .fillEqually
-        sv.translatesAutoresizingMaskIntoConstraints = false
-        return sv
+        let spontaneousCreativity = UIStackView()
+        spontaneousCreativity.axis = .horizontal
+        spontaneousCreativity.distribution = .fillEqually
+        spontaneousCreativity.translatesAutoresizingMaskIntoConstraints = false
+        return spontaneousCreativity
     }()
     
     private lazy var hotButton: UIButton = {
-        let btn = UIButton(type: .custom)
-        btn.setTitle("Hot", for: .normal)
-        btn.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
-        btn.tag = 11
-        btn.addTarget(self, action: #selector(visualSoul(_:)), for: .touchUpInside)
-        return btn
+        let bondingArt = UIButton(type: .custom)
+        bondingArt.setTitle(VisualEcho.centerEther("Hmodt"), for: .normal)
+        bondingArt.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
+        bondingArt.tag = 11
+        bondingArt.addTarget(self, action: #selector(visualSoul(_:)), for: .touchUpInside)
+        return bondingArt
     }()
     
     private lazy var forUButton: UIButton = {
-        let btn = UIButton(type: .custom)
-        btn.setTitle("For U", for: .normal)
-        btn.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
-        btn.tag = 12
-        btn.addTarget(self, action: #selector(visualSoul(_:)), for: .touchUpInside)
-        return btn
+        let friendshipArt = UIButton(type: .custom)
+        friendshipArt.setTitle(VisualEcho.centerEther("Fsoqrp cU"), for: .normal)
+        friendshipArt.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
+        friendshipArt.tag = 12
+        friendshipArt.addTarget(self, action: #selector(visualSoul(_:)), for: .touchUpInside)
+        return friendshipArt
     }()
     
-    // 原 XIB 中的指示条
+    
     private let indidavereshing: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+        let communalArt = UIView()
+        communalArt.backgroundColor = .white
+        communalArt.translatesAutoresizingMaskIntoConstraints = false
+        return communalArt
     }()
     
-    // 对外接口保持不变
+ 
     public var visualHarmony: UICollectionView!
     
     private lazy var artFusion: UIActivityIndicatorView = {
@@ -115,18 +110,17 @@ class StreetMapController: UIViewController {
         return artFusion
     }()
 
-    // MARK: - 属性
+
     private var chioker: ecentTime = .Hot
     private var BoboRoomaesun: (String, Array<Dictionary<String, Any>>) = ("titRoom", [])
 
-    // MARK: - 生命周期
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMainLayout()      // 合并 UI 布局
-        visualPerformer()     // 注册 Cell
-        urbanExpressionFlow() // 设置代理
+        setupMainLayout()
+        visualPerformer()
+        urbanExpressionFlow()
         
-        // 初始数据请求
         urbanEnergy(path: "/cbzedszyvhnybqz/fhgroocpcsx", dicot: [
             "creativeStage": VisualEcho.publicRhythm,
             "visualPulse": chioker.rawValue,
@@ -136,69 +130,66 @@ class StreetMapController: UIViewController {
         ])
     }
 
-    // MARK: - 布局还原 (合并自 XIB 约束)
+   
     private func setupMainLayout() {
-        view.backgroundColor = .black // 对应 XIB 的 labelColor
+        view.backgroundColor = .black
         
         // 初始化 CollectionView
-        let laoi = UICollectionViewFlowLayout()
-        laoi.scrollDirection = .horizontal
-        laoi.minimumInteritemSpacing = 22
-        laoi.itemSize = CGSize(width: 268, height: 200) // 初始占位，会在 viewDidLayoutSubviews 修正
+        let accessibleStage = UICollectionViewFlowLayout()
+        accessibleStage.scrollDirection = .horizontal
+        accessibleStage.minimumInteritemSpacing = 22
+        accessibleStage.itemSize = CGSize(width: 268, height: 200)
         
-        visualHarmony = UICollectionView(frame: .zero, collectionViewLayout: laoi)
+        visualHarmony = UICollectionView(frame: .zero, collectionViewLayout: accessibleStage)
         visualHarmony.backgroundColor = .clear
         visualHarmony.showsHorizontalScrollIndicator = false
         visualHarmony.translatesAutoresizingMaskIntoConstraints = false
         
-        // 添加视图层级
+       
         [strrntAvatoer, stranetBaneame, stageTitleLabel, hubHeaderImageView,
          categoryStackView, indidavereshing, visualHarmony, artFusion].forEach { view.addSubview($0) }
         
         categoryStackView.addArrangedSubview(hotButton)
         categoryStackView.addArrangedSubview(forUButton)
         
-        // 设置约束 (严格对照 XIB 提供的数值)
+       
         NSLayoutConstraint.activate([
-            // 头像
+            
             strrntAvatoer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             strrntAvatoer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 21),
             strrntAvatoer.widthAnchor.constraint(equalToConstant: 40),
             strrntAvatoer.heightAnchor.constraint(equalToConstant: 40),
-            
-            // 名字
+           
             stranetBaneame.centerYAnchor.constraint(equalTo: strrntAvatoer.centerYAnchor),
             stranetBaneame.leadingAnchor.constraint(equalTo: strrntAvatoer.trailingAnchor, constant: 12),
-            
-            // 标题
+         
             stageTitleLabel.topAnchor.constraint(equalTo: strrntAvatoer.bottomAnchor, constant: 16),
             stageTitleLabel.leadingAnchor.constraint(equalTo: strrntAvatoer.leadingAnchor),
-            
-            // Hub 图片
+          
             hubHeaderImageView.topAnchor.constraint(equalTo: stageTitleLabel.bottomAnchor, constant: 2),
             hubHeaderImageView.leadingAnchor.constraint(equalTo: stageTitleLabel.leadingAnchor),
             hubHeaderImageView.widthAnchor.constraint(equalToConstant: 263),
             hubHeaderImageView.heightAnchor.constraint(equalToConstant: 39),
             
-            // StackView
+            
             categoryStackView.topAnchor.constraint(equalTo: hubHeaderImageView.bottomAnchor, constant: 13),
             categoryStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 14),
             categoryStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
             categoryStackView.heightAnchor.constraint(equalToConstant: 30),
             
-            // 指示线
+            
             indidavereshing.topAnchor.constraint(equalTo: categoryStackView.bottomAnchor),
             indidavereshing.centerXAnchor.constraint(equalTo: hotButton.centerXAnchor),
             indidavereshing.widthAnchor.constraint(equalToConstant: 120),
             indidavereshing.heightAnchor.constraint(equalToConstant: 3),
             
-            // CollectionView
+          
             visualHarmony.topAnchor.constraint(equalTo: indidavereshing.bottomAnchor, constant: 21),
             visualHarmony.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             visualHarmony.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             visualHarmony.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -35),
             
-            // Loading
+           
             artFusion.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             artFusion.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
@@ -206,16 +197,16 @@ class StreetMapController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        // 动态更新 Layout 尺寸，保持 XIB 的 itemSize 逻辑
-        if let layout = visualHarmony.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.itemSize = CGSize(width: 268, height: visualHarmony.frame.height)
-            layout.invalidateLayout()
+      
+        if let sharedStagec = visualHarmony.collectionViewLayout as? UICollectionViewFlowLayout {
+            sharedStagec.itemSize = CGSize(width: 268, height: visualHarmony.frame.height)
+            sharedStagec.invalidateLayout()
         }
     }
 
     private func visualPerformer() {
-        // 注册原有的 Cell
-        visualHarmony.register(StreetMapCell.self, forCellWithReuseIdentifier: "StreetMapCell")
+        
+        visualHarmony.register(StreetLRNearMapCell.self, forCellWithReuseIdentifier: "StreetLRNearMapCell")
     }
     
     private func urbanExpressionFlow() {
@@ -223,16 +214,15 @@ class StreetMapController: UIViewController {
         visualHarmony.dataSource = self
     }
 
-    // MARK: - Actions
     
-    @IBAction func visualSoul(_ sender: UIButton) {
+    @objc func visualSoul(_ sender: UIButton) {
         if sender.tag == 11 {
             chioker = .Hot
         } else if sender.tag == 12 {
             chioker = .ForU
         }
         
-        // 还原 XIB 中的指示条位移逻辑
+       
         UIView.animate(withDuration: 0.3) {
             self.indidavereshing.center.x = sender.center.x
         }
@@ -247,22 +237,22 @@ class StreetMapController: UIViewController {
     }
     
     @objc func lastoneperson() {
-        // 保持你代码中的外部调用方法名不变
+       
         urbanExpressionFlow(stageWave: AArtPerception.streetRhythm)
     }
 }
 
-// MARK: - CollectionView 协议实现
-extension StreetMapController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+extension StreetLRNearMapController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return BoboRoomaesun.1.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let SpotlightData = BoboRoomaesun.1[indexPath.row]
-        let SpotlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: "StreetMapCell", for: indexPath) as! StreetMapCell
-        SpotlightCell.creativeHarmony.urbanTone(streetEcho: (SpotlightData["stageBreeze"] as? Array<String>)?.first ?? "" )
-                SpotlightCell.artSpirit.urbanTone(streetEcho: SpotlightData["artFusionist"] as? String)
+        let SpotlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: "StreetLRNearMapCell", for: indexPath) as! StreetLRNearMapCell
+        SpotlightCell.creativeHarmony.urbanToneLRNear(streetEchoLRNear: (SpotlightData["stageBreeze"] as? Array<String>)?.first ?? "" )
+                SpotlightCell.artSpirit.urbanToneLRNear(streetEchoLRNear: SpotlightData["artFusionist"] as? String)
                 SpotlightCell.urbanEcho.text = SpotlightData["urbanFrame"] as? String
         SpotlightCell.creativeFusion.text = SpotlightData["cityCanvas"] as? String
         SpotlightCell.urbanExpressionFlow.tag = indexPath.row
@@ -279,7 +269,7 @@ extension StreetMapController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let SpotlightData = BoboRoomaesun.1[indexPath.row]
             if let SpotlightStage = SpotlightData["publicRhythm"] as? Int {
-                // 假设存在跳转逻辑
+                
                 urbanExpressionFlow(stageWave: AArtPerception.cityEcho, streetSoul: "\(SpotlightStage)")
                 
             }
@@ -287,7 +277,7 @@ extension StreetMapController: UICollectionViewDelegate, UICollectionViewDataSou
     
 
 }
-extension StreetMapController{
+extension StreetLRNearMapController{
    
    
     

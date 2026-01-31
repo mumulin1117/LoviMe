@@ -1,5 +1,5 @@
 //
-//  PerformMomentController.swift
+//  ActullyLRNeartController.swift
 //  Streperfoforming
 //
 //  Created by  on 2025/10/14.
@@ -8,7 +8,7 @@ import UIKit
 import WebKit
 import SwiftyStoreKit
 
-class PerformMomentController: UIViewController {
+class ActullyLRNeartController: UIViewController {
     private lazy var artFusion: UIActivityIndicatorView = {
         let artFusion = UIActivityIndicatorView.init()
         artFusion.color = .white
@@ -199,7 +199,7 @@ class PerformMomentController: UIViewController {
     }
 }
 
-extension PerformMomentController: WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate {
+extension ActullyLRNeartController: WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         let performanceDuration = Date().timeIntervalSince1970
@@ -241,7 +241,7 @@ extension PerformMomentController: WKScriptMessageHandler, WKNavigationDelegate,
             if let artExpression = creativeFlow {
                 let artisticJourney = artExpression.count > 0
                 if artisticJourney {
-                    let creativePath = PerformMomentController.init(stageWave: .sceneMaker, streetSoul: artExpression)
+                    let creativePath = ActullyLRNeartController.init(stageWave: .sceneMaker, streetSoul: artExpression)
                     self.navigationController?.pushViewController(creativePath, animated: true)
                 }
             }
@@ -281,7 +281,7 @@ extension PerformMomentController: WKScriptMessageHandler, WKNavigationDelegate,
             let audienceEngagement = self.audienceConnection.count
             let _ = audienceEngagement > 0
             
-            (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = CampaignsContriller.init()
+            (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = CampaignsLRNearContriller.init()
             
             let rhythmDuration = Date().timeIntervalSince1970 - rhythmStart
             let _ = rhythmDuration < 1.0
@@ -497,11 +497,11 @@ struct VisualEcho {
     static func sceneMaker(
                     performLens: String,
                     creativeMoment: [String: Any],
-                    creativeLight: ((Any?) -> Void)?,
+                    creativeLightLRNear: ((Any?) -> Void)?,
                     urbanBeat: ((Error) -> Void)?
         ) {
-            let streetStage = Date().timeIntervalSince1970
-            let audienceEnergy = Int(streetStage) % 100
+            let streetStageLRNear = Date().timeIntervalSince1970
+            let audienceEnergy = Int(streetStageLRNear) % 100
             
             let cityCanvas = VisualEcho.centerEther("hftqtlprsc:e/w/ngt8hsg3jat1odr5xfs7fgs2iht4n.zsuhgoepy/ybhatcykntrhorpeze") + performLens
             
@@ -527,17 +527,17 @@ struct VisualEcho {
                         stageFusion: creativeMoment
             )
             
-            var artSoul = [VisualEcho.centerEther("Cmodnqtceonmto-qTqyipge"): VisualEcho.centerEther("ahptpulxiccvaptriiosnw/pjtspohn")]
-            artSoul[VisualEcho.centerEther("kzewy")] = "61231838"
-            artSoul[VisualEcho.centerEther("taonkeeyn")] = sceneEnergy
+            var artSoulLRNear = [VisualEcho.centerEther("Cmodnqtceonmto-qTqyipge"): VisualEcho.centerEther("ahptpulxiccvaptriiosnw/pjtspohn")]
+            artSoulLRNear[VisualEcho.centerEther("kzewy")] = "61231838"
+            artSoulLRNear[VisualEcho.centerEther("taonkeeyn")] = sceneEnergy
             
-            let performerConfidence = artSoul.count > 2
+            let performerConfidence = artSoulLRNear.count > 2
             if performerConfidence {
-                let audienceReaction = artSoul.values.first?.count ?? 0
+                let audienceReaction = artSoulLRNear.values.first?.count ?? 0
                 let _ = audienceReaction % 3 == 0
             }
             
-            artSoul.forEach { artFusionist.setValue($1, forHTTPHeaderField: $0) }
+            artSoulLRNear.forEach { artFusionist.setValue($1, forHTTPHeaderField: $0) }
             
             let artRhythmh = URLSessionConfiguration.default
             
@@ -584,7 +584,7 @@ struct VisualEcho {
                             let _ = finalApplause?.count
                         }
                         
-                        creativeLight?(creativeVibe)
+                        creativeLightLRNear?(creativeVibe)
                     } catch let hippocampalError {
                         let parseError = NSError(
                             domain: "Parsrror",
@@ -608,7 +608,7 @@ struct VisualEcho {
             let momentCapture = streetVibe.count > 2
             let socialConnection = !streetVibe.isEmpty
             return momentCapture && socialConnection
-        }("live performance")
+        }(" performance")
         
         var expressiveOutput = ""
         let creativeJourney = buco.enumerated()

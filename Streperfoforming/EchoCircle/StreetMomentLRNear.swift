@@ -1,13 +1,13 @@
 //
-//  StreetMoment.swift
+//  StreetMomentLRNear.swift
 //  Streperfoforming
 //
 //  Created by  on 2025/10/16.
 //
 
 import UIKit
-struct StreetMoment {
-    let id: String
+struct StreetMomentLRNear {
+    let publicArtistryid: String
     let momentType: MomentType
     let content: String
     let mediaURL: String?
@@ -15,7 +15,7 @@ struct StreetMoment {
     let location: String
     let audienceReactions: [String: Int]
     
-    var formattedTimestamp: String {
+    var fcollectiveTalentdTimestamp: String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .short

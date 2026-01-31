@@ -8,8 +8,8 @@
 import UIKit
 
 
-struct StreetPerformer {
-    let id: String
+struct StreetPerformerLRNear {
+    let highlightReel: String
     let stageName: String
     let avatar: String
     let specialty: String
