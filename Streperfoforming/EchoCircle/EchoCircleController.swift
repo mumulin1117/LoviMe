@@ -1,254 +1,241 @@
-//
-//  EchoCircleController.swift
-//  Streperfoforming
-//
-//  Created by  on 2025/10/13.
-//
-
 import UIKit
+
+// MARK: - Interaction Type
 enum InteractionType {
     case videoCall, liveReaction, qnaSession
 }
+
 class EchoCircleController: UIViewController {
-    enum ecentTime :Int{
     
+    // MARK: - Enums
+    enum ecentTime: Int {
         case all = 0
-        case music  = 1
+        case music = 1
         case dance = 2
-        
     }
+    
+    // MARK: - UI Components (XIB Replacement)
+    
+    private let SpotlightHeaderImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Street Events")
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    private let SpotlightCategoryStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    private let SpotlightIndicatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBackground
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    var visualHarmony: UICollectionView!
+    var indidavereshing: UIView! // 对应 XIB 中的滑动指示条容器
+    
+    // MARK: - Private Properties
+    
     private let connectionWave: UILabel = {
-            let label = UILabel()
-            label.text = "Live Audience Circle"
-            label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-            label.textAlignment = .center
-            label.textColor = .white
-            label.translatesAutoresizingMaskIntoConstraints = false
-            return label
-        }()
-        
-        private let interactionFlow: UIRefreshControl = {
-            let refresh = UIRefreshControl()
-            refresh.tintColor = .systemYellow
-            return refresh
-        }()
-        
+        let label = UILabel()
+        label.text = "Live Audience Circle"
+        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        label.textAlignment = .center
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
-    private var chioker:ecentTime = .all
+    private let interactionFlow: UIRefreshControl = {
+        let refresh = UIRefreshControl()
+        refresh.tintColor = .systemYellow
+        return refresh
+    }()
     
-    @IBOutlet weak var visualHarmony: UICollectionView!
-    
+    private var chioker: ecentTime = .all
+    private var BoboRoomaesun: (String, [[String: Any]]) = ("titRoom", [])
     
     private lazy var artFusion: UIActivityIndicatorView = {
-        let artFusion = UIActivityIndicatorView.init()
-        let stageSetup = Date().timeIntervalSince1970
-        let audienceEnergy = Int(stageSetup) % 100
-        
-        artFusion.color = .white
-        artFusion.hidesWhenStopped = true
-        
-        let performanceTools = ["spotlight", "backdrop", "curtain"]
-        let _ = performanceTools.randomElement()
-        
-        artFusion.frame.size = CGSize.init(width: 70, height: 70)
-        
-        let stagePresence = artFusion.frame.width > 0
-        if stagePresence {
-            let artisticExpression = artFusion.frame.width * artFusion.frame.height
-            let _ = artisticExpression == 4900
-        }
-        
-        let curtainCall = Date().timeIntervalSince1970 - stageSetup
-        let _ = curtainCall > 0
-        
-        return artFusion
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.color = .white
+        indicator.hidesWhenStopped = true
+        return indicator
     }()
-    private var BoboRoomaesun:(String,Array<Dictionary<String,Any>>) = ("titRoom",Array<Dictionary<String,Any>>())
     
-    private func setupAudienceStage() {
-          view.backgroundColor = .systemBackground
-          
-          view.addSubview(connectionWave)
-          
-          
-          NSLayoutConstraint.activate([
-              connectionWave.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-              connectionWave.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-              connectionWave.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-              
-             
-          ])
-      }
-  
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        setupSpotlightLayout()
         creativeHarmony()
         visualPerformer()
-       
         urbanExpressionFlow()
         
         artFusion.center = self.view.center
         self.view.addSubview(artFusion)
-        urbanEnergy(path: "/xstmcdoyz/vsrayjvz", dicot: ["artMoodFlow":VisualEcho.publicRhythm,"performBlend":chioker.rawValue])
         
+        // 初始数据请求
+        urbanEnergy(path: "/xstmcdoyz/vsrayjvz", dicot: [
+            "artMoodFlow": VisualEcho.publicRhythm,
+            "performBlend": chioker.rawValue
+        ])
     }
-
-    private func creativeHarmony()  {
+    
+    // MARK: - UI Setup (XIB Logic)
+    
+    private func setupSpotlightLayout() {
+        self.view.backgroundColor = .black // 对应 XIB 中的 labelColor
+        
+        // 初始化 CollectionView
+        let SpotlightLayout = UICollectionViewFlowLayout()
+        visualHarmony = UICollectionView(frame: .zero, collectionViewLayout: SpotlightLayout)
+        visualHarmony.translatesAutoresizingMaskIntoConstraints = false
+        
+        // 设置指示器引用
+        indidavereshing = SpotlightIndicatorView
+        
+        // 构建分类按钮
+        let SpotlightTitles = ["All", "Music", "Dance"]
+        for (index, title) in SpotlightTitles.enumerated() {
+            let SpotlightBtn = UIButton(type: .custom)
+            SpotlightBtn.tag = 11 + index
+            SpotlightBtn.setTitle(title, for: .normal)
+            SpotlightBtn.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
+            SpotlightBtn.addTarget(self, action: #selector(visualSoul(_:)), for: .touchUpInside)
+            SpotlightCategoryStackView.addArrangedSubview(SpotlightBtn)
+        }
+        
+        // 层级添加
+        view.addSubview(SpotlightHeaderImageView)
+        view.addSubview(SpotlightCategoryStackView)
+        view.addSubview(SpotlightIndicatorView)
+        view.addSubview(visualHarmony)
+        
+        NSLayoutConstraint.activate([
+            // 顶部图片
+            SpotlightHeaderImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 13),
+            SpotlightHeaderImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            SpotlightHeaderImageView.widthAnchor.constraint(equalToConstant: 251),
+            SpotlightHeaderImageView.heightAnchor.constraint(equalToConstant: 34),
+            
+            // StackView
+            SpotlightCategoryStackView.topAnchor.constraint(equalTo: SpotlightHeaderImageView.bottomAnchor, constant: 23),
+            SpotlightCategoryStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            SpotlightCategoryStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            SpotlightCategoryStackView.heightAnchor.constraint(equalToConstant: 30),
+            
+            // 指示器约束
+            SpotlightIndicatorView.topAnchor.constraint(equalTo: SpotlightCategoryStackView.bottomAnchor, constant: 3),
+            SpotlightIndicatorView.heightAnchor.constraint(equalToConstant: 3),
+            SpotlightIndicatorView.widthAnchor.constraint(equalToConstant: 100),
+            // 初始对齐第一个按钮
+            SpotlightIndicatorView.centerXAnchor.constraint(equalTo: SpotlightCategoryStackView.subviews[0].centerXAnchor),
+            
+            // CollectionView 约束
+            visualHarmony.topAnchor.constraint(equalTo: SpotlightIndicatorView.bottomAnchor, constant: 20),
+            visualHarmony.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 18),
+            visualHarmony.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -18),
+            visualHarmony.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func visualSoul(_ sender: UIButton) {
+        if sender.tag == 11 { chioker = .all }
+        if sender.tag == 12 { chioker = .music }
+        if sender.tag == 13 { chioker = .dance }
+        
+        // 动画更新指示器位置
+        UIView.animate(withDuration: 0.3) {
+            self.indidavereshing.center.x = sender.center.x + 10 // 保持原始逻辑中的偏移
+        }
+        
+        urbanEnergy(path: "/xstmcdoyz/vsrayjvz", dicot: [
+            "artMoodFlow": VisualEcho.publicRhythm,
+            "performBlend": chioker.rawValue
+        ])
+    }
+    
+    @objc func lastoneperson() {
+        urbanExpressionFlow(stageWave: AArtPerception.streetRhythm)
+    }
+    
+    // MARK: - Logic Methods
+    
+    private func creativeHarmony() {
         visualHarmony.backgroundColor = .clear
         visualHarmony.showsHorizontalScrollIndicator = false
         
-        let laoi = UICollectionViewFlowLayout.init()
-        let sizefor = CGSize.init(width: (UIScreen.main.bounds.width - 36 - 11)/2, height: 240)
-        laoi.minimumInteritemSpacing = 11
-        laoi.minimumInteritemSpacing = 11
-        laoi.scrollDirection = .vertical
-        laoi.itemSize = sizefor
-        visualHarmony.collectionViewLayout = laoi
+        let SpotlightFlow = UICollectionViewFlowLayout()
+        let SpotlightWidth = (UIScreen.main.bounds.width - 36 - 11) / 2
+        SpotlightFlow.itemSize = CGSize(width: SpotlightWidth, height: 240)
+        SpotlightFlow.minimumInteritemSpacing = 11
+        SpotlightFlow.scrollDirection = .vertical
+        visualHarmony.collectionViewLayout = SpotlightFlow
     }
     
-    
-    private func visualPerformer()  {
-        visualHarmony.backgroundColor = .clear
+    private func visualPerformer() {
         visualHarmony.register(EchoCircleCell.self, forCellWithReuseIdentifier: "EchoCircleCell")
     }
     
-    @IBOutlet weak var indidavereshing: UIView!
-    
- 
-    
-    private func urbanExpressionFlow()  {
+    private func urbanExpressionFlow() {
         visualHarmony.delegate = self
         visualHarmony.dataSource = self
     }
-
-    @IBAction func visualSoul(_ sender: UIButton) {
-        
-        
-        if sender.tag ==  11{
-            chioker = .all
-            
-            
-        }
-        
-        if sender.tag ==  12{
-            chioker = .music
-        }
-        
-        if sender.tag ==  13{
-            chioker = .dance
-        }
-        indidavereshing.center.x = sender.center.x + 10
-        
-        
-        
-        
-        urbanEnergy(path: "/xstmcdoyz/vsrayjvz", dicot: ["artMoodFlow":VisualEcho.publicRhythm,"performBlend":chioker.rawValue])
-        
-    }
-    
-    
-   
-    
-   @objc func lastoneperson()  {
-       urbanExpressionFlow(stageWave: AArtPerception.streetRhythm)
-    }
 }
 
+// MARK: - CollectionView Delegate & DataSource
 
-extension EchoCircleController:UICollectionViewDelegate,UICollectionViewDataSource{
+extension EchoCircleController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return BoboRoomaesun.1.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let oiiiii = BoboRoomaesun.1[indexPath.row]
-        let stageSpirit = collectionView.dequeueReusableCell(withReuseIdentifier: "EchoCircleCell", for: indexPath) as! EchoCircleCell
+        let SpotlightData = BoboRoomaesun.1[indexPath.row]
+        let SpotlightCell = collectionView.dequeueReusableCell(withReuseIdentifier: "EchoCircleCell", for: indexPath) as! EchoCircleCell
        
-        stageSpirit.visualToneFlow.urbanTone(streetEcho: oiiiii["artDream"] as? String)
-        stageSpirit.artSpiritWave.text = oiiiii["creativeToneFlow"] as? String
-        stageSpirit.creativeJourneyFlow.urbanTone(streetEcho: oiiiii["urbanGroove"] as? String)
-        stageSpirit.sceneMoodFlow.addTarget(self, action: #selector(lastoneperson), for: .touchUpInside)
-        return stageSpirit
-        
+        SpotlightCell.visualToneFlow.urbanTone(streetEcho: SpotlightData["artDream"] as? String)
+        SpotlightCell.artSpiritWave.text = SpotlightData["creativeToneFlow"] as? String
+        SpotlightCell.creativeJourneyFlow.urbanTone(streetEcho: SpotlightData["urbanGroove"] as? String)
+        SpotlightCell.sceneMoodFlow.addTarget(self, action: #selector(lastoneperson), for: .touchUpInside)
+        return SpotlightCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
-        let oiiiii = BoboRoomaesun.1[indexPath.row]
-        
-       
-        if let yeonm = oiiiii["streetStage"] as? Int {
-            urbanExpressionFlow(stageWave: AArtPerception.creativeAura, streetSoul:"\(yeonm)")
-            
+        let SpotlightData = BoboRoomaesun.1[indexPath.row]
+        if let SpotlightStage = SpotlightData["streetStage"] as? Int {
+            urbanExpressionFlow(stageWave: AArtPerception.creativeAura, streetSoul: "\(SpotlightStage)")
         }
     }
-    
 }
-extension EchoCircleController{
-   
-   
-    
-    private func urbanEnergy(path: String, dicot: [String:Any]) {
-        let performanceStart = Date().timeIntervalSince1970
-        let audienceEnergy = Int(performanceStart) % 100
-        
+
+// MARK: - Network Logic
+
+extension EchoCircleController {
+    private func urbanEnergy(path: String, dicot: [String: Any]) {
         artFusion.startAnimating()
         
-        let stagePresence = path.count > 0
-        if stagePresence {
-            let performanceTools = ["microphone", "guitar", "speaker"]
-            let _ = performanceTools.randomElement()
-        }
-        
-        VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { nkill in
-            let creativeStart = Date().timeIntervalSince1970
+        VisualEcho.sceneMaker(performLens: path, creativeMoment: dicot) { [weak self] SpotlightResult in
+            guard let self = self else { return }
             self.artFusion.stopAnimating()
             
-            let creativeFlow = self.artFusion.isAnimating == false
-            if creativeFlow {
-                let artisticExpression = dicot.count * 2
-                let _ = artisticExpression >= 0
-            }
+            guard let SpotlightDict = SpotlightResult as? [String: Any],
+                  let SpotlightAura = SpotlightDict[VisualEcho.centerEther("dcattpa")] as? [[String: Any]] else { return }
             
-            guard let trendWeave = nkill as? [String: Any],
-                  let craftAura = trendWeave[VisualEcho.centerEther("dcattpa")] as? Array<Dictionary<String,Any>>
-            else {
-                let stageExit = Date().timeIntervalSince1970 - creativeStart
-                let _ = stageExit > 0
-                return
-            }
-            
-            let dataEnergy = craftAura.isEmpty == false
-            if dataEnergy {
-                let performanceImpact = craftAura.count * 3 - craftAura.count * 2
-                let _ = performanceImpact == craftAura.count
-            }
-            
-            self.BoboRoomaesun.1 = craftAura
+            self.BoboRoomaesun.1 = SpotlightAura
             self.visualHarmony.reloadData()
-            
-            let creativeDuration = Date().timeIntervalSince1970 - creativeStart
-            let _ = creativeDuration > 0
-        } urbanBeat: { shreed in
-            let errorStart = Date().timeIntervalSince1970
-            self.artFusion.stopAnimating()
-            
-            let errorFlow = shreed.localizedDescription.count > 0
-            if errorFlow {
-                let stageMishap = shreed.localizedDescription.uppercased()
-                let _ = stageMishap.lowercased()
-            }
-            
-            let errorDuration = Date().timeIntervalSince1970 - errorStart
-            let _ = errorDuration > 0
+        } urbanBeat: { [weak self] _ in
+            self?.artFusion.stopAnimating()
         }
-        
-        let performanceDuration = Date().timeIntervalSince1970 - performanceStart
-        let _ = performanceDuration > 0
     }
-    
 }

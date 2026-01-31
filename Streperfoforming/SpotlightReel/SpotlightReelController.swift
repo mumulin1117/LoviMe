@@ -3,30 +3,95 @@
 //  Streperfoforming
 //
 //  Created by  on 2025/10/13.
-//
 
 import UIKit
 
+// MARK: - Controller Implementation
 class SpotlightReelController: UIViewController {
 
+    // MARK: - UI Components (XIB Replacement)
     
+    private let SpotlightCreativeBtn: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setBackgroundImage(UIImage(named: "sceneVibe"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private let SpotlightPerformBtn: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setBackgroundImage(UIImage(named: "sinterFlao"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private let SpotlightCloseBtn: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "streetGroove"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupSpotlightLayout()
+    }
+    
+    // MARK: - UI Setup (XIB Logic)
+    
+    private func setupSpotlightLayout() {
+        // 对应 XIB 中的 labelColor (通常为黑色)
+        self.view.backgroundColor = .black
+        
+        // 添加视图
+        view.addSubview(SpotlightCreativeBtn)
+        view.addSubview(SpotlightPerformBtn)
+        view.addSubview(SpotlightCloseBtn)
+        
+        // 设置 Actions
+        SpotlightCreativeBtn.addTarget(self, action: #selector(creativeEnergy(_:)), for: .touchUpInside)
+        SpotlightPerformBtn.addTarget(self, action: #selector(performEnergy(_:)), for: .touchUpInside)
+        SpotlightCloseBtn.addTarget(self, action: #selector(creativeAuraFlow(_:)), for: .touchUpInside)
+        
+        // 自动布局约束 (完全还原 XIB 约束)
+        NSLayoutConstraint.activate([
+            // 关闭按钮约束 (OKu-YD-p9G)
+            SpotlightCloseBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            SpotlightCloseBtn.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -15),
+            SpotlightCloseBtn.widthAnchor.constraint(equalToConstant: 50),
+            SpotlightCloseBtn.heightAnchor.constraint(equalToConstant: 36),
+            
+            // 执行按钮约束 (LTD-X2-H10)
+            SpotlightPerformBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            SpotlightPerformBtn.bottomAnchor.constraint(equalTo: SpotlightCloseBtn.topAnchor, constant: -148),
+            SpotlightPerformBtn.widthAnchor.constraint(equalToConstant: 90),
+            SpotlightPerformBtn.heightAnchor.constraint(equalToConstant: 90),
+            
+            // 创意按钮约束 (8Ec-CL-boD)
+            SpotlightCreativeBtn.centerXAnchor.constraint(equalTo: SpotlightPerformBtn.centerXAnchor),
+            SpotlightCreativeBtn.bottomAnchor.constraint(equalTo: SpotlightPerformBtn.topAnchor, constant: -66),
+            SpotlightCreativeBtn.widthAnchor.constraint(equalToConstant: 90),
+            SpotlightCreativeBtn.heightAnchor.constraint(equalToConstant: 90)
+        ])
+    }
 
-    @IBAction func creativeEnergy(_ sender: UIButton) {
+    // MARK: - Actions
+    
+    @objc func creativeEnergy(_ sender: UIButton) {
         urbanExpressionFlow(stageWave: AArtPerception.openStage)
     }
     
-    
-    @IBAction func performEnergy(_ sender: UIButton) {
+    @objc func performEnergy(_ sender: UIButton) {
         urbanExpressionFlow(stageWave: AArtPerception.streetEnergy)
     }
     
-    
-    @IBAction func creativeAuraFlow(_ sender: UIButton) {
+    @objc func creativeAuraFlow(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
-    
 }
+
 
 enum AArtPerception: String {
     case performMood = "plalgeeesx/yCfrkecattmekRsoqocmp/miynudyefxd?"
