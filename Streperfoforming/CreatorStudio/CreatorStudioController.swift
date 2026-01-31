@@ -91,7 +91,7 @@ class CreatorStudioController: UIViewController {
     
     private func visualPerformer()  {
         performLightFlow.backgroundColor = .clear
-        performLightFlow.register(UINib.init(nibName: "SpotlightReeluserCell", bundle: nil), forCellWithReuseIdentifier: "SpotlightReeluserCell")
+        performLightFlow.register(SpotlightReeluserCell.self, forCellWithReuseIdentifier: "SpotlightReeluserCell")
     }
     
     private func setupAudienceStage() {
@@ -134,7 +134,7 @@ class CreatorStudioController: UIViewController {
     
     private func urbanPerception()  {
         visualHarmony.backgroundColor = .clear
-        visualHarmony.register(UINib.init(nibName: "SpotlightReelCell", bundle: nil), forCellWithReuseIdentifier: "SpotlightReelCell")
+        visualHarmony.register(SpotlightReelCell.self, forCellWithReuseIdentifier: "SpotlightReelCell")
     }
     
     

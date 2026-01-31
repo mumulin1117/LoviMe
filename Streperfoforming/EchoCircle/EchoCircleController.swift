@@ -110,7 +110,7 @@ class EchoCircleController: UIViewController {
     
     private func visualPerformer()  {
         visualHarmony.backgroundColor = .clear
-        visualHarmony.register(UINib.init(nibName: "EchoCircleCell", bundle: nil), forCellWithReuseIdentifier: "EchoCircleCell")
+        visualHarmony.register(EchoCircleCell.self, forCellWithReuseIdentifier: "EchoCircleCell")
     }
     
     @IBOutlet weak var indidavereshing: UIView!

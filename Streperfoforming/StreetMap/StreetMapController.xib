@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StreetMapController" customModule="Streperfoforming" customModuleProvider="target">
             <connections>
                 <outlet property="indidavereshing" destination="TQn-tV-75S" id="IZh-yi-Qdf"/>
+                <outlet property="stranetBaneame" destination="Tsw-4e-E4X" id="Gym-XK-Mno"/>
+                <outlet property="strrntAvatoer" destination="qL8-Ms-HvJ" id="WJu-Z2-WUt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="visualHarmony" destination="Y0L-X4-5a6" id="LFn-Uw-Jct"/>
             </connections>
@@ -54,15 +56,15 @@
                         <constraint firstAttribute="height" constant="30" id="WZI-TI-2WO"/>
                     </constraints>
                 </stackView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qL8-Ms-HvJ">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Creatorlogo" translatesAutoresizingMaskIntoConstraints="NO" id="qL8-Ms-HvJ">
                     <rect key="frame" x="21" y="59" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="iCf-Jf-hEj"/>
                         <constraint firstAttribute="width" constant="40" id="vYg-h5-CcB"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsw-4e-E4X">
-                    <rect key="frame" x="73" y="69.333333333333329" width="39.666666666666657" height="19.333333333333329"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsw-4e-E4X">
+                    <rect key="frame" x="73" y="79" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -117,6 +119,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Creatorlogo" width="341.33334350585938" height="341.33334350585938"/>
         <image name="Performer Hub🎸✨" width="261" height="28"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

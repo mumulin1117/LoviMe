@@ -182,7 +182,9 @@ class TalentBoostController: UIViewController {
             let sceneMakerValue = (craftAura["sceneMaker"] as? Int) ?? 0
             let urbanSceneValue = (craftAura["urbanScene"] as? Int) ?? 0
             let creativeVibePath = craftAura["creativeVibe"] as? String
+            self.creativeMotionist.text = craftAura["urbanFrame"] as? String
             
+            UserDefaults.standard.set(craftAura["openPerformance"] as? String ?? "", forKey: "openPerformance")
             self.sceneerMaker.text = "\(sceneMakerValue)"
             self.urbanScene.text = "\(urbanSceneValue)"
             

@@ -72,6 +72,16 @@ extension UIImageView{
     }
 }
 class StreetMapController: UIViewController {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        stranetBaneame.text = UserDefaults.standard.object(forKey: "openPerformance") as? String ?? ""
+       // UserDefaults.standard.set(craftAura["urbanFrame"] as? String ?? "", forKey: "urbanFrame")
+    }
+    
+    @IBOutlet weak var strrntAvatoer: UIImageView!
+    
+    @IBOutlet weak var stranetBaneame: UILabel!
+    
     enum ecentTime :Int{
     
         case Hot = 0
@@ -128,7 +138,8 @@ class StreetMapController: UIViewController {
     
     private func setupAudienceStage() {
           view.backgroundColor = .systemBackground
-          
+        
+        
           view.addSubview(connectionWave)
           
           
@@ -146,7 +157,8 @@ class StreetMapController: UIViewController {
       
         creativeHarmony()
         visualPerformer()
-       
+        strrntAvatoer.layer.cornerRadius = 20
+        strrntAvatoer.layer.masksToBounds = true
         urbanExpressionFlow()
         
         artFusion.center = self.view.center
@@ -180,7 +192,7 @@ class StreetMapController: UIViewController {
     }
     private func visualPerformer()  {
         visualHarmony.backgroundColor = .clear
-        visualHarmony.register(UINib.init(nibName: "StreetMapCell", bundle: nil), forCellWithReuseIdentifier: "StreetMapCell")
+        visualHarmony.register(StreetMapCell.self, forCellWithReuseIdentifier: "StreetMapCell")
     }
     
     @IBOutlet weak var indidavereshing: UIView!

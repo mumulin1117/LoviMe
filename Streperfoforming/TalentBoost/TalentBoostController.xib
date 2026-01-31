@@ -132,8 +132,8 @@
                         <constraint firstAttribute="height" constant="58" id="wIe-yj-amg"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cke-Vs-Ko3">
-                    <rect key="frame" x="176.66666666666666" y="224" width="40" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cke-Vs-Ko3">
+                    <rect key="frame" x="196.66666666666666" y="224" width="0.0" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="joj-r4-WTF"/>
                     </constraints>
