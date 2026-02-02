@@ -7,5 +7,9 @@ target 'Streperfoforming' do
 
   # Pods for Streperfoforming
 pod 'IQKeyboardManager'
+pod 'Adjust', '~> 5.1.1'
+  
+  
+pod 'FBSDKCoreKit'
 pod 'SwiftyStoreKit'
 end
