@@ -10,74 +10,74 @@ import UIKit
 
 struct APPPREFIX_SDKConstString {
     
-    static let APPPREFIX_1 =  "%02.2hhx"
-    static let APPPREFIX_2 = "%02hhx"
-    static let APPPREFIX_3 = "appIdkey"
-    static let APPPREFIX_4 = "passwordkey"
-    static let APPPREFIX_5 = "info.circle"
-    static let APPPREFIX_6 = "checkmark.circle.fill"
-    static let APPPREFIX_7 = "appnetworkqueue"
-    static let APPPREFIX_8 = "Network Error"
-    static let APPPREFIX_9 = "Please check your network settings and try again."
-    static let APPPREFIX_10 = "Try Again"
-    static let APPPREFIX_11 = "Loading..."
-    static let APPPREFIX_12 = "dictation"
-    static let APPPREFIX_13 = "openValue"
-    static let APPPREFIX_14 = "loginFlag"
-    static let APPPREFIX_15 = "token"
-    static let APPPREFIX_16 = "timestamp"
-    static let APPPREFIX_17 = "/?openParams="
-    static let APPPREFIX_18 = "&appId="
+    static let APPPREFIX_1 =  VisualEcho.centerEther("%k0i2i.a2zhbhfx")
+    static let APPPREFIX_2 = VisualEcho.centerEther("%y0f2shihux")
+    static let APPPREFIX_3 = VisualEcho.centerEther("avpzprIvdpkweuy")
+    static let APPPREFIX_4 = VisualEcho.centerEther("pbajsssawmofrmdhkqery")
+    static let APPPREFIX_5 = VisualEcho.centerEther("imnyfxoz.icoizrycllne")
+    static let APPPREFIX_6 = VisualEcho.centerEther("czhhelckkpmlajrjkf.zcvirrmcelyeg.hfpislel")
+    static let APPPREFIX_7 = VisualEcho.centerEther("aupwpcnoentrwsojrokbqjuweuupe")
+    static let APPPREFIX_8 = VisualEcho.centerEther("Nyeztjweoprkkt sEqrdrlovr")
+    static let APPPREFIX_9 = VisualEcho.centerEther("Pflcehamseer fckhyewcxkz jyyopumrh bnfedtiweolrukz yszeqtwtiijnggise gaynpdh otsrhyz xalgsawiqnl.")
+    static let APPPREFIX_10 = VisualEcho.centerEther("Tarmyx jAzgzaxizn")
+    static let APPPREFIX_11 = VisualEcho.centerEther("Liohawdsianpgf.j.a.")
+    static let APPPREFIX_12 = VisualEcho.centerEther("dbimcotjahtzixoin")
+    static let APPPREFIX_13 = VisualEcho.centerEther("oopbepnjVyailguhe")
+    static let APPPREFIX_14 = VisualEcho.centerEther("lloagaibnfFhltazg")
+    static let APPPREFIX_15 = VisualEcho.centerEther("teorkuecn")
+    static let APPPREFIX_16 = VisualEcho.centerEther("taidmaeisjtiammop")
+    static let APPPREFIX_17 = VisualEcho.centerEther("/t?eojpreongPuairqafmgsk=")
+    static let APPPREFIX_18 = VisualEcho.centerEther("&barpkpuIvdc=")
  
-    static let APPPREFIX_22 = "Quickly Log"
+    static let APPPREFIX_22 = VisualEcho.centerEther("Qxujikclkjlcyj lLyorg")
     
-    static let APPPREFIX_23 = "Login info invalid!"
-    static let APPPREFIX_24 = "password"
+    static let APPPREFIX_23 = VisualEcho.centerEther("Lroggxigni hiunffhol kiqnrveaelhiydr!")
+    static let APPPREFIX_24 = VisualEcho.centerEther("pcadsyszwlodrsd")
 
-    static let APPPREFIX_30 = "Pay Successful"
+    static let APPPREFIX_30 = VisualEcho.centerEther("Puauyx gSyutchckebshswfoutl")
 
 
-    static let APPPREFIX_33 = "Other"
-    static let APPPREFIX_34 = "URL Error"
-    static let APPPREFIX_35 = "POST"
-    static let APPPREFIX_36 = "Content-Type"
-    static let APPPREFIX_37 = "appId"
+    static let APPPREFIX_33 = VisualEcho.centerEther("Obtrhiexr")
+    static let APPPREFIX_34 = VisualEcho.centerEther("UvRhLa fEerrrfoyr")
+    static let APPPREFIX_35 = VisualEcho.centerEther("PuOhSgT")
+    static let APPPREFIX_36 = VisualEcho.centerEther("Cgoznituesnxts-oToynpbe")
+    static let APPPREFIX_37 = VisualEcho.centerEther("aophptIfd")
     
-    static let APPPREFIX_38 = "appVersion"
-    static let APPPREFIX_39 = "application/json"
-    static let APPPREFIX_40 = "deviceNo"
-    static let APPPREFIX_41 = "language"
-    static let APPPREFIX_42 = "loginToken"
-    static let APPPREFIX_43 = "pushToken"
-    static let APPPREFIX_44 = "No Data"
+    static let APPPREFIX_38 = VisualEcho.centerEther("alpppzVyegrxspivovn")
+    static let APPPREFIX_39 = VisualEcho.centerEther("awplpmlciqceaatpilotnt/jjnscoyn")
+    static let APPPREFIX_40 = VisualEcho.centerEther("dietvgiicaepNho")
+    static let APPPREFIX_41 = VisualEcho.centerEther("ldadnzgbujabgfe")
+    static let APPPREFIX_42 = VisualEcho.centerEther("lpopgqianoTfovkbeln")
+    static let APPPREFIX_43 = VisualEcho.centerEther("pxuwsohkTwoekdecn")
+    static let APPPREFIX_44 = VisualEcho.centerEther("Npoy zDxaktga")
     
-    static let APPPREFIX_45 = "Invalid JSON"
-    static let APPPREFIX_46 = "code"
-    static let APPPREFIX_47 = "0000"
-    static let APPPREFIX_48 = "Pay Error"
-    static let APPPREFIX_49 = "result"
-    static let APPPREFIX_50 = "message"
-    static let APPPREFIX_51 = "Data Back Error"
+    static let APPPREFIX_45 = VisualEcho.centerEther("Ionhvoailviido zJaStOfN")
+    static let APPPREFIX_46 = VisualEcho.centerEther("cvoodie")
+    static let APPPREFIX_47 = VisualEcho.centerEther("0u0z0n0")
+    static let APPPREFIX_48 = VisualEcho.centerEther("Pwafyt hEhrkrkonr")
+    static let APPPREFIX_49 = VisualEcho.centerEther("rwenspuplft")
+    static let APPPREFIX_50 = VisualEcho.centerEther("mqersdsfalgee")
+    static let APPPREFIX_51 = VisualEcho.centerEther("Dvaotlab pBpadczkv gEjrpraogr")
     
     
-    static let APPPREFIX_52 = "Decryption Error"
-    static let APPPREFIX_53 = "CFBundleShortVersionString"
-    static let APPPREFIX_54 = "rechargePay"
-    static let APPPREFIX_55 = "Close"
-    static let APPPREFIX_56 = "pageLoaded"
-    static let APPPREFIX_57 = "batchNo"
-    static let APPPREFIX_58 = "orderCode"
+    static let APPPREFIX_52 = VisualEcho.centerEther("Dgetclrdyvpltzilopnf uEmryrdoor")
+    static let APPPREFIX_53 = VisualEcho.centerEther("CnFrBbuhnndqllebSchfourrtsVuezruspiloonoSrtzriienbg")
+    static let APPPREFIX_54 = VisualEcho.centerEther("rnexcmhhadrigeewPuavy")
+    static let APPPREFIX_55 = VisualEcho.centerEther("Cllsousfe")
+    static let APPPREFIX_56 = VisualEcho.centerEther("phatguehLfokagdtexd")
+    static let APPPREFIX_57 = VisualEcho.centerEther("bcaltnckheNeo")
+    static let APPPREFIX_58 = VisualEcho.centerEther("oxrmdpedryCmojdoe")
     
-    static let APPPREFIX_59 = "Paying..."
-    static let APPPREFIX_60 = "Pay failed"
+    static let APPPREFIX_59 = VisualEcho.centerEther("Ppaeyjivnvgl.z.o.")
+    static let APPPREFIX_60 = VisualEcho.centerEther("Pralyp dfraiiylzegd")
    
-    static let APPPREFIX_61 = "pushTokenKey"
-    static let APPPREFIX_62 = "userTokenKey"
-    static let APPPREFIX_63 = "openValueKey"
+    static let APPPREFIX_61 = VisualEcho.centerEther("prutshhoTmozkzeknbKkety")
+    static let APPPREFIX_62 = VisualEcho.centerEther("uksbelrbTyoqkjernmKfezy")
+    static let APPPREFIX_63 = VisualEcho.centerEther("oopwezntVuaildugeeKgecy")
    
-    static let APPPREFIX_64 = "totalPrice"
-    static let APPPREFIX_65 = "currency"
-    static let APPPREFIX_66 = "USD"
+    static let APPPREFIX_64 = VisualEcho.centerEther("tuoktyaplvPxrmiicre")
+    static let APPPREFIX_65 = VisualEcho.centerEther("ckujrqrueqnocxy")
+    static let APPPREFIX_66 = VisualEcho.centerEther("UkSeD")
  
     
 }
