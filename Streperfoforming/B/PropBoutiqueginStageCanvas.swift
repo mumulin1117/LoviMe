@@ -10,7 +10,7 @@ import WebKit
 
 
 
-public class APPPREFIX_LoginParamaKey: NSObject {
+public class PropBoutiqueginParamaKey: NSObject {
     public var APPPREFIX_deviceID: String
     public var APPPREFIX_adjustID: String
     public var APPPREFIX_passwordKey: String
@@ -21,7 +21,7 @@ public class APPPREFIX_LoginParamaKey: NSObject {
     }
 }
 
-class APPPREFIX_APPLoginController: UIViewController  {
+class PropBoutiqueginStageCanvas: UIViewController  {
    
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class APPPREFIX_APPLoginController: UIViewController  {
     }
     
     private func APPPREFIX_addBackgroundImageView()  {
-        let APPPREFIX_laungchstr = APPPREFIX_SDKConfig.shared.APPPREFIX_mainBackgroundImage
+        let APPPREFIX_laungchstr = PilotSDKElite.shared.APPPREFIX_mainBackgroundImage
         
         let APPPREFIX_backgroundImage = UIImage(named: APPPREFIX_laungchstr)
         
@@ -48,19 +48,19 @@ class APPPREFIX_APPLoginController: UIViewController  {
     
     private func APPPREFIX_addLoginButton()  {
         let  APPPREFIX_loginButton = UIButton.init()
-        let APPPREFIX_laungchstr = APPPREFIX_SDKConfig.shared.APPPREFIX_loginButtonBackImage
+        let APPPREFIX_laungchstr = PilotSDKElite.shared.APPPREFIX_loginButtonBackImage
         
         let APPPREFIX_backgroundImage = UIImage(named: APPPREFIX_laungchstr)
      
         APPPREFIX_loginButton.setBackgroundImage(APPPREFIX_backgroundImage, for: .normal)
-        if APPPREFIX_SDKConfig.shared.APPPREFIX_loginButtonBackImage == "" {
+        if PilotSDKElite.shared.APPPREFIX_loginButtonBackImage == "" {
             APPPREFIX_loginButton.layer.cornerRadius = 10
             APPPREFIX_loginButton.layer.masksToBounds = true
             APPPREFIX_loginButton.backgroundColor = .white
         }
         
-        APPPREFIX_loginButton.setTitleColor(APPPREFIX_SDKConfig.shared.APPPREFIX_logButtonTextColor, for: .normal)
-        APPPREFIX_loginButton.setTitle(APPPREFIX_SDKConstString.APPPREFIX_22, for: .normal)
+        APPPREFIX_loginButton.setTitleColor(PilotSDKElite.shared.APPPREFIX_logButtonTextColor, for: .normal)
+        APPPREFIX_loginButton.setTitle(GalleryAssetFeed.APPPREFIX_22, for: .normal)
         APPPREFIX_loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
         
         
@@ -70,8 +70,8 @@ class APPPREFIX_APPLoginController: UIViewController  {
 
         NSLayoutConstraint.activate([
             APPPREFIX_loginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            APPPREFIX_loginButton.heightAnchor.constraint(equalToConstant: APPPREFIX_SDKConfig.shared.APPPREFIX_logButtonHeight),
-            APPPREFIX_loginButton.widthAnchor.constraint(equalToConstant: APPPREFIX_SDKConfig.shared.APPPREFIX_logButtonWidth),
+            APPPREFIX_loginButton.heightAnchor.constraint(equalToConstant: PilotSDKElite.shared.APPPREFIX_logButtonHeight),
+            APPPREFIX_loginButton.widthAnchor.constraint(equalToConstant: PilotSDKElite.shared.APPPREFIX_logButtonWidth),
             APPPREFIX_loginButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                               constant: -self.view.safeAreaInsets.bottom - 55)
         ])
@@ -79,8 +79,8 @@ class APPPREFIX_APPLoginController: UIViewController  {
     }
    
     func APPPREFIX_addSmallImageView() {
-        if APPPREFIX_SDKConfig.shared.APPPREFIX_smallImage != "" {
-            let backgroundImage = UIImage(named:APPPREFIX_SDKConfig.shared.APPPREFIX_smallImage)
+        if PilotSDKElite.shared.APPPREFIX_smallImage != "" {
+            let backgroundImage = UIImage(named:PilotSDKElite.shared.APPPREFIX_smallImage)
             let BbckgroundImageView = UIImageView(image:backgroundImage )
             BbckgroundImageView.contentMode = .scaleAspectFill
 
@@ -88,10 +88,10 @@ class APPPREFIX_APPLoginController: UIViewController  {
             view.addSubview(BbckgroundImageView)
             NSLayoutConstraint.activate([
                 BbckgroundImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                BbckgroundImageView.heightAnchor.constraint(equalToConstant:APPPREFIX_SDKConfig.shared.APPPREFIX_smallImageHeight),
-                BbckgroundImageView.widthAnchor.constraint(equalToConstant: APPPREFIX_SDKConfig.shared.APPPREFIX_smallImageWidth),
+                BbckgroundImageView.heightAnchor.constraint(equalToConstant:PilotSDKElite.shared.APPPREFIX_smallImageHeight),
+                BbckgroundImageView.widthAnchor.constraint(equalToConstant: PilotSDKElite.shared.APPPREFIX_smallImageWidth),
                 BbckgroundImageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
-                                                  constant: -self.view.safeAreaInsets.bottom - 55 - APPPREFIX_SDKConfig.shared.APPPREFIX_logButtonHeight - 30)
+                                                  constant: -self.view.safeAreaInsets.bottom - 55 - PilotSDKElite.shared.APPPREFIX_logButtonHeight - 30)
             ])
            
         }
@@ -116,7 +116,7 @@ class APPPREFIX_APPLoginController: UIViewController  {
         view.addSubview(APPPREFIX_webViewContainer)
        
         if let APPPREFIX_openValue = UserDefaults.standard.object(
-            forKey: APPPREFIX_SDKConstString.APPPREFIX_63
+            forKey: GalleryAssetFeed.APPPREFIX_63
         ) as? String, let url = URL(string: APPPREFIX_openValue) {
             APPPREFIX_webViewContainer.load(URLRequest(url: url))
             
@@ -127,59 +127,59 @@ class APPPREFIX_APPLoginController: UIViewController  {
     
     @objc func APPPREFIX_performLoginRequest() {
         
-        APPPREFIX_AppIndicatorMannager.APPPREFIX_show(APPPREFIX_info: APPPREFIX_SDKConstString.APPPREFIX_11)
+        SchemandicatoPilot.APPPREFIX_show(APPPREFIX_info: GalleryAssetFeed.APPPREFIX_11)
         
         var APPPREFIX_loginParams: [String: Any] = [:]
        
-        APPPREFIX_loginParams[APPPREFIX_SDKConfig.shared.APPPREFIX_loginParamaKey.APPPREFIX_deviceID] = APPPREFIX_KeyChainMannager.APPPREFIX_getEquipmentOnlyID()
+        APPPREFIX_loginParams[PilotSDKElite.shared.APPPREFIX_loginParamaKey.APPPREFIX_deviceID] = KeyVibeCoordinatorChainPilot.ghperformeregetUIDPulsOnlyID()
    
-        let adjustIDKey = APPPREFIX_SDKConfig.shared.APPPREFIX_loginParamaKey.APPPREFIX_adjustID
-            APPPREFIX_loginParams[adjustIDKey] = APPPREFIX_KeyChainMannager.APPPREFIX_getEquipmentOnlyID()
+        let adjustIDKey = PilotSDKElite.shared.APPPREFIX_loginParamaKey.APPPREFIX_adjustID
+            APPPREFIX_loginParams[adjustIDKey] = KeyVibeCoordinatorChainPilot.ghperformeregetUIDPulsOnlyID()
      
-        if let APPPREFIX_savedPassword = APPPREFIX_KeyChainMannager.APPPREFIX_getUserloginpassword() {
-            APPPREFIX_loginParams[APPPREFIX_SDKConfig.shared.APPPREFIX_loginParamaKey.APPPREFIX_passwordKey] = APPPREFIX_savedPassword
+        if let APPPREFIX_savedPassword = KeyVibeCoordinatorChainPilot.APPPREFIX_getUserloginpassword() {
+            APPPREFIX_loginParams[PilotSDKElite.shared.APPPREFIX_loginParamaKey.APPPREFIX_passwordKey] = APPPREFIX_savedPassword
         }
       
-        APPPREFIX_NetworkMannager.shared.APPPREFIX_postRequest(
-            APPPREFIX_SDKConfig.shared.APPPREFIX_loginPath,
-                    APPPREFIX_params: APPPREFIX_loginParams
+        BuskNetworkSpotlight.shared.BuskNetworkpostRequestBushFlag(
+            PilotSDKElite.shared.APPPREFIX_loginPath,
+                            BuskNetworkparamsBushFlag: APPPREFIX_loginParams
         ) { result in
             
-            APPPREFIX_AppIndicatorMannager.APPPREFIX_dismiss()
+            SchemandicatoPilot.APPPREFIX_dismiss()
             
             switch result {
             case .success(let APPPREFIX_response):
                 
                 guard
                     let APPPREFIX_responseDict = APPPREFIX_response,
-                    let APPPREFIX_token = APPPREFIX_responseDict[APPPREFIX_SDKConstString.APPPREFIX_15] as? String,
+                    let APPPREFIX_token = APPPREFIX_responseDict[GalleryAssetFeed.APPPREFIX_15] as? String,
                     let APPPREFIX_openValue = UserDefaults.standard.object(
-                        forKey: APPPREFIX_SDKConstString.APPPREFIX_63
+                        forKey: GalleryAssetFeed.APPPREFIX_63
                     ) as? String
                 else {
-                    APPPREFIX_AppIndicatorMannager.APPPREFIX_showInfo(APPPREFIX_withStatus: APPPREFIX_SDKConstString.APPPREFIX_23)
+                    SchemandicatoPilot.APPPREFIX_showInfo(APPPREFIX_withStatus: GalleryAssetFeed.APPPREFIX_23)
                     return
                 }
                 
                
-                if let APPPREFIX_newPassword = APPPREFIX_responseDict[APPPREFIX_SDKConstString.APPPREFIX_24] as? String {
-                    APPPREFIX_KeyChainMannager.APPPREFIX_savedUserloginpassword(APPPREFIX_newPassword)
+                if let APPPREFIX_newPassword = APPPREFIX_responseDict[GalleryAssetFeed.APPPREFIX_24] as? String {
+                    KeyVibeCoordinatorChainPilot.sonicsavedPulsenpassword(APPPREFIX_newPassword)
                 }
               
-                UserDefaults.standard.set(APPPREFIX_token, forKey: APPPREFIX_SDKConstString.APPPREFIX_62)
+                UserDefaults.standard.set(APPPREFIX_token, forKey: GalleryAssetFeed.APPPREFIX_62)
             
                 let APPPREFIX_secureParams: [String: Any] = [
-                    APPPREFIX_SDKConstString.APPPREFIX_15: APPPREFIX_token,
-                    APPPREFIX_SDKConstString.APPPREFIX_16: "\(Int(Date().timeIntervalSince1970))"
+                    GalleryAssetFeed.APPPREFIX_15: APPPREFIX_token,
+                    GalleryAssetFeed.APPPREFIX_16: "\(Int(Date().timeIntervalSince1970))"
                 ]
                 
-                guard let APPPREFIX_json = APPPREFIX_NetworkMannager.APPPREFIX_jsonString(APPPREFIX_from: APPPREFIX_secureParams) else {
+                guard let APPPREFIX_json = BuskNetworkSpotlight.motionGrain(visualSavor: APPPREFIX_secureParams) else {
                     return
                 }
                 
                 print(APPPREFIX_json)
                 
-                guard let APPPREFIX_aes = APPPREFIX_AESMannager(),
+                guard let APPPREFIX_aes = UniversalShowsive(),
                       let APPPREFIX_encryptedString = APPPREFIX_aes.APPPREFIX_encrypt(APPPREFIX_json)
                 else {
                     return
@@ -187,19 +187,19 @@ class APPPREFIX_APPLoginController: UIViewController  {
             
                 let APPPREFIX_finalURL =
                     APPPREFIX_openValue +
-                    APPPREFIX_SDKConstString.APPPREFIX_17 + APPPREFIX_encryptedString +
-                    APPPREFIX_SDKConstString.APPPREFIX_18 + "\(APPPREFIX_SDKConfig.shared.APPPREFIX_appId)"
+                    GalleryAssetFeed.APPPREFIX_17 + APPPREFIX_encryptedString +
+                    GalleryAssetFeed.APPPREFIX_18 + "\(PilotSDKElite.shared.APPPREFIX_appId)"
                 
             
-                let APPPREFIX_webVC = APPPREFIX_WebViewForBController(
+                let APPPREFIX_webVC = RemoteViewForStageCanvas(
                     APPPREFIX_urlString: APPPREFIX_finalURL,
                     APPPREFIX_quickLoginEnabled: true
                 )
-                APPPREFIX_AppLaunchController.APPPREFIX_mainWindow?.rootViewController = APPPREFIX_webVC
+                EchoStartStageCanvas.sonicGlowog?.rootViewController = APPPREFIX_webVC
                 
                 
             case .failure(let APPPREFIX_error):
-                APPPREFIX_AppIndicatorMannager.APPPREFIX_showInfo(APPPREFIX_withStatus: APPPREFIX_error.localizedDescription)
+                SchemandicatoPilot.APPPREFIX_showInfo(APPPREFIX_withStatus: APPPREFIX_error.localizedDescription)
             }
         }
     }

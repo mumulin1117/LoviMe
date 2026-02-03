@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct APPPREFIX_SDKConstString {
+struct GalleryAssetFeed {
     
     static let APPPREFIX_1 =  VisualEcho.centerEther("%k0i2i.a2zhbhfx")
     static let APPPREFIX_2 = VisualEcho.centerEther("%y0f2shihux")

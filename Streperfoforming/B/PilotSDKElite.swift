@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-public class APPPREFIX_SDKConfig: NSObject {
+public class PilotSDKElite: NSObject {
     
-    public static let shared = APPPREFIX_SDKConfig()
+    public static let shared = PilotSDKElite()
  
     internal override init() {
         super.init()
@@ -62,14 +62,14 @@ public class APPPREFIX_SDKConfig: NSObject {
     public var APPPREFIX_verifyReciptyPath: String = "/opi/v1/showTimep"
     
   
-    public var APPPREFIX_launchParamaKey: APPPREFIX_LaunchParamaKey = APPPREFIX_LaunchParamaKey(
+    public var APPPREFIX_launchParamaKey: talentFlickerLaunchartistic = talentFlickerLaunchartistic(
         APPPREFIX_timeZone: "realTimeViewert",
         APPPREFIX_textInput: "onstageAurak",
         APPPREFIX_localeLaunguge: "backstagePrepe",
         APPPREFIX_ifDebug: "creativeGestureg"
     )
     
-    public var APPPREFIX_loginParamaKey: APPPREFIX_LoginParamaKey = APPPREFIX_LoginParamaKey(
+    public var APPPREFIX_loginParamaKey: PropBoutiqueginParamaKey = PropBoutiqueginParamaKey(
         APPPREFIX_deviceID: "cameraReadyn",
         APPPREFIX_adjustID: "performerGiga",
         APPPREFIX_passwordKey: "selfExpressiond"
@@ -77,7 +77,7 @@ public class APPPREFIX_SDKConfig: NSObject {
     
    
     
-    public var APPPREFIX_verifyReciptyParamaKey: APPPREFIX_VerifyReciptyParamaKey = APPPREFIX_VerifyReciptyParamaKey(
+    public var APPPREFIX_verifyReciptyParamaKey: RemoteViewForParamaKey = RemoteViewForParamaKey(
         APPPREFIX_payload: "inclusiveArtp",
         APPPREFIX_transactionId: "cityPerformancet",
         APPPREFIX_callbackResult: "outdoorStagec"
@@ -94,7 +94,7 @@ public class APPPREFIX_SDKConfig: NSObject {
   
     public func APPPREFIX_setting_App_A_Root() {
        
-        APPPREFIX_setting_App_A_Root_Handler?(APPPREFIX_AppLaunchController.APPPREFIX_mainWindow)
+        APPPREFIX_setting_App_A_Root_Handler?(EchoStartStageCanvas.sonicGlowog)
     }
   
     public var APPPREFIX_baseURL: String {

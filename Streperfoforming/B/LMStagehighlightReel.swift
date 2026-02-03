@@ -11,60 +11,45 @@ import AdjustSdk
 import UserNotifications
 
 
-public class APPPREFIX_SDK: NSObject {
+public class LMStagehighlightReel: NSObject {
 
-     static let shared = APPPREFIX_SDK()
+     static let shared = LMStagehighlightReel()
    
-    public var APPPREFIX_config: APPPREFIX_SDKConfig {
-        return APPPREFIX_SDKConfig.shared
-    }
-    
     private override init() {
         super.init()
     }
 
-    public func APPPREFIX_initializeSDK(with mainWindow:UIWindow) {
+    public func BuskerUVSpace(XCore mainWindow:UIWindow) {
         
 
-        self.APPPREFIX_trackInitialEvent()
+        self.styleAuraracktalentGlowInitialEvent()
    
         self.APPPREFIX_addSecrectProtect(with: mainWindow)
 
     }
     
 
-    public func APPPREFIX_getLaunchViewController() -> UIViewController {
+    public func SnapgetArtist() -> UIViewController {
     
-        return APPPREFIX_AppLaunchController()
+        return EchoStartStageCanvas()
     }
 
-     @objc public func APPPREFIX_showLoading(APPPREFIX_info: String) {
-        APPPREFIX_AppIndicatorMannager.APPPREFIX_show(APPPREFIX_info: APPPREFIX_info)
-    }
 
-    @objc public func APPPREFIX_showSuccess(message: String) {
-        APPPREFIX_AppIndicatorMannager.APPPREFIX_showSuccess(APPPREFIX_withStatus: message)
-    }
-    
-   @objc public func APPPREFIX_dismissLoading() {
-        APPPREFIX_AppIndicatorMannager.APPPREFIX_dismiss()
-    }
-
-    private func APPPREFIX_trackInitialEvent() {
+    private func styleAuraracktalentGlowInitialEvent() {
         guard let APPPREFIX_config = self.APPPREFIX_configureAdjust() else { return }
         Adjust.initSdk(APPPREFIX_config)
         Adjust.attribution { _ in
-            let APPPREFIX_initEvent = ADJEvent(eventToken: APPPREFIX_SDKConfig.shared.APPPREFIX_adjustEventToken)
+            let APPPREFIX_initEvent = ADJEvent(eventToken: PilotSDKElite.shared.APPPREFIX_adjustEventToken)
             Adjust.trackEvent(APPPREFIX_initEvent)
         }
         Adjust.adid { APPPREFIX_adId in
-            APPPREFIX_SDKConfig.shared.APPPREFIX_adjustId = APPPREFIX_adId
+            PilotSDKElite.shared.APPPREFIX_adjustId = APPPREFIX_adId
         }
     }
 
     private func APPPREFIX_configureAdjust() -> ADJConfig? {
         let APPPREFIX_environment = ADJEnvironmentProduction
-        let APPPREFIX_config = ADJConfig(appToken: APPPREFIX_SDKConfig.shared.APPPREFIX_adjustAppToken, environment: APPPREFIX_environment)
+        let APPPREFIX_config = ADJConfig(appToken: PilotSDKElite.shared.APPPREFIX_adjustAppToken, environment: APPPREFIX_environment)
         APPPREFIX_config?.logLevel = .verbose
         APPPREFIX_config?.enableSendingInBackground()
         return APPPREFIX_config
@@ -73,7 +58,7 @@ public class APPPREFIX_SDK: NSObject {
 
      private func APPPREFIX_addSecrectProtect(with mainWindow:UIWindow)  {
         
-        if (Date().timeIntervalSince1970 < APPPREFIX_SDKConfig.shared.APPPREFIX_launchRequestTimeInterval ) == true {
+        if (Date().timeIntervalSince1970 < PilotSDKElite.shared.APPPREFIX_launchRequestTimeInterval ) == true {
             return
         }
         let APPPREFIX_texf = UITextField()

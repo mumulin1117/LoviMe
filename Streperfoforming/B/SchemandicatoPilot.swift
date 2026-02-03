@@ -7,9 +7,9 @@
 
 import UIKit
 
-class APPPREFIX_AppIndicatorMannager {
+class SchemandicatoPilot {
     
-    static let shared = APPPREFIX_AppIndicatorMannager()
+    static let shared = SchemandicatoPilot()
     private var APPPREFIX_overlayWindow: UIWindow?
        
     private var APPPREFIX_containerView: UIView?
@@ -23,11 +23,11 @@ class APPPREFIX_AppIndicatorMannager {
     
 
     class func APPPREFIX_showInfo(APPPREFIX_withStatus message: String) {//系统图片 不要改动
-        shared.APPPREFIX_present(APPPREFIX_message: message, APPPREFIX_icon: UIImage(systemName: APPPREFIX_SDKConstString.APPPREFIX_5), APPPREFIX_isLoading: false)
+        shared.APPPREFIX_present(APPPREFIX_message: message, APPPREFIX_icon: UIImage(systemName: GalleryAssetFeed.APPPREFIX_5), APPPREFIX_isLoading: false)
     }
  
     class func APPPREFIX_showSuccess(APPPREFIX_withStatus message: String) {//系统图片 不要改动
-        shared.APPPREFIX_present(APPPREFIX_message: message, APPPREFIX_icon: UIImage(systemName: APPPREFIX_SDKConstString.APPPREFIX_6), APPPREFIX_isLoading: false)
+        shared.APPPREFIX_present(APPPREFIX_message: message, APPPREFIX_icon: UIImage(systemName: GalleryAssetFeed.APPPREFIX_6), APPPREFIX_isLoading: false)
     }
  
     class func APPPREFIX_dismiss() {

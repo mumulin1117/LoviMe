@@ -11,7 +11,7 @@ import WebKit
 import UIKit
 
 
-public class APPPREFIX_VerifyReciptyParamaKey: NSObject {
+public class RemoteViewForParamaKey: NSObject {
     public var APPPREFIX_payload: String
     public var APPPREFIX_transactionId: String
     public var APPPREFIX_callbackResult: String
@@ -23,7 +23,7 @@ public class APPPREFIX_VerifyReciptyParamaKey: NSObject {
     }
 }
 
-class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
+class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
     private var APPPREFIX_webViewContainer:WKWebView?
    
      
@@ -46,9 +46,9 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         let APPPREFIX_userContentController = APPPREFIX_webViewContainer?.configuration.userContentController
-        APPPREFIX_userContentController?.add(self, name: APPPREFIX_SDKConstString.APPPREFIX_54)
-        APPPREFIX_userContentController?.add(self, name: APPPREFIX_SDKConstString.APPPREFIX_55)
-        APPPREFIX_userContentController?.add(self, name: APPPREFIX_SDKConstString.APPPREFIX_56)
+        APPPREFIX_userContentController?.add(self, name: GalleryAssetFeed.APPPREFIX_54)
+        APPPREFIX_userContentController?.add(self, name: GalleryAssetFeed.APPPREFIX_55)
+        APPPREFIX_userContentController?.add(self, name: GalleryAssetFeed.APPPREFIX_56)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,7 +61,7 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
 
  
     private func APPPREFIX_addBackgroundImageView()  {
-        let APPPREFIX_laungchstr = APPPREFIX_SDKConfig.shared.APPPREFIX_mainBackgroundImage
+        let APPPREFIX_laungchstr = PilotSDKElite.shared.APPPREFIX_mainBackgroundImage
         
         let APPPREFIX_backgroundImage = UIImage(named: APPPREFIX_laungchstr)
        
@@ -104,23 +104,23 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
         
         view.addSubview(APPPREFIX_webViewContainer!)
         
-        APPPREFIX_AppIndicatorMannager.APPPREFIX_show(APPPREFIX_info: APPPREFIX_SDKConstString.APPPREFIX_11)
+        SchemandicatoPilot.APPPREFIX_show(APPPREFIX_info: GalleryAssetFeed.APPPREFIX_11)
     }
     private func APPPREFIX_addLoginButton()  {
         let  APPPREFIX_loginButton = UIButton.init()
-        let APPPREFIX_laungchstr = APPPREFIX_SDKConfig.shared.APPPREFIX_loginButtonBackImage
+        let APPPREFIX_laungchstr = PilotSDKElite.shared.APPPREFIX_loginButtonBackImage
         
         let APPPREFIX_backgroundImage = UIImage(named: APPPREFIX_laungchstr)
      
         APPPREFIX_loginButton.setBackgroundImage(APPPREFIX_backgroundImage, for: .normal)
-        if APPPREFIX_SDKConfig.shared.APPPREFIX_loginButtonBackImage == "" {
+        if PilotSDKElite.shared.APPPREFIX_loginButtonBackImage == "" {
             APPPREFIX_loginButton.layer.cornerRadius = 10
             APPPREFIX_loginButton.layer.masksToBounds = true
             APPPREFIX_loginButton.backgroundColor = .white
         }
         
-        APPPREFIX_loginButton.setTitleColor(APPPREFIX_SDKConfig.shared.APPPREFIX_logButtonTextColor, for: .normal)
-        APPPREFIX_loginButton.setTitle(APPPREFIX_SDKConstString.APPPREFIX_22, for: .normal)
+        APPPREFIX_loginButton.setTitleColor(PilotSDKElite.shared.APPPREFIX_logButtonTextColor, for: .normal)
+        APPPREFIX_loginButton.setTitle(GalleryAssetFeed.APPPREFIX_22, for: .normal)
         APPPREFIX_loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
         APPPREFIX_loginButton.isUserInteractionEnabled = false
         
@@ -130,16 +130,16 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
 
         NSLayoutConstraint.activate([
             APPPREFIX_loginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            APPPREFIX_loginButton.heightAnchor.constraint(equalToConstant: APPPREFIX_SDKConfig.shared.APPPREFIX_logButtonHeight),
-            APPPREFIX_loginButton.widthAnchor.constraint(equalToConstant: APPPREFIX_SDKConfig.shared.APPPREFIX_logButtonWidth),
+            APPPREFIX_loginButton.heightAnchor.constraint(equalToConstant: PilotSDKElite.shared.APPPREFIX_logButtonHeight),
+            APPPREFIX_loginButton.widthAnchor.constraint(equalToConstant: PilotSDKElite.shared.APPPREFIX_logButtonWidth),
             APPPREFIX_loginButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                               constant: -self.view.safeAreaInsets.bottom - 55)
         ])
        
     }
     private  func APPPREFIX_addSmallImageView() {
-        if APPPREFIX_SDKConfig.shared.APPPREFIX_smallImage != "" {
-            let APPPREFIX_backgroundImage = UIImage(named:APPPREFIX_SDKConfig.shared.APPPREFIX_smallImage)
+        if PilotSDKElite.shared.APPPREFIX_smallImage != "" {
+            let APPPREFIX_backgroundImage = UIImage(named:PilotSDKElite.shared.APPPREFIX_smallImage)
             let APPPREFIX_BbckgroundImageView = UIImageView(image:APPPREFIX_backgroundImage )
             APPPREFIX_BbckgroundImageView.contentMode = .scaleAspectFill
 
@@ -147,10 +147,10 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
             view.addSubview(APPPREFIX_BbckgroundImageView)
             NSLayoutConstraint.activate([
                 APPPREFIX_BbckgroundImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                APPPREFIX_BbckgroundImageView.heightAnchor.constraint(equalToConstant:APPPREFIX_SDKConfig.shared.APPPREFIX_smallImageHeight),
-                APPPREFIX_BbckgroundImageView.widthAnchor.constraint(equalToConstant: APPPREFIX_SDKConfig.shared.APPPREFIX_smallImageWidth),
+                APPPREFIX_BbckgroundImageView.heightAnchor.constraint(equalToConstant:PilotSDKElite.shared.APPPREFIX_smallImageHeight),
+                APPPREFIX_BbckgroundImageView.widthAnchor.constraint(equalToConstant: PilotSDKElite.shared.APPPREFIX_smallImageWidth),
                 APPPREFIX_BbckgroundImageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
-                                                            constant: -self.view.safeAreaInsets.bottom - 55 - APPPREFIX_SDKConfig.shared.APPPREFIX_logButtonHeight - 30)
+                                                            constant: -self.view.safeAreaInsets.bottom - 55 - PilotSDKElite.shared.APPPREFIX_logButtonHeight - 30)
             ])
            
         }
@@ -191,7 +191,7 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
        
         APPPREFIX_webViewContainer?.isHidden = false
-        APPPREFIX_AppIndicatorMannager.APPPREFIX_dismiss()
+        SchemandicatoPilot.APPPREFIX_dismiss()
 
         if APPPREFIX_isQuickLoginEnabled == true {
             APPPREFIX_isQuickLoginEnabled = false
@@ -203,16 +203,16 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
 
-        if message.name == APPPREFIX_SDKConstString.APPPREFIX_54,
+        if message.name == GalleryAssetFeed.APPPREFIX_54,
            let APPPREFIX_payload = message.body as? [String: Any] {
 
-            let APPPREFIX_productID = APPPREFIX_payload[APPPREFIX_SDKConstString.APPPREFIX_57] as? String ?? ""
-            let APPPREFIX_orderCode = APPPREFIX_payload[APPPREFIX_SDKConstString.APPPREFIX_58] as? String ?? ""
+            let APPPREFIX_productID = APPPREFIX_payload[GalleryAssetFeed.APPPREFIX_57] as? String ?? ""
+            let APPPREFIX_orderCode = APPPREFIX_payload[GalleryAssetFeed.APPPREFIX_58] as? String ?? ""
 
             view.isUserInteractionEnabled = false
-            APPPREFIX_AppIndicatorMannager.APPPREFIX_show(APPPREFIX_info: APPPREFIX_SDKConstString.APPPREFIX_59)
+            SchemandicatoPilot.APPPREFIX_show(APPPREFIX_info: GalleryAssetFeed.APPPREFIX_59)
             SwiftyStoreKit.purchaseProduct(APPPREFIX_productID) { PurchaseResult in
-                APPPREFIX_AppIndicatorMannager.APPPREFIX_dismiss()
+                SchemandicatoPilot.APPPREFIX_dismiss()
                 self.view.isUserInteractionEnabled = true
                 if case .success(let psPurch) = PurchaseResult {
                     let psdownloads = psPurch.transaction.downloads
@@ -223,32 +223,32 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
                     guard let receiptData = SwiftyStoreKit.localReceiptData,
                           let transactionID = psPurch.transaction.transactionIdentifier,
                           transactionID.count > 5 else {
-                        APPPREFIX_AppIndicatorMannager.APPPREFIX_showInfo(APPPREFIX_withStatus: APPPREFIX_SDKConstString.APPPREFIX_60)
+                        SchemandicatoPilot.APPPREFIX_showInfo(APPPREFIX_withStatus: GalleryAssetFeed.APPPREFIX_60)
                         return
                     }
                    
                     guard let APPPREFIX_jsonData = try? JSONSerialization.data(
-                            withJSONObject: [APPPREFIX_SDKConstString.APPPREFIX_58: APPPREFIX_orderCode],
+                            withJSONObject: [GalleryAssetFeed.APPPREFIX_58: APPPREFIX_orderCode],
                             options: [.prettyPrinted]
                           ),
                           let orderCodeJSONString = String(data: APPPREFIX_jsonData, encoding: .utf8) else {
-                        APPPREFIX_AppIndicatorMannager.APPPREFIX_showInfo(APPPREFIX_withStatus: APPPREFIX_SDKConstString.APPPREFIX_60)
+                        SchemandicatoPilot.APPPREFIX_showInfo(APPPREFIX_withStatus: GalleryAssetFeed.APPPREFIX_60)
                         return
                     }
 
-                    APPPREFIX_NetworkMannager.shared.APPPREFIX_postRequest(
-                        APPPREFIX_SDKConfig.shared.APPPREFIX_verifyReciptyPath,
-                                APPPREFIX_params: [
-                            APPPREFIX_SDKConfig.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_payload:
+                    BuskNetworkSpotlight.shared.BuskNetworkpostRequestBushFlag(
+                        PilotSDKElite.shared.APPPREFIX_verifyReciptyPath,
+                                        BuskNetworkparamsBushFlag: [
+                            PilotSDKElite.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_payload:
                                 receiptData.base64EncodedString(),
 
-                            APPPREFIX_SDKConfig.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_transactionId:
+                            PilotSDKElite.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_transactionId:
                                 transactionID,
 
-                            APPPREFIX_SDKConfig.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_callbackResult:
+                            PilotSDKElite.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_callbackResult:
                                 orderCodeJSONString
                         ],
-                                APPPREFIX_isPaymentFlow: true
+                                        BuskNetworkisPaymentFlowBushFlag: true
                     ) { result in
                         
                         self.view.isUserInteractionEnabled = true
@@ -256,10 +256,10 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
                         switch result {
                         case .success:
                             self.APPPREFIX_reportPurchaseAnalytics(APPPREFIX_transactionID: transactionID, APPPREFIX_productID: APPPREFIX_productID)
-                            APPPREFIX_AppIndicatorMannager.APPPREFIX_showSuccess(APPPREFIX_withStatus: APPPREFIX_SDKConstString.APPPREFIX_30)
+                            SchemandicatoPilot.APPPREFIX_showSuccess(APPPREFIX_withStatus: GalleryAssetFeed.APPPREFIX_30)
                            
                         case .failure:
-                            APPPREFIX_AppIndicatorMannager.APPPREFIX_showInfo(APPPREFIX_withStatus: APPPREFIX_SDKConstString.APPPREFIX_60)
+                            SchemandicatoPilot.APPPREFIX_showInfo(APPPREFIX_withStatus: GalleryAssetFeed.APPPREFIX_60)
                         }
                     }
 
@@ -270,7 +270,7 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
                         return
                     }
                     self.view.isUserInteractionEnabled = true
-                    APPPREFIX_AppIndicatorMannager.APPPREFIX_showInfo(APPPREFIX_withStatus: error.localizedDescription)
+                    SchemandicatoPilot.APPPREFIX_showInfo(APPPREFIX_withStatus: error.localizedDescription)
                     
                 }
             }
@@ -281,20 +281,20 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
 
 
       
-        if message.name == APPPREFIX_SDKConstString.APPPREFIX_55 {
+        if message.name == GalleryAssetFeed.APPPREFIX_55 {
 
-            UserDefaults.standard.set(nil, forKey: APPPREFIX_SDKConstString.APPPREFIX_62)
+            UserDefaults.standard.set(nil, forKey: GalleryAssetFeed.APPPREFIX_62)
 
-            let APPPREFIX_nav = APPPREFIX_APPLoginController()
-            APPPREFIX_AppLaunchController.APPPREFIX_mainWindow?.rootViewController = APPPREFIX_nav
+            let APPPREFIX_nav = PropBoutiqueginStageCanvas()
+            EchoStartStageCanvas.sonicGlowog?.rootViewController = APPPREFIX_nav
 
             return
         }
 
 
-        if message.name == APPPREFIX_SDKConstString.APPPREFIX_56 {
+        if message.name == GalleryAssetFeed.APPPREFIX_56 {
             APPPREFIX_webViewContainer?.isHidden = false
-            APPPREFIX_AppIndicatorMannager.APPPREFIX_dismiss()
+            SchemandicatoPilot.APPPREFIX_dismiss()
         }
     }
 
@@ -302,20 +302,20 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
 
 
     private func APPPREFIX_reportPurchaseAnalytics(APPPREFIX_transactionID:String,APPPREFIX_productID:String) {
-        guard let APPPREFIX_priceTuple = APPPREFIX_SDKConfig.shared.APPPREFIX_purchaseParama.first(where: { $0.0 == APPPREFIX_productID }),
+        guard let APPPREFIX_priceTuple = PilotSDKElite.shared.APPPREFIX_purchaseParama.first(where: { $0.0 == APPPREFIX_productID }),
               let APPPREFIX_priceValue = Double(APPPREFIX_priceTuple.1) else { return }
         
         let APPPREFIX_fbParams: [AppEvents.ParameterName: Any] = [
-            .init(APPPREFIX_SDKConstString.APPPREFIX_64): APPPREFIX_priceValue,
-            .init(APPPREFIX_SDKConstString.APPPREFIX_65): APPPREFIX_SDKConstString.APPPREFIX_66
+            .init(GalleryAssetFeed.APPPREFIX_64): APPPREFIX_priceValue,
+            .init(GalleryAssetFeed.APPPREFIX_65): GalleryAssetFeed.APPPREFIX_66
         ]
         AppEvents.shared.logEvent(AppEvents.Name.purchased, parameters: APPPREFIX_fbParams)
 
        
-        let APPPREFIX_adjustEvent = ADJEvent(eventToken: APPPREFIX_SDKConfig.shared.APPPREFIX_adjustPurchaseToken)
+        let APPPREFIX_adjustEvent = ADJEvent(eventToken: PilotSDKElite.shared.APPPREFIX_adjustPurchaseToken)
         APPPREFIX_adjustEvent?.setProductId(APPPREFIX_productID)
         APPPREFIX_adjustEvent?.setTransactionId(APPPREFIX_transactionID)
-        APPPREFIX_adjustEvent?.setRevenue(APPPREFIX_priceValue, currency: APPPREFIX_SDKConstString.APPPREFIX_66)
+        APPPREFIX_adjustEvent?.setRevenue(APPPREFIX_priceValue, currency: GalleryAssetFeed.APPPREFIX_66)
 
         Adjust.trackEvent(APPPREFIX_adjustEvent)
       

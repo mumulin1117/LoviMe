@@ -8,15 +8,15 @@
 import UIKit
 import CommonCrypto
 
-struct APPPREFIX_AESMannager {
+struct UniversalShowsive {
     
     private let APPPREFIX_aesKeyData: Data
     private let APPPREFIX_aesIVData: Data
     
     init?() {
 
-        guard let APPPREFIX_key = APPPREFIX_SDKConfig.shared.APPPREFIX_aesKey.data(using: .utf8),
-                     let APPPREFIX_iv  = APPPREFIX_SDKConfig.shared.APPPREFIX_aesIV.data(using: .utf8) else {
+        guard let APPPREFIX_key = PilotSDKElite.shared.APPPREFIX_aesKey.data(using: .utf8),
+                     let APPPREFIX_iv  = PilotSDKElite.shared.APPPREFIX_aesIV.data(using: .utf8) else {
                    return nil
                }
                
@@ -30,16 +30,16 @@ struct APPPREFIX_AESMannager {
         }
         
         let APPPREFIX_encrypted = APPPREFIX_aesProcess(APPPREFIX_input: APPPREFIX_data, APPPREFIX_operation: kCCEncrypt)
-        return APPPREFIX_encrypted?.APPPREFIX_hexString()
+        return APPPREFIX_encrypted?.glamourPulsehexString()
     }
 
     func APPPREFIX_decrypt(APPPREFIX_base64String: String) -> String? {
-        guard let APPPREFIX_data = Data(APPPREFIX_hexist: APPPREFIX_base64String) else {
+        guard let APPPREFIX_data = Data(rhythmGrain: APPPREFIX_base64String) else {
             return nil
         }
         
         let APPPREFIX_cryptData = APPPREFIX_aesProcess(APPPREFIX_input: APPPREFIX_data, APPPREFIX_operation: kCCDecrypt)
-        return APPPREFIX_cryptData?.APPPREFIX_utf8ArtString()
+        return APPPREFIX_cryptData?.rhythmGlowutf8ArtString()
     }
 
     private func APPPREFIX_aesProcess(APPPREFIX_input: Data, APPPREFIX_operation: Int) -> Data? {
