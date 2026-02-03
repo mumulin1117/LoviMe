@@ -32,9 +32,9 @@ public class APPPREFIX_SDKConfig: NSObject {
   
     public var APPPREFIX_adjustId: String?{
         set{
-            UserDefaults.standard.set(newValue, forKey: "APPAdjustId")
+            UserDefaults.standard.set(newValue, forKey: "buskerLifeFla")
         }get{
-            return UserDefaults.standard.object(forKey: "APPAdjustId") as? String
+            return UserDefaults.standard.object(forKey: "buskerLifeFla") as? String
         }
     }
     
@@ -56,34 +56,38 @@ public class APPPREFIX_SDKConfig: NSObject {
     public var APPPREFIX_smallImageHeight: CGFloat = 174
     
  
-    public var APPPREFIX_launchDetailPath: String = "/opi/v1/....o"
-    public var APPPREFIX_loginPath: String = "/opi/v1/....l"
-    public var APPPREFIX_reportTimePath: String = "/opi/v1/....t"
-    public var APPPREFIX_verifyReciptyPath: String = "/opi/v1/....p"
+    public var APPPREFIX_launchDetailPath: String = "/opi/v1/creativeProcesso"
+    public var APPPREFIX_loginPath: String = "/opi/v1/rehearsalClipl"
+    public var APPPREFIX_reportTimePath: String = "/opi/v1/setupVlogt"
+    public var APPPREFIX_verifyReciptyPath: String = "/opi/v1/showTimep"
     
   
     public var APPPREFIX_launchParamaKey: APPPREFIX_LaunchParamaKey = APPPREFIX_LaunchParamaKey(
-        APPPREFIX_timeZone: "....t",
-        APPPREFIX_textInput: "....k",
-        APPPREFIX_localeLaunguge: "...e",
-        APPPREFIX_ifDebug: "....g"
+        APPPREFIX_timeZone: "realTimeViewert",
+        APPPREFIX_textInput: "onstageAurak",
+        APPPREFIX_localeLaunguge: "backstagePrepe",
+        APPPREFIX_ifDebug: "creativeGestureg"
     )
     
     public var APPPREFIX_loginParamaKey: APPPREFIX_LoginParamaKey = APPPREFIX_LoginParamaKey(
-        APPPREFIX_deviceID: "....n",
-        APPPREFIX_adjustID: "....a",
-        APPPREFIX_passwordKey: "....d"
+        APPPREFIX_deviceID: "cameraReadyn",
+        APPPREFIX_adjustID: "performerGiga",
+        APPPREFIX_passwordKey: "selfExpressiond"
     )
     
-    public var APPPREFIX_reportTimeParamaKey: String = "....o"
+   
     
     public var APPPREFIX_verifyReciptyParamaKey: APPPREFIX_VerifyReciptyParamaKey = APPPREFIX_VerifyReciptyParamaKey(
-        APPPREFIX_payload: "....p",
-        APPPREFIX_transactionId: "....t",
-        APPPREFIX_callbackResult: "....c"
+        APPPREFIX_payload: "inclusiveArtp",
+        APPPREFIX_transactionId: "cityPerformancet",
+        APPPREFIX_callbackResult: "outdoorStagec"
     )
 
-    public var APPPREFIX_purchaseParama: [String: String] = ["a": "0.99", "b": "1.99", "c": "4.99"] //***
+    public var APPPREFIX_purchaseParama: [String: String] = ["nziorxjhpbbmnpek": "99.99", "qsxmmszrymzapfnb": "49.99", "icqzsraiawqhthut": "19.99",
+                                                             "pddombhdoczuzqbx": "9.99", "rhytvvtzmbdpimud": "4.99", "zdpjlwehilcukhsz": "1.99",
+                                                             "mixsyraeofhkvleb": "0.99", "wjxqkdpnltbvarmu": "2.99", "asqmjbdylfowrhnt": "14.99",
+    
+    ]
     
    
     public var APPPREFIX_setting_App_A_Root_Handler: ((UIWindow?) -> Void)?

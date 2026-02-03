@@ -28,21 +28,15 @@ struct APPPREFIX_SDKConstString {
     static let APPPREFIX_16 = "timestamp"
     static let APPPREFIX_17 = "/?openParams="
     static let APPPREFIX_18 = "&appId="
-    static let APPPREFIX_19 = "utun"
-    static let APPPREFIX_20 = "ppp"
-    static let APPPREFIX_21 = "ipsec"
+ 
     static let APPPREFIX_22 = "Quickly Log"
     
     static let APPPREFIX_23 = "Login info invalid!"
     static let APPPREFIX_24 = "password"
-    static let APPPREFIX_25 = "In-App Purchases are disabled on this device."
-    static let APPPREFIX_26 = "No valid product found."
-    static let APPPREFIX_27 = "Payment cancelled"
-    static let APPPREFIX_28 = "Transaction failed."
-    static let APPPREFIX_29 = "resource_"
+
     static let APPPREFIX_30 = "Pay Successful"
-    static let APPPREFIX_31 = "_key"
-    static let APPPREFIX_32 = "zip"
+
+
     static let APPPREFIX_33 = "Other"
     static let APPPREFIX_34 = "URL Error"
     static let APPPREFIX_35 = "POST"
@@ -84,9 +78,6 @@ struct APPPREFIX_SDKConstString {
     static let APPPREFIX_64 = "totalPrice"
     static let APPPREFIX_65 = "currency"
     static let APPPREFIX_66 = "USD"
-    static let APPPREFIX_67 = "com.app.purchase.serial"
-    static let APPPREFIX_68 = "com.app.purchase.state"
-    static let APPPREFIX_69 = "The payment is in progress, please wait for completion."
-    static let APPPREFIX_70 = "Payment pending parental approval"
+ 
     
 }
