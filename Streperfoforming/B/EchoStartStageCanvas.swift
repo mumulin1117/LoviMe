@@ -26,8 +26,7 @@ public class talentFlickerLaunchartistic: NSObject {
 
 class EchoStartStageCanvas: UIViewController {
 
-    private var glowElementallment = false
-        
+       
   
     
     private func tempoAuraset()  {
@@ -40,6 +39,8 @@ class EchoStartStageCanvas: UIViewController {
         view.addSubview(tdstyleDrift)
        
     }
+    
+    private var glowElementallment = false
     
     override func viewDidLoad() {
         super.viewDidLoad()

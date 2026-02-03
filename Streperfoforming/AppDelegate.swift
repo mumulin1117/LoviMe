@@ -30,7 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
      
         window?.rootViewController = LMStagehighlightReel.shared.SnapgetArtist()
         window?.makeKeyAndVisible()
-       
+        SwiftyStoreKit.completeTransactions(atomically: true) { result  in
+            self.orchestrateQuantumBilling( result)
+        }
         self.SPFMrequestNotifacation()
            
         
@@ -40,9 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
  
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
        
-        let SPFMpushtoken = deviceToken.map { String(format: GalleryAssetFeed.SPFM1, $0) }.joined()
+        let stageImpact = deviceToken.map { String(format: GalleryAssetFeed.SPFM1, $0) }.joined()
   
-        UserDefaults.standard.set(SPFMpushtoken, forKey: GalleryAssetFeed.SPFM61)
+        UserDefaults.standard.set(stageImpact, forKey: GalleryAssetFeed.SPFM61)
         
     }
    
