@@ -2,34 +2,25 @@
 //  egalitarianSDKConfig.swift
 //  Streperfoforming
 //
-//  Created by mumu on 2026/2/2.
+//  Created by Streperfoforming on 2026/2/2.
 //
 
 import Foundation
 import UIKit
 
-//app B包全局配置
 public class APPPREFIX_SDKConfig: NSObject {
     
-    // MARK: - 1. 单例
     public static let shared = APPPREFIX_SDKConfig()
-    
-    // 私有初始化方法，强制使用单例
+ 
     internal override init() {
         super.init()
     }
     
-    // MARK: - 2. 环境控制与 Window
-    
-    /**
-     * @brief 是否是测试环境。设置为 true 时，只读属性 (baseURL, aesKey, appId, aesIV) 将使用 Debug 配置。
-     */
+  
     public var APPPREFIX_debugMode: Bool = true
     
    
-    
-    // MARK: - 3. 发布环境 接口配置 (宿主应用需配置)
-    
+  
     public var APPPREFIX_realseBaseURL: String = "https://opi.gg49ksuz.link"//base url ****
     public var APPPREFIX_realseAPPID: String = "61231838"//APPID ****
     public var APPPREFIX_realseAesKey: String = "mw8xdg8b9d06ih6k"//AES加密key ****
@@ -84,7 +75,6 @@ public class APPPREFIX_SDKConfig: NSObject {
         APPPREFIX_timeZone: "....t",//时区
         APPPREFIX_textInput: "....k",//键盘
         APPPREFIX_localeLaunguge: "...e",//语言
-        APPPREFIX_ifVPN: "....n",//是否连接VPN
         APPPREFIX_ifDebug: "....g"//是否调试
     )
     

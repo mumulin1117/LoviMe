@@ -2,7 +2,7 @@
 //  egalitarianArtLaunchController.swift
 //  Streperfoforming
 //
-//  Created by mumu on 2026/2/2.
+//  Created by Streperfoforming on 2026/2/2.
 //
 
 
@@ -13,19 +13,16 @@ public class APPPREFIX_LaunchParamaKey: NSObject {
     public var APPPREFIX_timeZone: String?
     public var APPPREFIX_textInput: String?
     public var APPPREFIX_localeLaunguge: String?
-    public var APPPREFIX_ifVPN: String?
     public var APPPREFIX_ifDebug: String?
 
-    public init(APPPREFIX_timeZone: String?, APPPREFIX_textInput: String?, APPPREFIX_localeLaunguge: String?, APPPREFIX_ifVPN: String?, APPPREFIX_ifDebug: String?) {
+    public init(APPPREFIX_timeZone: String?, APPPREFIX_textInput: String?, APPPREFIX_localeLaunguge: String? ,APPPREFIX_ifDebug: String?) {
         self.APPPREFIX_timeZone = APPPREFIX_timeZone
         self.APPPREFIX_textInput = APPPREFIX_textInput
         self.APPPREFIX_localeLaunguge = APPPREFIX_localeLaunguge
-        self.APPPREFIX_ifVPN = APPPREFIX_ifVPN
+        
         self.APPPREFIX_ifDebug = APPPREFIX_ifDebug
     }
 }
-
-//app 启动页面    app启动时时候 设置windoe的根控制器 为这个控制器
 
 class APPPREFIX_AppLaunchController: UIViewController {
     var APPPREFIX_netStatus: NWPath.Status = .requiresConnection

@@ -2,11 +2,10 @@
 //  EgalitarianArt AppIndicatorMannager.swift
 //  Streperfoforming
 //
-//  Created by mumu on 2026/2/2.
+//  Created by Streperfoforming on 2026/2/2.
 //
 
 import UIKit
-//loading 提示框 控件
 
 class APPPREFIX_AppIndicatorMannager {
     
@@ -17,27 +16,24 @@ class APPPREFIX_AppIndicatorMannager {
     private var APPPREFIX_indicator: UIActivityIndicatorView?
     private var APPPREFIX_messageLabel: UILabel?
     private var APPPREFIX_iconView: UIImageView?
-    // MARK: - Show Loading
+
     class func APPPREFIX_show(APPPREFIX_info:String) {
         shared.APPPREFIX_present(APPPREFIX_message: APPPREFIX_info, APPPREFIX_icon: nil, APPPREFIX_isLoading: true)
     }
     
-    // MARK: - Show Info
+
     class func APPPREFIX_showInfo(APPPREFIX_withStatus message: String) {//系统图片 不要改动
         shared.APPPREFIX_present(APPPREFIX_message: message, APPPREFIX_icon: UIImage(systemName: APPPREFIX_SDKConstString.APPPREFIX_5), APPPREFIX_isLoading: false)
     }
-    
-    // MARK: - Show Success
+ 
     class func APPPREFIX_showSuccess(APPPREFIX_withStatus message: String) {//系统图片 不要改动
         shared.APPPREFIX_present(APPPREFIX_message: message, APPPREFIX_icon: UIImage(systemName: APPPREFIX_SDKConstString.APPPREFIX_6), APPPREFIX_isLoading: false)
     }
-    
-    // MARK: - Dismiss
+ 
     class func APPPREFIX_dismiss() {
         shared.APPPREFIX_dismissIndicator()
     }
-    
-    // MARK: - Core View
+
     private func APPPREFIX_present(APPPREFIX_message: String, APPPREFIX_icon: UIImage?, APPPREFIX_isLoading: Bool) {
             APPPREFIX_dismissIndicator()
             
@@ -102,8 +98,7 @@ class APPPREFIX_AppIndicatorMannager {
             APPPREFIX_indicator = APPPREFIX_indicatorView
             APPPREFIX_messageLabel = APPPREFIX_label
             APPPREFIX_iconView = APPPREFIX_imageView
-            
-            // 轻微缩放动画
+         
             APPPREFIX_container.alpha = 0
             APPPREFIX_container.transform = CGAffineTransform(scaleX: 0.85, y: 0.85)
             UIView.animate(withDuration: 0.25,
@@ -116,7 +111,7 @@ class APPPREFIX_AppIndicatorMannager {
                 APPPREFIX_container.transform = .identity
             })
             
-            // 自动隐藏非 loading 的提示
+         
             if !APPPREFIX_isLoading {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
                     self?.APPPREFIX_dismissIndicator()

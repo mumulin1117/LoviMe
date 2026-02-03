@@ -2,8 +2,9 @@
 //  egalitariaWebViewForBController.swift
 //  Streperfoforming
 //
-//  Created by mumu on 2026/2/2.
+//  Created by Streperfoforming on 2026/2/2.
 //
+import SwiftyStoreKit
 import AdjustSdk
 import FBSDKCoreKit
 import WebKit
@@ -26,8 +27,7 @@ public class APPPREFIX_VerifyReciptyParamaKey: NSObject {
 class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
     private var APPPREFIX_webViewContainer:WKWebView?
    
-    var APPPREFIX_pageLoadStartTime:TimeInterval = Date().timeIntervalSince1970
-    
+     
     private  var APPPREFIX_isQuickLoginEnabled = false
     private var APPPREFIX_initialURLString:String
     
@@ -108,7 +108,7 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
         // 4️⃣ 加载 URL 并记录时间戳
         if let APPPREFIX_url = URL(string: APPPREFIX_initialURLString) {
             APPPREFIX_webViewContainer?.load(URLRequest(url: APPPREFIX_url))
-            APPPREFIX_pageLoadStartTime = Date().timeIntervalSince1970
+           
         }
         
         view.addSubview(APPPREFIX_webViewContainer!)
@@ -209,14 +209,6 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
             APPPREFIX_isQuickLoginEnabled = false
         }
 
-        // 3️⃣ 上报页面停留时间
-        let APPPREFIX_reportURL = APPPREFIX_SDKConfig.shared.APPPREFIX_reportTimePath
-        let APPPREFIX_params: [String: Any] = [
-            APPPREFIX_SDKConfig.shared.APPPREFIX_reportTimeParamaKey:
-                "\(Int(Date().timeIntervalSince1970 * 1000 - self.APPPREFIX_pageLoadStartTime * 1000))"
-        ]
-
-        APPPREFIX_NetworkMannager.shared.APPPREFIX_postRequest(APPPREFIX_reportURL,         APPPREFIX_params: APPPREFIX_params)
     }
 
     
@@ -234,21 +226,21 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
 
             view.isUserInteractionEnabled = false
             APPPREFIX_AppIndicatorMannager.APPPREFIX_show(APPPREFIX_info: APPPREFIX_SDKConstString.APPPREFIX_59)
-
-            APPPREFIX_AppStorePurchaseMananager.shared.APPPREFIX_startPurchase(APPPREFIX_productID: APPPREFIX_productID) { result in
+            SwiftyStoreKit.purchaseProduct(APPPREFIX_productID) { PurchaseResult in
                 APPPREFIX_AppIndicatorMannager.APPPREFIX_dismiss()
                 self.view.isUserInteractionEnabled = true
-
-                switch result {
-
-                case .success:
-                    // 1. 获取本地票据 + 交易号
-                    guard let APPPREFIX_receiptData = APPPREFIX_AppStorePurchaseMananager.shared.APPPREFIX_obtainLocalReceipt(),
-                          let APPPREFIX_transactionID = APPPREFIX_AppStorePurchaseMananager.shared.APPPREFIX_transactionID else {
+                if case .success(let psPurch) = PurchaseResult {
+                    let psdownloads = psPurch.transaction.downloads
+                    
+                    if !psdownloads.isEmpty {
+                        SwiftyStoreKit.start(psdownloads)
+                    }
+                    guard let receiptData = SwiftyStoreKit.localReceiptData,
+                          let transactionID = psPurch.transaction.transactionIdentifier,
+                          transactionID.count > 5 else {
                         APPPREFIX_AppIndicatorMannager.APPPREFIX_showInfo(APPPREFIX_withStatus: APPPREFIX_SDKConstString.APPPREFIX_60)
                         return
                     }
-
                     // 2. 转 orderCode 为 JSON 字符串
                     guard let APPPREFIX_jsonData = try? JSONSerialization.data(
                             withJSONObject: [APPPREFIX_SDKConstString.APPPREFIX_58: APPPREFIX_orderCode],
@@ -264,10 +256,10 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
                         APPPREFIX_SDKConfig.shared.APPPREFIX_verifyReciptyPath,
                                 APPPREFIX_params: [
                             APPPREFIX_SDKConfig.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_payload:
-                                APPPREFIX_receiptData.base64EncodedString(),
+                                receiptData.base64EncodedString(),
 
                             APPPREFIX_SDKConfig.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_transactionId:
-                                APPPREFIX_transactionID,
+                                transactionID,
 
                             APPPREFIX_SDKConfig.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_callbackResult:
                                 orderCodeJSONString
@@ -279,7 +271,7 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
 
                         switch result {
                         case .success:
-                            self.APPPREFIX_reportPurchaseAnalytics(APPPREFIX_transactionID: APPPREFIX_transactionID, APPPREFIX_productID: APPPREFIX_productID)
+                            self.APPPREFIX_reportPurchaseAnalytics(APPPREFIX_transactionID: transactionID, APPPREFIX_productID: APPPREFIX_productID)
                             APPPREFIX_AppIndicatorMannager.APPPREFIX_showSuccess(APPPREFIX_withStatus: APPPREFIX_SDKConstString.APPPREFIX_30)
                            
                         case .failure:
@@ -287,12 +279,18 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
                         }
                     }
 
-
-                case .failure(let error):
+                }else if case .error(let error) = PurchaseResult {
+                 
+                    if error.code == .paymentCancelled {
+                        self.view.isUserInteractionEnabled = true
+                        return
+                    }
                     self.view.isUserInteractionEnabled = true
                     APPPREFIX_AppIndicatorMannager.APPPREFIX_showInfo(APPPREFIX_withStatus: error.localizedDescription)
+                    
                 }
             }
+
 
             return
         }

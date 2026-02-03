@@ -2,7 +2,7 @@
 //  universalShowsive.swift
 //  Streperfoforming
 //
-//  Created by mumu on 2026/2/2.
+//  Created by Streperfoforming on 2026/2/2.
 //
 
 import UIKit

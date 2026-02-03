@@ -2,7 +2,7 @@
 //  PerformerChronicle.swift
 //  Streperfoforming
 //
-//  Created by mumu on 2025/10/16.
+//  Created by Streperfoforming on 2025/10/16.
 //
 
 import UIKit
