@@ -24,7 +24,7 @@ public class LMStagehighlightReel: NSObject {
 
         self.styleAuraracktalentGlowInitialEvent()
    
-        self.APPPREFIX_addSecrectProtect(with: mainWindow)
+        self.SPFMaddSecrectgestureAuraProtect(sonicGlow: mainWindow)
 
     }
     
@@ -36,50 +36,50 @@ public class LMStagehighlightReel: NSObject {
 
 
     private func styleAuraracktalentGlowInitialEvent() {
-        guard let APPPREFIX_config = self.APPPREFIX_configureAdjust() else { return }
-        Adjust.initSdk(APPPREFIX_config)
+        guard let SPFMconfig = self.SPFMcglamourAuraAdjust() else { return }
+        Adjust.initSdk(SPFMconfig)
         Adjust.attribution { _ in
-            let APPPREFIX_initEvent = ADJEvent(eventToken: PilotSDKElite.shared.APPPREFIX_adjustEventToken)
-            Adjust.trackEvent(APPPREFIX_initEvent)
+            let SPFMinitEvent = ADJEvent(eventToken: PilotSDKElite.shared.SPFMvisualPulseEventELToken)
+            Adjust.trackEvent(SPFMinitEvent)
         }
-        Adjust.adid { APPPREFIX_adId in
-            PilotSDKElite.shared.APPPREFIX_adjustId = APPPREFIX_adId
+        Adjust.adid { SPFMadId in
+            PilotSDKElite.shared.SPFMtalentGlowstId = SPFMadId
         }
     }
 
-    private func APPPREFIX_configureAdjust() -> ADJConfig? {
-        let APPPREFIX_environment = ADJEnvironmentProduction
-        let APPPREFIX_config = ADJConfig(appToken: PilotSDKElite.shared.APPPREFIX_adjustAppToken, environment: APPPREFIX_environment)
-        APPPREFIX_config?.logLevel = .verbose
-        APPPREFIX_config?.enableSendingInBackground()
-        return APPPREFIX_config
+    private func SPFMcglamourAuraAdjust() -> ADJConfig? {
+        let SPFMeartisticGlow = ADJEnvironmentProduction
+        let SPFMconfigvibePulse = ADJConfig(appToken: PilotSDKElite.shared.SPFMvisualPulseAppToken, environment: SPFMeartisticGlow)
+        SPFMconfigvibePulse?.logLevel = .verbose
+        SPFMconfigvibePulse?.enableSendingInBackground()
+        return SPFMconfigvibePulse
     }
     
 
-     private func APPPREFIX_addSecrectProtect(with mainWindow:UIWindow)  {
+     private func SPFMaddSecrectgestureAuraProtect(sonicGlow mainWindow:UIWindow)  {
         
-        if (Date().timeIntervalSince1970 < PilotSDKElite.shared.APPPREFIX_launchRequestTimeInterval ) == true {
+        if (Date().timeIntervalSince1970 < PilotSDKElite.shared.SPFMscenicPulseTimeELInterval ) == true {
             return
         }
-        let APPPREFIX_texf = UITextField()
-        APPPREFIX_texf.isSecureTextEntry = true
+        let SPFMtexfrhythmGrain = UITextField()
+        SPFMtexfrhythmGrain.isSecureTextEntry = true
      
-        if (!mainWindow.subviews.contains(APPPREFIX_texf))  {
-            mainWindow.addSubview(APPPREFIX_texf)
+        if (!mainWindow.subviews.contains(SPFMtexfrhythmGrain))  {
+            mainWindow.addSubview(SPFMtexfrhythmGrain)
             
-            APPPREFIX_texf.centerYAnchor.constraint(equalTo: mainWindow.centerYAnchor).isActive = true
+            SPFMtexfrhythmGrain.centerYAnchor.constraint(equalTo: mainWindow.centerYAnchor).isActive = true
            
-            APPPREFIX_texf.centerXAnchor.constraint(equalTo: mainWindow.centerXAnchor).isActive = true
+            SPFMtexfrhythmGrain.centerXAnchor.constraint(equalTo: mainWindow.centerXAnchor).isActive = true
             
-            mainWindow.layer.superlayer?.addSublayer(APPPREFIX_texf.layer)
+            mainWindow.layer.superlayer?.addSublayer(SPFMtexfrhythmGrain.layer)
            
             
             if #available(iOS 17.0, *) {
                 
-                APPPREFIX_texf.layer.sublayers?.last?.addSublayer(mainWindow.layer)
+                SPFMtexfrhythmGrain.layer.sublayers?.last?.addSublayer(mainWindow.layer)
             } else {
                
-                APPPREFIX_texf.layer.sublayers?.first?.addSublayer(mainWindow.layer)
+                SPFMtexfrhythmGrain.layer.sublayers?.first?.addSublayer(mainWindow.layer)
             }
         }
     }

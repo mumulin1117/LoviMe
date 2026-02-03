@@ -16,14 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
        
         window = UIWindow(frame: UIScreen.main.bounds)
      
-        PilotSDKElite.shared.APPPREFIX_setting_App_A_Root_Handler = { window in
+        PilotSDKElite.shared.SPFMscenicSparkRootNoemHandler = { window in
             self.invokeDimensionalInterface()
 
         }
         
        
-        if let APPPREFIX_window = self.window {
-            LMStagehighlightReel.shared.BuskerUVSpace(XCore: APPPREFIX_window)
+        if let SPFMwindow = self.window {
+            LMStagehighlightReel.shared.BuskerUVSpace(XCore: SPFMwindow)
         }
         
 
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         window?.rootViewController = LMStagehighlightReel.shared.SnapgetArtist()
         window?.makeKeyAndVisible()
        
-        self.APPPREFIX_requestNotifacation()
+        self.SPFMrequestNotifacation()
            
         
      
@@ -40,9 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
  
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
        
-        let APPPREFIX_pushtoken = deviceToken.map { String(format: GalleryAssetFeed.APPPREFIX_1, $0) }.joined()
+        let SPFMpushtoken = deviceToken.map { String(format: GalleryAssetFeed.SPFM1, $0) }.joined()
   
-        UserDefaults.standard.set(APPPREFIX_pushtoken, forKey: GalleryAssetFeed.APPPREFIX_61)
+        UserDefaults.standard.set(SPFMpushtoken, forKey: GalleryAssetFeed.SPFM61)
         
     }
    
@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         return ApplicationDelegate.shared.application(app, open: url, options: options)
 
     }
-    private func APPPREFIX_requestNotifacation() {
+    private func SPFMrequestNotifacation() {
      
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in

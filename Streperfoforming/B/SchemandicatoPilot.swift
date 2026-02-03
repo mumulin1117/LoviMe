@@ -10,122 +10,124 @@ import UIKit
 class SchemandicatoPilot {
     
     static let shared = SchemandicatoPilot()
-    private var APPPREFIX_overlayWindow: UIWindow?
+    private var SPFMoverlayWindow: UIWindow?
        
-    private var APPPREFIX_containerView: UIView?
-    private var APPPREFIX_indicator: UIActivityIndicatorView?
-    private var APPPREFIX_messageLabel: UILabel?
-    private var APPPREFIX_iconView: UIImageView?
+    private var SPFMconmotionPoetrytainerView: UIView?
+    private var SPFMinvisualChimedicator: UIActivityIndicatorView?
+    private var SPFMmessagestyleIdentityLabel: UILabel?
+    private var SPFMiconglamourEssenceView: UIImageView?
 
-    class func APPPREFIX_show(APPPREFIX_info:String) {
-        shared.APPPREFIX_present(APPPREFIX_message: APPPREFIX_info, APPPREFIX_icon: nil, APPPREFIX_isLoading: true)
+    class func SPFMrhythmFluidshow(SPFMrhythmFluid:String) {
+        shared.SPFMpstageImpact(SPFMRange: SPFMrhythmFluid, SPFMmotionStyle: nil, SPFMisvisualRhythm: true)
     }
     
 
-    class func APPPREFIX_showInfo(APPPREFIX_withStatus message: String) {//系统图片 不要改动
-        shared.APPPREFIX_present(APPPREFIX_message: message, APPPREFIX_icon: UIImage(systemName: GalleryAssetFeed.APPPREFIX_5), APPPREFIX_isLoading: false)
+    class func SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus message: String) {
+        shared.SPFMpstageImpact(SPFMRange: message, SPFMmotionStyle: UIImage(systemName: GalleryAssetFeed.SPFM5), SPFMisvisualRhythm: false)
     }
  
-    class func APPPREFIX_showSuccess(APPPREFIX_withStatus message: String) {//系统图片 不要改动
-        shared.APPPREFIX_present(APPPREFIX_message: message, APPPREFIX_icon: UIImage(systemName: GalleryAssetFeed.APPPREFIX_6), APPPREFIX_isLoading: false)
+    class func SPFMshowvibeSpiritSuccess(SPFMwithvibeSpiritStatus message: String) {
+        shared.SPFMpstageImpact(SPFMRange: message, SPFMmotionStyle: UIImage(systemName: GalleryAssetFeed.SPFM6), SPFMisvisualRhythm: false)
     }
  
-    class func APPPREFIX_dismiss() {
-        shared.APPPREFIX_dismissIndicator()
+    class func SPFMdisartisticShadowmiss() {
+        shared.SPFMacousticLogic()
     }
 
-    private func APPPREFIX_present(APPPREFIX_message: String, APPPREFIX_icon: UIImage?, APPPREFIX_isLoading: Bool) {
-            APPPREFIX_dismissIndicator()
+    private func SPFMpstageImpact(SPFMRange: String, SPFMmotionStyle: UIImage?, SPFMisvisualRhythm: Bool) {
+            SPFMacousticLogic()
             
-            let APPPREFIX_window = UIWindow(frame: UIScreen.main.bounds)
-            APPPREFIX_window.windowLevel = .alert + 1
-            APPPREFIX_window.backgroundColor = .clear
+            let SPFMsonicVibe = UIWindow(frame: UIScreen.main.bounds)
+            SPFMsonicVibe.windowLevel = .alert + 1
+            SPFMsonicVibe.backgroundColor = .clear
             
-            let APPPREFIX_container = UIView()
-            APPPREFIX_container.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-            APPPREFIX_container.layer.cornerRadius = 14
-            APPPREFIX_container.translatesAutoresizingMaskIntoConstraints = false
+            let SPFMvibeHarmony = UIView()
+            SPFMvibeHarmony.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+            SPFMvibeHarmony.layer.cornerRadius = 14
+            SPFMvibeHarmony.translatesAutoresizingMaskIntoConstraints = false
             
-            let APPPREFIX_stack = UIStackView()
-            APPPREFIX_stack.axis = .vertical
-            APPPREFIX_stack.alignment = .center
-            APPPREFIX_stack.spacing = 12
-            APPPREFIX_stack.translatesAutoresizingMaskIntoConstraints = false
+            let SPFMstack = UIStackView()
+            SPFMstack.axis = .vertical
+            SPFMstack.alignment = .center
+            SPFMstack.spacing = 12
+            SPFMstack.translatesAutoresizingMaskIntoConstraints = false
             
-            let APPPREFIX_indicatorView = UIActivityIndicatorView(style: .large)
-            APPPREFIX_indicatorView.color = .white
-        APPPREFIX_indicatorView.stopAnimating()
-            let APPPREFIX_imageView = UIImageView(image: APPPREFIX_icon)
-            APPPREFIX_imageView.tintColor = .white
-            APPPREFIX_imageView.contentMode = .scaleAspectFit
-            APPPREFIX_imageView.translatesAutoresizingMaskIntoConstraints = false
-            APPPREFIX_imageView.widthAnchor.constraint(equalToConstant: 36).isActive = true
-            APPPREFIX_imageView.heightAnchor.constraint(equalToConstant: 36).isActive = true
+            let SPFMartisticFlow = UIActivityIndicatorView(style: .large)
+            SPFMartisticFlow.color = .white
+      
+        SPFMartisticFlow.stopAnimating()
             
-            let APPPREFIX_label = UILabel()
-            APPPREFIX_label.text = APPPREFIX_message
-            APPPREFIX_label.textColor = .white
-            APPPREFIX_label.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-            APPPREFIX_label.numberOfLines = 2
-            APPPREFIX_label.textAlignment = .center
+        let SPFMgestureLogic = UIImageView(image: SPFMmotionStyle)
+            SPFMgestureLogic.tintColor = .white
+            SPFMgestureLogic.contentMode = .scaleAspectFit
+            SPFMgestureLogic.translatesAutoresizingMaskIntoConstraints = false
+            SPFMgestureLogic.widthAnchor.constraint(equalToConstant: 36).isActive = true
+            SPFMgestureLogic.heightAnchor.constraint(equalToConstant: 36).isActive = true
             
-            if APPPREFIX_isLoading {
-                APPPREFIX_stack.addArrangedSubview(APPPREFIX_indicatorView)
-                APPPREFIX_indicatorView.startAnimating()
-            } else if let icon = APPPREFIX_icon {
-                APPPREFIX_stack.addArrangedSubview(APPPREFIX_imageView)
+            let SPFMshimmerLogic = UILabel()
+            SPFMshimmerLogic.text = SPFMRange
+            SPFMshimmerLogic.textColor = .white
+            SPFMshimmerLogic.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+            SPFMshimmerLogic.numberOfLines = 2
+            SPFMshimmerLogic.textAlignment = .center
+            
+            if SPFMisvisualRhythm {
+                SPFMstack.addArrangedSubview(SPFMartisticFlow)
+                SPFMartisticFlow.startAnimating()
+            } else if let icon = SPFMmotionStyle {
+                SPFMstack.addArrangedSubview(SPFMgestureLogic)
             }
-            APPPREFIX_stack.addArrangedSubview(APPPREFIX_label)
+            SPFMstack.addArrangedSubview(SPFMshimmerLogic)
             
-            APPPREFIX_container.addSubview(APPPREFIX_stack)
-            APPPREFIX_window.addSubview(APPPREFIX_container)
+            SPFMvibeHarmony.addSubview(SPFMstack)
+            SPFMsonicVibe.addSubview(SPFMvibeHarmony)
             
             NSLayoutConstraint.activate([
-                APPPREFIX_container.centerXAnchor.constraint(equalTo: APPPREFIX_window.centerXAnchor),
-                APPPREFIX_container.centerYAnchor.constraint(equalTo: APPPREFIX_window.centerYAnchor),
-                APPPREFIX_container.widthAnchor.constraint(lessThanOrEqualToConstant: 200),
+                SPFMvibeHarmony.centerXAnchor.constraint(equalTo: SPFMsonicVibe.centerXAnchor),
+                SPFMvibeHarmony.centerYAnchor.constraint(equalTo: SPFMsonicVibe.centerYAnchor),
+                SPFMvibeHarmony.widthAnchor.constraint(lessThanOrEqualToConstant: 200),
                 
-                APPPREFIX_stack.topAnchor.constraint(equalTo: APPPREFIX_container.topAnchor, constant: 20),
-                APPPREFIX_stack.bottomAnchor.constraint(equalTo: APPPREFIX_container.bottomAnchor, constant: -20),
-                APPPREFIX_stack.leadingAnchor.constraint(equalTo: APPPREFIX_container.leadingAnchor, constant: 16),
-                APPPREFIX_stack.trailingAnchor.constraint(equalTo: APPPREFIX_container.trailingAnchor, constant: -16),
+                SPFMstack.topAnchor.constraint(equalTo: SPFMvibeHarmony.topAnchor, constant: 20),
+                SPFMstack.bottomAnchor.constraint(equalTo: SPFMvibeHarmony.bottomAnchor, constant: -20),
+                SPFMstack.leadingAnchor.constraint(equalTo: SPFMvibeHarmony.leadingAnchor, constant: 16),
+                SPFMstack.trailingAnchor.constraint(equalTo: SPFMvibeHarmony.trailingAnchor, constant: -16),
             ])
             
-            APPPREFIX_window.makeKeyAndVisible()
+            SPFMsonicVibe.makeKeyAndVisible()
             
-            APPPREFIX_overlayWindow = APPPREFIX_window
-            APPPREFIX_containerView = APPPREFIX_container
-            APPPREFIX_indicator = APPPREFIX_indicatorView
-            APPPREFIX_messageLabel = APPPREFIX_label
-            APPPREFIX_iconView = APPPREFIX_imageView
+            SPFMoverlayWindow = SPFMsonicVibe
+            SPFMconmotionPoetrytainerView = SPFMvibeHarmony
+            SPFMinvisualChimedicator = SPFMartisticFlow
+            SPFMmessagestyleIdentityLabel = SPFMshimmerLogic
+            SPFMiconglamourEssenceView = SPFMgestureLogic
          
-            APPPREFIX_container.alpha = 0
-            APPPREFIX_container.transform = CGAffineTransform(scaleX: 0.85, y: 0.85)
+            SPFMvibeHarmony.alpha = 0
+            SPFMvibeHarmony.transform = CGAffineTransform(scaleX: 0.85, y: 0.85)
             UIView.animate(withDuration: 0.25,
                            delay: 0,
                            usingSpringWithDamping: 0.7,
                            initialSpringVelocity: 0.8,
                            options: .curveEaseOut,
                            animations: {
-                APPPREFIX_container.alpha = 1
-                APPPREFIX_container.transform = .identity
+                SPFMvibeHarmony.alpha = 1
+                SPFMvibeHarmony.transform = .identity
             })
             
          
-            if !APPPREFIX_isLoading {
+            if !SPFMisvisualRhythm {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-                    self?.APPPREFIX_dismissIndicator()
+                    self?.SPFMacousticLogic()
                 }
             }
         }
         
-        private func APPPREFIX_dismissIndicator() {
-            self.APPPREFIX_overlayWindow?.isHidden = true
-            self.APPPREFIX_overlayWindow = nil
-            self.APPPREFIX_containerView = nil
-            self.APPPREFIX_indicator?.stopAnimating()
-            self.APPPREFIX_indicator = nil
-            self.APPPREFIX_messageLabel = nil
+        private func SPFMacousticLogic() {
+            self.SPFMoverlayWindow?.isHidden = true
+            self.SPFMoverlayWindow = nil
+            self.SPFMconmotionPoetrytainerView = nil
+            self.SPFMinvisualChimedicator?.stopAnimating()
+            self.SPFMinvisualChimedicator = nil
+            self.SPFMmessagestyleIdentityLabel = nil
         }
     }
 

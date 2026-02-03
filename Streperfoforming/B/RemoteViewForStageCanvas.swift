@@ -12,28 +12,28 @@ import UIKit
 
 
 public class RemoteViewForParamaKey: NSObject {
-    public var APPPREFIX_payload: String
-    public var APPPREFIX_transactionId: String
-    public var APPPREFIX_callbackResult: String
+    public var SPFMpaygestureAuraload: String
+    public var SPFMtransacgestureAurationId: String
+    public var SPFMcallbackvibePulseResult: String
 
-    public init(APPPREFIX_payload: String, APPPREFIX_transactionId: String, APPPREFIX_callbackResult: String) {
-        self.APPPREFIX_payload = APPPREFIX_payload
-        self.APPPREFIX_transactionId = APPPREFIX_transactionId
-        self.APPPREFIX_callbackResult = APPPREFIX_callbackResult
+    public init(SPFMpayrhythmSnapload: String, SPFMtransarhythmSnapctionId: String, SPFMcallbackrhythmSnapResult: String) {
+        self.SPFMpaygestureAuraload = SPFMpayrhythmSnapload
+        self.SPFMtransacgestureAurationId = SPFMtransarhythmSnapctionId
+        self.SPFMcallbackvibePulseResult = SPFMcallbackrhythmSnapResult
     }
 }
 
 class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
-    private var APPPREFIX_webViewContainer:WKWebView?
+    private var SPFMglamourWave:WKWebView?
    
      
-    private  var APPPREFIX_isQuickLoginEnabled = false
-    private var APPPREFIX_initialURLString:String
+    private  var SPFMisrhythmFlickerEnabled = false
+    private var SPFtalentVibeString:String
     
-    init(APPPREFIX_urlString:String,APPPREFIX_quickLoginEnabled:Bool) {
-        APPPREFIX_initialURLString = APPPREFIX_urlString
+    init(SPFMurlscenicGazeString:String,SPFMquickscenicGaze:Bool) {
+        SPFtalentVibeString = SPFMurlscenicGazeString
         
-        APPPREFIX_isQuickLoginEnabled = APPPREFIX_quickLoginEnabled
+        SPFMisrhythmFlickerEnabled = SPFMquickscenicGaze
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -45,10 +45,10 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
         
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
-        let APPPREFIX_userContentController = APPPREFIX_webViewContainer?.configuration.userContentController
-        APPPREFIX_userContentController?.add(self, name: GalleryAssetFeed.APPPREFIX_54)
-        APPPREFIX_userContentController?.add(self, name: GalleryAssetFeed.APPPREFIX_55)
-        APPPREFIX_userContentController?.add(self, name: GalleryAssetFeed.APPPREFIX_56)
+        let SPFMusersonicBeam = SPFMglamourWave?.configuration.userContentController
+        SPFMusersonicBeam?.add(self, name: GalleryAssetFeed.SPFM54)
+        SPFMusersonicBeam?.add(self, name: GalleryAssetFeed.SPFM55)
+        SPFMusersonicBeam?.add(self, name: GalleryAssetFeed.SPFM56)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -56,101 +56,101 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
         
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
-        APPPREFIX_webViewContainer?.configuration.userContentController.removeAllScriptMessageHandlers()
+        SPFMglamourWave?.configuration.userContentController.removeAllScriptMessageHandlers()
     }
 
  
-    private func APPPREFIX_addBackgroundImageView()  {
-        let APPPREFIX_laungchstr = PilotSDKElite.shared.APPPREFIX_mainBackgroundImage
+    private func SPFMaddgestureBloom()  {
+        let SPFMvibeFlowstr = PilotSDKElite.shared.SPFMmaintalentAura
         
-        let APPPREFIX_backgroundImage = UIImage(named: APPPREFIX_laungchstr)
+        let SPFMbartisticGlintmage = UIImage(named: SPFMvibeFlowstr)
        
-        let APPPREFIX_BbckgroundImageView = UIImageView(image:APPPREFIX_backgroundImage )
-        APPPREFIX_BbckgroundImageView.contentMode = .scaleAspectFill
-        APPPREFIX_BbckgroundImageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        view.addSubview(APPPREFIX_BbckgroundImageView)
+        let SPFMBbglamourDriftView = UIImageView(image:SPFMbartisticGlintmage )
+        SPFMBbglamourDriftView.contentMode = .scaleAspectFill
+        SPFMBbglamourDriftView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        view.addSubview(SPFMBbglamourDriftView)
        
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        APPPREFIX_addBackgroundImageView()
+        SPFMaddgestureBloom()
         
-        if APPPREFIX_isQuickLoginEnabled == true {
-            APPPREFIX_addLoginButton()
-            APPPREFIX_addSmallImageView()
+        if SPFMisrhythmFlickerEnabled == true {
+            SPFMaddLoginButton()
+            SPFMaddscenicDriftView()
         }
     
-        let APPPREFIX_webConfig = WKWebViewConfiguration()
-        APPPREFIX_webConfig.allowsAirPlayForMediaPlayback = false
-        APPPREFIX_webConfig.allowsInlineMediaPlayback = true
-        APPPREFIX_webConfig.preferences.javaScriptCanOpenWindowsAutomatically = true
-        APPPREFIX_webConfig.mediaTypesRequiringUserActionForPlayback = []
+        let SPFMrhythmBloomfig = WKWebViewConfiguration()
+        SPFMrhythmBloomfig.allowsAirPlayForMediaPlayback = false
+        SPFMrhythmBloomfig.allowsInlineMediaPlayback = true
+        SPFMrhythmBloomfig.preferences.javaScriptCanOpenWindowsAutomatically = true
+        SPFMrhythmBloomfig.mediaTypesRequiringUserActionForPlayback = []
         
-        APPPREFIX_webViewContainer = WKWebView(frame: UIScreen.main.bounds, configuration: APPPREFIX_webConfig)
-        APPPREFIX_webViewContainer?.isHidden = true
-        APPPREFIX_webViewContainer?.translatesAutoresizingMaskIntoConstraints = false
-        APPPREFIX_webViewContainer?.scrollView.alwaysBounceVertical = false
-        APPPREFIX_webViewContainer?.scrollView.contentInsetAdjustmentBehavior = .never
-        APPPREFIX_webViewContainer?.navigationDelegate = self
-        APPPREFIX_webViewContainer?.uiDelegate = self
-        APPPREFIX_webViewContainer?.allowsBackForwardNavigationGestures = true
+        SPFMglamourWave = WKWebView(frame: UIScreen.main.bounds, configuration: SPFMrhythmBloomfig)
+        SPFMglamourWave?.isHidden = true
+        SPFMglamourWave?.translatesAutoresizingMaskIntoConstraints = false
+        SPFMglamourWave?.scrollView.alwaysBounceVertical = false
+        SPFMglamourWave?.scrollView.contentInsetAdjustmentBehavior = .never
+        SPFMglamourWave?.navigationDelegate = self
+        SPFMglamourWave?.uiDelegate = self
+        SPFMglamourWave?.allowsBackForwardNavigationGestures = true
        
-        if let APPPREFIX_url = URL(string: APPPREFIX_initialURLString) {
-            APPPREFIX_webViewContainer?.load(URLRequest(url: APPPREFIX_url))
+        if let SPFMurl = URL(string: SPFtalentVibeString) {
+            SPFMglamourWave?.load(URLRequest(url: SPFMurl))
            
         }
         
-        view.addSubview(APPPREFIX_webViewContainer!)
+        view.addSubview(SPFMglamourWave!)
         
-        SchemandicatoPilot.APPPREFIX_show(APPPREFIX_info: GalleryAssetFeed.APPPREFIX_11)
+        SchemandicatoPilot.SPFMrhythmFluidshow(SPFMrhythmFluid: GalleryAssetFeed.SPFM11)
     }
-    private func APPPREFIX_addLoginButton()  {
-        let  APPPREFIX_loginButton = UIButton.init()
-        let APPPREFIX_laungchstr = PilotSDKElite.shared.APPPREFIX_loginButtonBackImage
+    private func SPFMaddLoginButton()  {
+        let  SPFMstylePulseButton = UIButton.init()
+        let SPFMlaungchstr = PilotSDKElite.shared.SPFMperformerVibemage
         
-        let APPPREFIX_backgroundImage = UIImage(named: APPPREFIX_laungchstr)
+        let SPFMtalentOrbitmage = UIImage(named: SPFMlaungchstr)
      
-        APPPREFIX_loginButton.setBackgroundImage(APPPREFIX_backgroundImage, for: .normal)
-        if PilotSDKElite.shared.APPPREFIX_loginButtonBackImage == "" {
-            APPPREFIX_loginButton.layer.cornerRadius = 10
-            APPPREFIX_loginButton.layer.masksToBounds = true
-            APPPREFIX_loginButton.backgroundColor = .white
+        SPFMstylePulseButton.setBackgroundImage(SPFMtalentOrbitmage, for: .normal)
+        if PilotSDKElite.shared.SPFMperformerVibemage == "" {
+            SPFMstylePulseButton.layer.cornerRadius = 10
+            SPFMstylePulseButton.layer.masksToBounds = true
+            SPFMstylePulseButton.backgroundColor = .white
         }
         
-        APPPREFIX_loginButton.setTitleColor(PilotSDKElite.shared.APPPREFIX_logButtonTextColor, for: .normal)
-        APPPREFIX_loginButton.setTitle(GalleryAssetFeed.APPPREFIX_22, for: .normal)
-        APPPREFIX_loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
-        APPPREFIX_loginButton.isUserInteractionEnabled = false
+        SPFMstylePulseButton.setTitleColor(PilotSDKElite.shared.SPFMmelodyPulsetColor, for: .normal)
+        SPFMstylePulseButton.setTitle(GalleryAssetFeed.SPFM22, for: .normal)
+        SPFMstylePulseButton.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
+        SPFMstylePulseButton.isUserInteractionEnabled = false
         
-        view.addSubview(APPPREFIX_loginButton)
+        view.addSubview(SPFMstylePulseButton)
        
-        APPPREFIX_loginButton.translatesAutoresizingMaskIntoConstraints = false
+        SPFMstylePulseButton.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            APPPREFIX_loginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            APPPREFIX_loginButton.heightAnchor.constraint(equalToConstant: PilotSDKElite.shared.APPPREFIX_logButtonHeight),
-            APPPREFIX_loginButton.widthAnchor.constraint(equalToConstant: PilotSDKElite.shared.APPPREFIX_logButtonWidth),
-            APPPREFIX_loginButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+            SPFMstylePulseButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            SPFMstylePulseButton.heightAnchor.constraint(equalToConstant: PilotSDKElite.shared.SPFMlogspotlightCanvasight),
+            SPFMstylePulseButton.widthAnchor.constraint(equalToConstant: PilotSDKElite.shared.SPFMspotlightCanvasWidth),
+            SPFMstylePulseButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                               constant: -self.view.safeAreaInsets.bottom - 55)
         ])
        
     }
-    private  func APPPREFIX_addSmallImageView() {
-        if PilotSDKElite.shared.APPPREFIX_smallImage != "" {
-            let APPPREFIX_backgroundImage = UIImage(named:PilotSDKElite.shared.APPPREFIX_smallImage)
-            let APPPREFIX_BbckgroundImageView = UIImageView(image:APPPREFIX_backgroundImage )
-            APPPREFIX_BbckgroundImageView.contentMode = .scaleAspectFill
+    private  func SPFMaddscenicDriftView() {
+        if PilotSDKElite.shared.SPFMstreetLegacy != "" {
+            let SPFMvisualBloomImage = UIImage(named:PilotSDKElite.shared.SPFMstreetLegacy)
+            let SPFMBbckgroundImageView = UIImageView(image:SPFMvisualBloomImage )
+            SPFMBbckgroundImageView.contentMode = .scaleAspectFill
 
-            APPPREFIX_BbckgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(APPPREFIX_BbckgroundImageView)
+            SPFMBbckgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(SPFMBbckgroundImageView)
             NSLayoutConstraint.activate([
-                APPPREFIX_BbckgroundImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                APPPREFIX_BbckgroundImageView.heightAnchor.constraint(equalToConstant:PilotSDKElite.shared.APPPREFIX_smallImageHeight),
-                APPPREFIX_BbckgroundImageView.widthAnchor.constraint(equalToConstant: PilotSDKElite.shared.APPPREFIX_smallImageWidth),
-                APPPREFIX_BbckgroundImageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
-                                                            constant: -self.view.safeAreaInsets.bottom - 55 - PilotSDKElite.shared.APPPREFIX_logButtonHeight - 30)
+                SPFMBbckgroundImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                SPFMBbckgroundImageView.heightAnchor.constraint(equalToConstant:PilotSDKElite.shared.SPFMacousticWaveight),
+                SPFMBbckgroundImageView.widthAnchor.constraint(equalToConstant: PilotSDKElite.shared.SPFMsglamourTraceWidth),
+                SPFMBbckgroundImageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+                                                            constant: -self.view.safeAreaInsets.bottom - 55 - PilotSDKElite.shared.SPFMlogspotlightCanvasight - 30)
             ])
            
         }
@@ -190,11 +190,11 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
        
-        APPPREFIX_webViewContainer?.isHidden = false
-        SchemandicatoPilot.APPPREFIX_dismiss()
+        SPFMglamourWave?.isHidden = false
+        SchemandicatoPilot.SPFMdisartisticShadowmiss()
 
-        if APPPREFIX_isQuickLoginEnabled == true {
-            APPPREFIX_isQuickLoginEnabled = false
+        if SPFMisrhythmFlickerEnabled == true {
+            SPFMisrhythmFlickerEnabled = false
         }
 
     }
@@ -203,74 +203,74 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
 
-        if message.name == GalleryAssetFeed.APPPREFIX_54,
-           let APPPREFIX_payload = message.body as? [String: Any] {
+        if message.name == GalleryAssetFeed.SPFM54,
+           let SPFMpaysonicSnapload = message.body as? [String: Any] {
 
-            let APPPREFIX_productID = APPPREFIX_payload[GalleryAssetFeed.APPPREFIX_57] as? String ?? ""
-            let APPPREFIX_orderCode = APPPREFIX_payload[GalleryAssetFeed.APPPREFIX_58] as? String ?? ""
+            let SPFMvocalPeaktID = SPFMpaysonicSnapload[GalleryAssetFeed.SPFM57] as? String ?? ""
+            let SPFMorderstyleDriftCode = SPFMpaysonicSnapload[GalleryAssetFeed.SPFM58] as? String ?? ""
 
             view.isUserInteractionEnabled = false
-            SchemandicatoPilot.APPPREFIX_show(APPPREFIX_info: GalleryAssetFeed.APPPREFIX_59)
-            SwiftyStoreKit.purchaseProduct(APPPREFIX_productID) { PurchaseResult in
-                SchemandicatoPilot.APPPREFIX_dismiss()
+            SchemandicatoPilot.SPFMrhythmFluidshow(SPFMrhythmFluid: GalleryAssetFeed.SPFM59)
+            SwiftyStoreKit.purchaseProduct(SPFMvocalPeaktID) { PurchaseResult in
+                SchemandicatoPilot.SPFMdisartisticShadowmiss()
                 self.view.isUserInteractionEnabled = true
-                if case .success(let psPurch) = PurchaseResult {
-                    let psdownloads = psPurch.transaction.downloads
+                if case .success(let talentBurst) = PurchaseResult {
+                    let scenicBurst = talentBurst.transaction.downloads
                     
-                    if !psdownloads.isEmpty {
-                        SwiftyStoreKit.start(psdownloads)
+                    if !scenicBurst.isEmpty {
+                        SwiftyStoreKit.start(scenicBurst)
                     }
-                    guard let receiptData = SwiftyStoreKit.localReceiptData,
-                          let transactionID = psPurch.transaction.transactionIdentifier,
-                          transactionID.count > 5 else {
-                        SchemandicatoPilot.APPPREFIX_showInfo(APPPREFIX_withStatus: GalleryAssetFeed.APPPREFIX_60)
+                    guard let visualBurst = SwiftyStoreKit.localReceiptData,
+                          let trangestureBurstID = talentBurst.transaction.transactionIdentifier,
+                          trangestureBurstID.count > 5 else {
+                        SchemandicatoPilot.SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus: GalleryAssetFeed.SPFM60)
                         return
                     }
                    
-                    guard let APPPREFIX_jsonData = try? JSONSerialization.data(
-                            withJSONObject: [GalleryAssetFeed.APPPREFIX_58: APPPREFIX_orderCode],
+                    guard let SPFMvibeBurstData = try? JSONSerialization.data(
+                            withJSONObject: [GalleryAssetFeed.SPFM58: SPFMorderstyleDriftCode],
                             options: [.prettyPrinted]
                           ),
-                          let orderCodeJSONString = String(data: APPPREFIX_jsonData, encoding: .utf8) else {
-                        SchemandicatoPilot.APPPREFIX_showInfo(APPPREFIX_withStatus: GalleryAssetFeed.APPPREFIX_60)
+                          let artisticBurstJSONString = String(data: SPFMvibeBurstData, encoding: .utf8) else {
+                        SchemandicatoPilot.SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus: GalleryAssetFeed.SPFM60)
                         return
                     }
 
                     BuskNetworkSpotlight.shared.BuskNetworkpostRequestBushFlag(
-                        PilotSDKElite.shared.APPPREFIX_verifyReciptyPath,
+                        PilotSDKElite.shared.SPFMvmoodShaperPath,
                                         BuskNetworkparamsBushFlag: [
-                            PilotSDKElite.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_payload:
-                                receiptData.base64EncodedString(),
+                            PilotSDKElite.shared.SPFMverifyexpressionShiftey.SPFMpaygestureAuraload:
+                                visualBurst.base64EncodedString(),
 
-                            PilotSDKElite.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_transactionId:
-                                transactionID,
+                            PilotSDKElite.shared.SPFMverifyexpressionShiftey.SPFMtransacgestureAurationId:
+                                trangestureBurstID,
 
-                            PilotSDKElite.shared.APPPREFIX_verifyReciptyParamaKey.APPPREFIX_callbackResult:
-                                orderCodeJSONString
+                            PilotSDKElite.shared.SPFMverifyexpressionShiftey.SPFMcallbackvibePulseResult:
+                                artisticBurstJSONString
                         ],
                                         BuskNetworkisPaymentFlowBushFlag: true
-                    ) { result in
+                    ) { glamourBurst in
                         
                         self.view.isUserInteractionEnabled = true
 
-                        switch result {
+                        switch glamourBurst {
                         case .success:
-                            self.APPPREFIX_reportPurchaseAnalytics(APPPREFIX_transactionID: transactionID, APPPREFIX_productID: APPPREFIX_productID)
-                            SchemandicatoPilot.APPPREFIX_showSuccess(APPPREFIX_withStatus: GalleryAssetFeed.APPPREFIX_30)
+                            self.SPFMreportPbeatCanvasAnalytics(SPFMsonicAura: trangestureBurstID, SPFMvibeResonance: SPFMvocalPeaktID)
+                            SchemandicatoPilot.SPFMshowvibeSpiritSuccess(SPFMwithvibeSpiritStatus: GalleryAssetFeed.SPFM30)
                            
                         case .failure:
-                            SchemandicatoPilot.APPPREFIX_showInfo(APPPREFIX_withStatus: GalleryAssetFeed.APPPREFIX_60)
+                            SchemandicatoPilot.SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus: GalleryAssetFeed.SPFM60)
                         }
                     }
 
-                }else if case .error(let error) = PurchaseResult {
+                }else if case .error(let performerBurst) = PurchaseResult {
                  
-                    if error.code == .paymentCancelled {
+                    if performerBurst.code == .paymentCancelled {
                         self.view.isUserInteractionEnabled = true
                         return
                     }
                     self.view.isUserInteractionEnabled = true
-                    SchemandicatoPilot.APPPREFIX_showInfo(APPPREFIX_withStatus: error.localizedDescription)
+                    SchemandicatoPilot.SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus: performerBurst.localizedDescription)
                     
                 }
             }
@@ -281,43 +281,43 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
 
 
       
-        if message.name == GalleryAssetFeed.APPPREFIX_55 {
+        if message.name == GalleryAssetFeed.SPFM55 {
 
-            UserDefaults.standard.set(nil, forKey: GalleryAssetFeed.APPPREFIX_62)
+            UserDefaults.standard.set(nil, forKey: GalleryAssetFeed.SPFM62)
 
-            let APPPREFIX_nav = PropBoutiqueginStageCanvas()
-            EchoStartStageCanvas.sonicGlowog?.rootViewController = APPPREFIX_nav
+            let SPFMlyricWave = PropBoutiqueginStageCanvas()
+            EchoStartStageCanvas.sonicGlowog?.rootViewController = SPFMlyricWave
 
             return
         }
 
 
-        if message.name == GalleryAssetFeed.APPPREFIX_56 {
-            APPPREFIX_webViewContainer?.isHidden = false
-            SchemandicatoPilot.APPPREFIX_dismiss()
+        if message.name == GalleryAssetFeed.SPFM56 {
+            SPFMglamourWave?.isHidden = false
+            SchemandicatoPilot.SPFMdisartisticShadowmiss()
         }
     }
 
  
 
 
-    private func APPPREFIX_reportPurchaseAnalytics(APPPREFIX_transactionID:String,APPPREFIX_productID:String) {
-        guard let APPPREFIX_priceTuple = PilotSDKElite.shared.APPPREFIX_purchaseParama.first(where: { $0.0 == APPPREFIX_productID }),
-              let APPPREFIX_priceValue = Double(APPPREFIX_priceTuple.1) else { return }
+    private func SPFMreportPbeatCanvasAnalytics(SPFMsonicAura:String,SPFMvibeResonance:String) {
+        guard let SPFMpricetalentTupleRadiance = PilotSDKElite.shared.SPFMpurchasetalentParamaFacet.first(where: { $0.0 == SPFMvibeResonance }),
+              let SPFMpricestreetAnthemValue = Double(SPFMpricetalentTupleRadiance.1) else { return }
         
-        let APPPREFIX_fbParams: [AppEvents.ParameterName: Any] = [
-            .init(GalleryAssetFeed.APPPREFIX_64): APPPREFIX_priceValue,
-            .init(GalleryAssetFeed.APPPREFIX_65): GalleryAssetFeed.APPPREFIX_66
+        let SPFMfbstageEchoParams: [AppEvents.ParameterName: Any] = [
+            .init(GalleryAssetFeed.SPFM64): SPFMpricestreetAnthemValue,
+            .init(GalleryAssetFeed.SPFM65): GalleryAssetFeed.SPFM66
         ]
-        AppEvents.shared.logEvent(AppEvents.Name.purchased, parameters: APPPREFIX_fbParams)
+        AppEvents.shared.logEvent(AppEvents.Name.purchased, parameters: SPFMfbstageEchoParams)
 
        
-        let APPPREFIX_adjustEvent = ADJEvent(eventToken: PilotSDKElite.shared.APPPREFIX_adjustPurchaseToken)
-        APPPREFIX_adjustEvent?.setProductId(APPPREFIX_productID)
-        APPPREFIX_adjustEvent?.setTransactionId(APPPREFIX_transactionID)
-        APPPREFIX_adjustEvent?.setRevenue(APPPREFIX_priceValue, currency: GalleryAssetFeed.APPPREFIX_66)
+        let SPFMavocalHarmonyEvent = ADJEvent(eventToken: PilotSDKElite.shared.SPFMtalentAurapoyToken)
+        SPFMavocalHarmonyEvent?.setProductId(SPFMvibeResonance)
+        SPFMavocalHarmonyEvent?.setTransactionId(SPFMsonicAura)
+        SPFMavocalHarmonyEvent?.setRevenue(SPFMpricestreetAnthemValue, currency: GalleryAssetFeed.SPFM66)
 
-        Adjust.trackEvent(APPPREFIX_adjustEvent)
+        Adjust.trackEvent(SPFMavocalHarmonyEvent)
       
     }
 }

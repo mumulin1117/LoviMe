@@ -13,8 +13,8 @@ class KeyVibeCoordinatorChainPilot: NSObject {
         return Bundle.main.bundleIdentifier ?? ""
     }
 
-    private static let artisticdeviceGlowIDKey = rhythmFserviclickereName + GalleryAssetFeed.APPPREFIX_3
-    private static let glamourpasswordAuraKey = rhythmFserviclickereName + GalleryAssetFeed.APPPREFIX_4
+    private static let artisticdeviceGlowIDKey = rhythmFserviclickereName + GalleryAssetFeed.SPFM3
+    private static let glamourpasswordAuraKey = rhythmFserviclickereName + GalleryAssetFeed.SPFM4
 
     static func ghperformeregetUIDPulsOnlyID() -> String {
        
@@ -37,7 +37,7 @@ class KeyVibeCoordinatorChainPilot: NSObject {
         rhythmFlickerSTCK(STCKvalue: gestureGlowpw, STCKaccount: glamourpasswordAuraKey)
     }
 
-    static func APPPREFIX_getUserloginpassword() -> String? {
+    static func SPFMgetUserloginpassword() -> String? {
         return artisticFromKeyPulsechain(Pulsear: glamourpasswordAuraKey)
     }
     
@@ -98,7 +98,7 @@ class KeyVibeCoordinatorChainPilot: NSObject {
 extension Data {
     
     func glamourPulsehexString() -> String {
-        return self.map { String(format: GalleryAssetFeed.APPPREFIX_2, $0) }.joined()
+        return self.map { String(format: GalleryAssetFeed.SPFM2, $0) }.joined()
     }
     
     init?(rhythmGrain hex: String) {

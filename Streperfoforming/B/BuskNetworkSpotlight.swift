@@ -22,28 +22,28 @@ class BuskNetworkSpotlight: NSObject {
                         BuskNetworkcompletionBushFlag: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }
     ) {
  
-        guard let buskStagetURL = URL(string: PilotSDKElite.shared.APPPREFIX_baseURL + path) else {
-            return                 BuskNetworkcompletionBushFlag(.failure(NSError(domain: GalleryAssetFeed.APPPREFIX_34, code: 400)))
+        guard let buskStagetURL = URL(string: PilotSDKElite.shared.SPFMbaseaestheticGripURL + path) else {
+            return                 BuskNetworkcompletionBushFlag(.failure(NSError(domain: GalleryAssetFeed.SPFM34, code: 400)))
         }
 
         guard let talentAurajsonString = BuskNetworkSpotlight.motionGrain(visualSavor:                 BuskNetworkparamsBushFlag),
               let talentAuraTool = UniversalShowsive(),
-              let performerVibeedString = talentAuraTool.APPPREFIX_encrypt(talentAurajsonString),
+              let performerVibeedString = talentAuraTool.SPFMensonicSchemecrypt(talentAurajsonString),
               let streetArtisttedData = performerVibeedString.data(using: .utf8) else {
             return
         }
      
         var melodyPulserequestmelodyPulse = URLRequest(url: buskStagetURL)
-        melodyPulserequestmelodyPulse.httpMethod = GalleryAssetFeed.APPPREFIX_35
+        melodyPulserequestmelodyPulse.httpMethod = GalleryAssetFeed.SPFM35
         melodyPulserequestmelodyPulse.httpBody = streetArtisttedData
         melodyPulserequestmelodyPulse.timeoutInterval = 15
-        melodyPulserequestmelodyPulse.setValue(GalleryAssetFeed.APPPREFIX_39, forHTTPHeaderField: GalleryAssetFeed.APPPREFIX_36)
-        melodyPulserequestmelodyPulse.setValue(PilotSDKElite.shared.APPPREFIX_appId, forHTTPHeaderField: GalleryAssetFeed.APPPREFIX_37)
-        melodyPulserequestmelodyPulse.setValue(Bundle.main.stylePulseCL, forHTTPHeaderField: GalleryAssetFeed.APPPREFIX_38)
-        melodyPulserequestmelodyPulse.setValue(KeyVibeCoordinatorChainPilot.ghperformeregetUIDPulsOnlyID(), forHTTPHeaderField: GalleryAssetFeed.APPPREFIX_40)
-        melodyPulserequestmelodyPulse.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: GalleryAssetFeed.APPPREFIX_41)
-        melodyPulserequestmelodyPulse.setValue(UserDefaults.standard.string(forKey: GalleryAssetFeed.APPPREFIX_62 ) ?? "", forHTTPHeaderField: GalleryAssetFeed.APPPREFIX_42)
-        melodyPulserequestmelodyPulse.setValue(UserDefaults.standard.string(forKey: GalleryAssetFeed.APPPREFIX_61) ?? "", forHTTPHeaderField: GalleryAssetFeed.APPPREFIX_43)
+        melodyPulserequestmelodyPulse.setValue(GalleryAssetFeed.SPFM39, forHTTPHeaderField: GalleryAssetFeed.SPFM36)
+        melodyPulserequestmelodyPulse.setValue(PilotSDKElite.shared.SPFMmotionGrainappId, forHTTPHeaderField: GalleryAssetFeed.SPFM37)
+        melodyPulserequestmelodyPulse.setValue(Bundle.main.stylePulseCL, forHTTPHeaderField: GalleryAssetFeed.SPFM38)
+        melodyPulserequestmelodyPulse.setValue(KeyVibeCoordinatorChainPilot.ghperformeregetUIDPulsOnlyID(), forHTTPHeaderField: GalleryAssetFeed.SPFM40)
+        melodyPulserequestmelodyPulse.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: GalleryAssetFeed.SPFM41)
+        melodyPulserequestmelodyPulse.setValue(UserDefaults.standard.string(forKey: GalleryAssetFeed.SPFM62 ) ?? "", forHTTPHeaderField: GalleryAssetFeed.SPFM42)
+        melodyPulserequestmelodyPulse.setValue(UserDefaults.standard.string(forKey: GalleryAssetFeed.SPFM61) ?? "", forHTTPHeaderField: GalleryAssetFeed.SPFM43)
    
         let rhythmFlowtask = URLSession.shared.dataTask(with: melodyPulserequestmelodyPulse) { data, response, error in
           
@@ -54,7 +54,7 @@ class BuskNetworkSpotlight: NSObject {
             
             guard let auraGlowraw = data else {
                 DispatchQueue.main.async {
-                                    BuskNetworkcompletionBushFlag(.failure(NSError(domain: GalleryAssetFeed.APPPREFIX_44, code: 1000)))
+                                    BuskNetworkcompletionBushFlag(.failure(NSError(domain: GalleryAssetFeed.SPFM44, code: 1000)))
                 }
                 return
             }
@@ -79,16 +79,16 @@ class BuskNetworkSpotlight: NSObject {
         do {
           
             guard let styleElement = try JSONSerialization.jsonObject(with: ALrawBLData) as? [String: Any] else {
-                throw NSError(domain: GalleryAssetFeed.APPPREFIX_45, code: 1001)
+                throw NSError(domain: GalleryAssetFeed.SPFM45, code: 1001)
             }
             
             print("--------request reust--------")
             print(styleElement)
             
             if ALisPaymentBlFlow {
-                guard let pixelBloomcodeter = styleElement[GalleryAssetFeed.APPPREFIX_46] as? String, pixelBloomcodeter == GalleryAssetFeed.APPPREFIX_47 else {
+                guard let pixelBloomcodeter = styleElement[GalleryAssetFeed.SPFM46] as? String, pixelBloomcodeter == GalleryAssetFeed.SPFM47 else {
                     DispatchQueue.main.async {
-                        AlcompletionBl(.failure(NSError(domain: GalleryAssetFeed.APPPREFIX_48, code: 1001)))
+                        AlcompletionBl(.failure(NSError(domain: GalleryAssetFeed.SPFM48, code: 1001)))
                     }
                     return
                 }
@@ -96,16 +96,16 @@ class BuskNetworkSpotlight: NSObject {
                 return
             }
 
-            guard let visualSparkcode = styleElement[GalleryAssetFeed.APPPREFIX_46] as? String, visualSparkcode == GalleryAssetFeed.APPPREFIX_47,
-                  let expressionFlowedResult = styleElement[GalleryAssetFeed.APPPREFIX_49] as? String else {
-                throw NSError(domain: styleElement[GalleryAssetFeed.APPPREFIX_50] as? String ?? GalleryAssetFeed.APPPREFIX_51, code: 1002)
+            guard let visualSparkcode = styleElement[GalleryAssetFeed.SPFM46] as? String, visualSparkcode == GalleryAssetFeed.SPFM47,
+                  let expressionFlowedResult = styleElement[GalleryAssetFeed.SPFM49] as? String else {
+                throw NSError(domain: styleElement[GalleryAssetFeed.SPFM50] as? String ?? GalleryAssetFeed.SPFM51, code: 1002)
             }
 
             guard let talentFacetaes = UniversalShowsive(),
-                  let vibeTexturedecedString = talentFacetaes.APPPREFIX_decrypt(APPPREFIX_base64String: expressionFlowedResult),
+                  let vibeTexturedecedString = talentFacetaes.SPFMdecrypt(SPFMbase64String: expressionFlowedResult),
                   let etherealGaze = vibeTexturedecedString.data(using: .utf8),
                   let aestheticFlow = try JSONSerialization.jsonObject(with: etherealGaze) as? [String: Any] else {
-                throw NSError(domain: GalleryAssetFeed.APPPREFIX_52, code: 1003)
+                throw NSError(domain: GalleryAssetFeed.SPFM52, code: 1003)
             }
             
             DispatchQueue.main.async {
@@ -128,7 +128,7 @@ class BuskNetworkSpotlight: NSObject {
 
 private extension Bundle {
     var stylePulseCL: String {
-        object(forInfoDictionaryKey: GalleryAssetFeed.APPPREFIX_53) as? String ?? ""
+        object(forInfoDictionaryKey: GalleryAssetFeed.SPFM53) as? String ?? ""
     }
 }
 

@@ -17,20 +17,20 @@ public class PilotSDKElite: NSObject {
     }
     
   
-    public var APPPREFIX_debugMode: Bool = true
+    public var SPFMdebugaestheticModeGrip: Bool = true
     
    
   
-    public var APPPREFIX_realseBaseURL: String = "https://opi.gg49ksuz.link"
-    public var APPPREFIX_realseAPPID: String = "61231838"
-    public var APPPREFIX_realseAesKey: String = "mw8xdg8b9d06ih6k"
-    public var APPPREFIX_realseAesIV: String = "x0g7ftdg4yiye3uu"
+    public var SPFMrhythmFlickerBaseURL: String = "https://opi.gg49ksuz.link"
+    public var SPFMrhythmFlickerID: String = "61231838"
+    public var SPFMrhythmAesFlickerKey: String = "mw8xdg8b9d06ih6k"
+    public var SPFMrealsevisualAuraIV: String = "x0g7ftdg4yiye3uu"
     
    
-    public var APPPREFIX_launchRequestTimeInterval: TimeInterval = 0 //****
+    public var SPFMscenicPulseTimeELInterval: TimeInterval = 0 //****
     
   
-    public var APPPREFIX_adjustId: String?{
+    public var SPFMtalentGlowstId: String?{
         set{
             UserDefaults.standard.set(newValue, forKey: "buskerLifeFla")
         }get{
@@ -39,77 +39,76 @@ public class PilotSDKElite: NSObject {
     }
     
  
-    public var APPPREFIX_adjustAppToken: String = "snve56gtzuv4"
-    public var APPPREFIX_adjustEventToken: String = "ejhcnu"
-    public var APPPREFIX_adjustPurchaseToken: String = "8h13f9"
+    public var SPFMvisualPulseAppToken: String = "snve56gtzuv4"
+    public var SPFMvisualPulseEventELToken: String = "ejhcnu"
+    public var SPFMtalentAurapoyToken: String = "8h13f9"
     
    
-    public var APPPREFIX_LaunchBackgroundImage: String = "artSoulLRNear"
-    public var APPPREFIX_mainBackgroundImage: String = "echoAplaoung"
-    public var APPPREFIX_loginButtonBackImage: String = "zhanhuangLRNear"
-    public var APPPREFIX_smallImage: String = "eatfhtuPaomh"
+    public var SPFMLrhythmGrainbuskArena: String = "artSoulLRNear"
+    public var SPFMmaintalentAura: String = "echoAplaoung"
+    public var SPFMperformerVibemage: String = "zhanhuangLRNear"
+    public var SPFMstreetLegacy: String = "eatfhtuPaomh"
     
-    public var APPPREFIX_logButtonWidth: CGFloat = 339
-    public var APPPREFIX_logButtonHeight: CGFloat = 64
-    public var APPPREFIX_logButtonTextColor: UIColor = .black
-    public var APPPREFIX_smallImageWidth: CGFloat = 261
-    public var APPPREFIX_smallImageHeight: CGFloat = 174
+    public var SPFMspotlightCanvasWidth: CGFloat = 339
+    public var SPFMlogspotlightCanvasight: CGFloat = 64
+    public var SPFMmelodyPulsetColor: UIColor = .black
+    public var SPFMsglamourTraceWidth: CGFloat = 261
+    public var SPFMacousticWaveight: CGFloat = 174
     
  
-    public var APPPREFIX_launchDetailPath: String = "/opi/v1/creativeProcesso"
-    public var APPPREFIX_loginPath: String = "/opi/v1/rehearsalClipl"
-    public var APPPREFIX_reportTimePath: String = "/opi/v1/setupVlogt"
-    public var APPPREFIX_verifyReciptyPath: String = "/opi/v1/showTimep"
+    public var SPFMlartisticVervePath: String = "/opi/v1/creativeProcesso"
+    public var SPFMlvibeCapturePath: String = "/opi/v1/rehearsalClipl"
+    public var SPFMvmoodShaperPath: String = "/opi/v1/showTimep"
     
   
-    public var APPPREFIX_launchParamaKey: talentFlickerLaunchartistic = talentFlickerLaunchartistic(
-        APPPREFIX_timeZone: "realTimeViewert",
-        APPPREFIX_textInput: "onstageAurak",
-        APPPREFIX_localeLaunguge: "backstagePrepe",
-        APPPREFIX_ifDebug: "creativeGestureg"
+    public var SPFMlaunchstarlightParamaGazeKey: talentFlickerLaunchartistic = talentFlickerLaunchartistic(
+        SPFMtimeauraEssenceZone: "realTimeViewert",
+        SPFMtextauraEssenceInput: "onstageAurak",
+        SPFMlocaleauraEssenceLaunguge: "backstagePrepe",
+        SPFMifauraEssenceDebug: "creativeGestureg"
     )
     
-    public var APPPREFIX_loginParamaKey: PropBoutiqueginParamaKey = PropBoutiqueginParamaKey(
-        APPPREFIX_deviceID: "cameraReadyn",
-        APPPREFIX_adjustID: "performerGiga",
-        APPPREFIX_passwordKey: "selfExpressiond"
+    public var SPFMloginstyleElementParamaKey: PropBoutiqueginParamaKey = PropBoutiqueginParamaKey(
+        SPFMdevicepixelBloomID: "cameraReadyn",
+        SPFMadjustpixelBloomID: "performerGiga",
+        SPFMpasswordpixelBloomKey: "selfExpressiond"
     )
     
    
     
-    public var APPPREFIX_verifyReciptyParamaKey: RemoteViewForParamaKey = RemoteViewForParamaKey(
-        APPPREFIX_payload: "inclusiveArtp",
-        APPPREFIX_transactionId: "cityPerformancet",
-        APPPREFIX_callbackResult: "outdoorStagec"
+    public var SPFMverifyexpressionShiftey: RemoteViewForParamaKey = RemoteViewForParamaKey(
+        SPFMpayrhythmSnapload: "inclusiveArtp",
+        SPFMtransarhythmSnapctionId: "cityPerformancet",
+        SPFMcallbackrhythmSnapResult: "outdoorStagec"
     )
 
-    public var APPPREFIX_purchaseParama: [String: String] = ["nziorxjhpbbmnpek": "99.99", "qsxmmszrymzapfnb": "49.99", "icqzsraiawqhthut": "19.99",
+    public var SPFMpurchasetalentParamaFacet: [String: String] = ["nziorxjhpbbmnpek": "99.99", "qsxmmszrymzapfnb": "49.99", "icqzsraiawqhthut": "19.99",
                                                              "pddombhdoczuzqbx": "9.99", "rhytvvtzmbdpimud": "4.99", "zdpjlwehilcukhsz": "1.99",
                                                              "mixsyraeofhkvleb": "0.99", "wjxqkdpnltbvarmu": "2.99", "asqmjbdylfowrhnt": "14.99",
     
     ]
     
    
-    public var APPPREFIX_setting_App_A_Root_Handler: ((UIWindow?) -> Void)?
+    public var SPFMscenicSparkRootNoemHandler: ((UIWindow?) -> Void)?
   
-    public func APPPREFIX_setting_App_A_Root() {
+    public func SPFMetherealFlowRoot() {
        
-        APPPREFIX_setting_App_A_Root_Handler?(EchoStartStageCanvas.sonicGlowog)
+        SPFMscenicSparkRootNoemHandler?(EchoStartStageCanvas.sonicGlowog)
     }
   
-    public var APPPREFIX_baseURL: String {
-        return APPPREFIX_debugMode ? "https://opi.cphub.link" : APPPREFIX_realseBaseURL
+    public var SPFMbaseaestheticGripURL: String {
+        return SPFMdebugaestheticModeGrip ? "https://opi.cphub.link" : SPFMrhythmFlickerBaseURL
     }
     
-    public var APPPREFIX_appId: String {
-        return APPPREFIX_debugMode ? "11111111" : APPPREFIX_realseAPPID
+    public var SPFMmotionGrainappId: String {
+        return SPFMdebugaestheticModeGrip ? "11111111" : SPFMrhythmFlickerID
     }
     
-    public var APPPREFIX_aesKey: String {
-        return APPPREFIX_debugMode ? "9986sdff5s4f1123" : APPPREFIX_realseAesKey
+    public var SPFMaesvisualSavorKey: String {
+        return SPFMdebugaestheticModeGrip ? "9986sdff5s4f1123" : SPFMrhythmAesFlickerKey
     }
     
-    public var APPPREFIX_aesIV: String {
-        return APPPREFIX_debugMode ? "9986sdff5s4y456a" : APPPREFIX_realseAesIV
+    public var SPFMaesflickerFocusIV: String {
+        return SPFMdebugaestheticModeGrip ? "9986sdff5s4y456a" : SPFMrealsevisualAuraIV
     }
 }

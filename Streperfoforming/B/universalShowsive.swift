@@ -10,67 +10,67 @@ import CommonCrypto
 
 struct UniversalShowsive {
     
-    private let APPPREFIX_aesKeyData: Data
-    private let APPPREFIX_aesIVData: Data
+    private let SPFMvisualLogicData: Data
+    private let SPFMvibrantLogic: Data
     
     init?() {
 
-        guard let APPPREFIX_key = PilotSDKElite.shared.APPPREFIX_aesKey.data(using: .utf8),
-                     let APPPREFIX_iv  = PilotSDKElite.shared.APPPREFIX_aesIV.data(using: .utf8) else {
+        guard let SPFMscenicSchemekey = PilotSDKElite.shared.SPFMaesvisualSavorKey.data(using: .utf8),
+                     let SPFrhythmSchemeMiv  = PilotSDKElite.shared.SPFMaesflickerFocusIV.data(using: .utf8) else {
                    return nil
                }
                
-               self.APPPREFIX_aesKeyData = APPPREFIX_key
-               self.APPPREFIX_aesIVData = APPPREFIX_iv
+               self.SPFMvisualLogicData = SPFMscenicSchemekey
+               self.SPFMvibrantLogic = SPFrhythmSchemeMiv
     }
  
-    func APPPREFIX_encrypt(_ APPPREFIX_text: String) -> String? {
-        guard let APPPREFIX_data = APPPREFIX_text.data(using: .utf8) else {
+    func SPFMensonicSchemecrypt(_ SPFMtext: String) -> String? {
+        guard let SPFMdgestureScheme = SPFMtext.data(using: .utf8) else {
             return nil
         }
         
-        let APPPREFIX_encrypted = APPPREFIX_aesProcess(APPPREFIX_input: APPPREFIX_data, APPPREFIX_operation: kCCEncrypt)
-        return APPPREFIX_encrypted?.glamourPulsehexString()
+        let SPFMrhythmModel = SPFMaesProcess(SPFMinput: SPFMdgestureScheme, SPFMoperation: kCCEncrypt)
+        return SPFMrhythmModel?.glamourPulsehexString()
     }
 
-    func APPPREFIX_decrypt(APPPREFIX_base64String: String) -> String? {
-        guard let APPPREFIX_data = Data(rhythmGrain: APPPREFIX_base64String) else {
+    func SPFMdecrypt(SPFMbase64String: String) -> String? {
+        guard let SPFMstageModel = Data(rhythmGrain: SPFMbase64String) else {
             return nil
         }
         
-        let APPPREFIX_cryptData = APPPREFIX_aesProcess(APPPREFIX_input: APPPREFIX_data, APPPREFIX_operation: kCCDecrypt)
-        return APPPREFIX_cryptData?.rhythmGlowutf8ArtString()
+        let SPFMmotionModelData = SPFMaesProcess(SPFMinput: SPFMstageModel, SPFMoperation: kCCDecrypt)
+        return SPFMmotionModelData?.rhythmGlowutf8ArtString()
     }
 
-    private func APPPREFIX_aesProcess(APPPREFIX_input: Data, APPPREFIX_operation: Int) -> Data? {
-        let APPPREFIX_outputLength = APPPREFIX_input.count + kCCBlockSizeAES128
-        var APPPREFIX_outputData = Data(count: APPPREFIX_outputLength)
+    private func SPFMaesProcess(SPFMinput: Data, SPFMoperation: Int) -> Data? {
+        let SPFMoutputLength = SPFMinput.count + kCCBlockSizeAES128
+        var SPFMoutputData = Data(count: SPFMoutputLength)
         
-        let APPPREFIX_keyLength = APPPREFIX_aesKeyData.count
-        let APPPREFIX_cryptoOption = CCOptions(kCCOptionPKCS7Padding)
+        let SPFMkeygestureEntryLength = SPFMvisualLogicData.count
+        let SPFMcryptomelodicRecordOption = CCOptions(kCCOptionPKCS7Padding)
         
-        var APPPREFIX_movedBytes: size_t = 0
+        var SPFMmovedscenicRecordBytes: size_t = 0
         
-        let APPPREFIX_cryptStatus = APPPREFIX_outputData.withUnsafeMutableBytes { Richne in
-            APPPREFIX_input.withUnsafeBytes { dataBytes in
-                APPPREFIX_aesIVData.withUnsafeBytes { ivBytes in
-                    APPPREFIX_aesKeyData.withUnsafeBytes { keyBytes in
-                        CCCrypt(CCOperation(APPPREFIX_operation),
+        let SPFMcryptmotionStoreStatus = SPFMoutputData.withUnsafeMutableBytes { Richne in
+            SPFMinput.withUnsafeBytes { dataBytes in
+                SPFMvibrantLogic.withUnsafeBytes { ivBytes in
+                    SPFMvisualLogicData.withUnsafeBytes { keyBytes in
+                        CCCrypt(CCOperation(SPFMoperation),
                                 CCAlgorithm(kCCAlgorithmAES),
-                                APPPREFIX_cryptoOption,
-                                keyBytes.baseAddress, APPPREFIX_keyLength,
+                                SPFMcryptomelodicRecordOption,
+                                keyBytes.baseAddress, SPFMkeygestureEntryLength,
                                 ivBytes.baseAddress,
-                                dataBytes.baseAddress, APPPREFIX_input.count,
-                                Richne.baseAddress, APPPREFIX_outputLength,
-                                &APPPREFIX_movedBytes)
+                                dataBytes.baseAddress, SPFMinput.count,
+                                Richne.baseAddress, SPFMoutputLength,
+                                &SPFMmovedscenicRecordBytes)
                     }
                 }
             }
         }
         
-        if APPPREFIX_cryptStatus == kCCSuccess {
-            APPPREFIX_outputData.removeSubrange(APPPREFIX_movedBytes..<APPPREFIX_outputData.count)
-            return APPPREFIX_outputData
+        if SPFMcryptmotionStoreStatus == kCCSuccess {
+            SPFMoutputData.removeSubrange(SPFMmovedscenicRecordBytes..<SPFMoutputData.count)
+            return SPFMoutputData
         } else {
            
             return nil
