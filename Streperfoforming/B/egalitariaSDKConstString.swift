@@ -7,9 +7,8 @@
 
 
 import UIKit
-//MARK: - 相关字符串 保证用自己的方法混淆后 输出为以下
+
 struct APPPREFIX_SDKConstString {
-//exmple static let APPPREFIX_1 =  "%a0a2a.a2ahahaxa".stringdesc()  ---> "%02.2hhx"
     
     static let APPPREFIX_1 =  "%02.2hhx"
     static let APPPREFIX_2 = "%02hhx"

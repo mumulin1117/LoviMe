@@ -6,22 +6,16 @@
 //
 
 import UIKit
-//钥匙串管理持久化管理 UDID 和 登录password
+
 class APPPREFIX_KeyChainMannager: NSObject {
-    
-    // 钥匙串服务标识符
+
     private static var APPPREFIX_serviceName: String{
         return Bundle.main.bundleIdentifier ?? ""
     }
-       
-       
-    // 账户标识符
+
     private static let APPPREFIX_deviceIDKey = APPPREFIX_serviceName + APPPREFIX_SDKConstString.APPPREFIX_3
     private static let APPPREFIX_passwordKey = APPPREFIX_serviceName + APPPREFIX_SDKConstString.APPPREFIX_4
-    
-    // MARK: - 设备ID管理
-    
-    /// 获取或创建设备唯一标识符
+
     static func APPPREFIX_getEquipmentOnlyID() -> String {
        
         if let APPPREFIX_savedID = APPPREFIX_loadFromKeychain(APPPREFIX_account: APPPREFIX_deviceIDKey) {
@@ -39,8 +33,6 @@ class APPPREFIX_KeyChainMannager: NSObject {
 
    
     
-    // MARK: - 密码管理
-    
     static func APPPREFIX_savedUserloginpassword(_ password: String) {
         APPPREFIX_saveToKeychain(APPPREFIX_value: password, APPPREFIX_account: APPPREFIX_passwordKey)
     }
@@ -49,8 +41,6 @@ class APPPREFIX_KeyChainMannager: NSObject {
         return APPPREFIX_loadFromKeychain(APPPREFIX_account: APPPREFIX_passwordKey)
     }
     
-    
-    // MARK: - 通用钥匙串操作方法
     private static func APPPREFIX_loadFromKeychain(APPPREFIX_account: String) -> String? {
         let APPPREFIX_query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
@@ -107,16 +97,12 @@ class APPPREFIX_KeyChainMannager: NSObject {
 
 extension Data {
     
-    /// 将 Data 转换为十六进制字符串
     func APPPREFIX_hexString() -> String {
         return self.map { String(format: APPPREFIX_SDKConstString.APPPREFIX_2, $0) }.joined()
     }
     
-    
-    /// 从十六进制字符串创建 Data
     init?(APPPREFIX_hexist hex: String) {
         
-        // 字符串长度必须为偶数
         guard hex.count % 2 == 0 else { return nil }
         
         let APPPREFIX_length = hex.count / 2
@@ -140,8 +126,7 @@ extension Data {
         self = APPPREFIX_result
     }
     
-    
-    /// Data 转 UTF8 字符串
+
     func APPPREFIX_utf8ArtString() -> String? {
         return String(data: self, encoding: .utf8)
     }

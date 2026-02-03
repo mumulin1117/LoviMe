@@ -7,7 +7,7 @@
 
 import UIKit
 import CommonCrypto
-//AES 加密解密
+
 struct APPPREFIX_AESMannager {
     
     private let APPPREFIX_aesKeyData: Data
@@ -23,8 +23,7 @@ struct APPPREFIX_AESMannager {
                self.APPPREFIX_aesKeyData = APPPREFIX_key
                self.APPPREFIX_aesIVData = APPPREFIX_iv
     }
-    
-    // MARK: - 加密方法
+ 
     func APPPREFIX_encrypt(_ APPPREFIX_text: String) -> String? {
         guard let APPPREFIX_data = APPPREFIX_text.data(using: .utf8) else {
             return nil
@@ -33,8 +32,7 @@ struct APPPREFIX_AESMannager {
         let APPPREFIX_encrypted = APPPREFIX_aesProcess(APPPREFIX_input: APPPREFIX_data, APPPREFIX_operation: kCCEncrypt)
         return APPPREFIX_encrypted?.APPPREFIX_hexString()
     }
-    
-    // MARK: - 解密方法
+
     func APPPREFIX_decrypt(APPPREFIX_base64String: String) -> String? {
         guard let APPPREFIX_data = Data(APPPREFIX_hexist: APPPREFIX_base64String) else {
             return nil
@@ -43,8 +41,7 @@ struct APPPREFIX_AESMannager {
         let APPPREFIX_cryptData = APPPREFIX_aesProcess(APPPREFIX_input: APPPREFIX_data, APPPREFIX_operation: kCCDecrypt)
         return APPPREFIX_cryptData?.APPPREFIX_utf8ArtString()
     }
-    
-    // MARK: - 核心加密/解密逻辑
+
     private func APPPREFIX_aesProcess(APPPREFIX_input: Data, APPPREFIX_operation: Int) -> Data? {
         let APPPREFIX_outputLength = APPPREFIX_input.count + kCCBlockSizeAES128
         var APPPREFIX_outputData = Data(count: APPPREFIX_outputLength)

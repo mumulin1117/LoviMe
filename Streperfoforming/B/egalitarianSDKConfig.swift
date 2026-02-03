@@ -21,102 +21,78 @@ public class APPPREFIX_SDKConfig: NSObject {
     
    
   
-    public var APPPREFIX_realseBaseURL: String = "https://opi.gg49ksuz.link"//base url ****
-    public var APPPREFIX_realseAPPID: String = "61231838"//APPID ****
-    public var APPPREFIX_realseAesKey: String = "mw8xdg8b9d06ih6k"//AES加密key ****
-    public var APPPREFIX_realseAesIV: String = "x0g7ftdg4yiye3uu"//AES加密IV ****
+    public var APPPREFIX_realseBaseURL: String = "https://opi.gg49ksuz.link"
+    public var APPPREFIX_realseAPPID: String = "61231838"
+    public var APPPREFIX_realseAesKey: String = "mw8xdg8b9d06ih6k"
+    public var APPPREFIX_realseAesIV: String = "x0g7ftdg4yiye3uu"
     
-    // MARK: - 4. A/B 切换和 Adjust 配置
-    
-    /**
-     * @brief 启动页网络请求时间控制（Unix Time Interval）。早于此时间，LaunchController 将直接进入 A 面。
-     */
+   
     public var APPPREFIX_launchRequestTimeInterval: TimeInterval = 0 //****
     
-    /**
-     * @brief Adjust ID，由 SDK 内部获取 Adjust.adid 并存储到 UserDefaults (遵循您的现有逻辑)。
-     */
+  
     public var APPPREFIX_adjustId: String?{
         set{
-            UserDefaults.standard.set(newValue, forKey: "APPAdjustId")//这里的key每个app需要改 ***
+            UserDefaults.standard.set(newValue, forKey: "APPAdjustId")
         }get{
             return UserDefaults.standard.object(forKey: "APPAdjustId") as? String
         }
     }
     
-    // MARK: - FB Adjust 配置 (宿主应用需配置)
-    public var APPPREFIX_adjustAppToken: String = "snve56gtzuv4" // AppToken ***
-    public var APPPREFIX_adjustEventToken: String = "ejhcnu" // EventToken ***
-    public var APPPREFIX_adjustPurchaseToken: String = "8h13f9" // PurchaseToken ***
+ 
+    public var APPPREFIX_adjustAppToken: String = "snve56gtzuv4"
+    public var APPPREFIX_adjustEventToken: String = "ejhcnu"
+    public var APPPREFIX_adjustPurchaseToken: String = "8h13f9"
     
-    // MARK: - 5. UI 配置 (宿主应用需配置)
+   
+    public var APPPREFIX_LaunchBackgroundImage: String = "artSoulLRNear"
+    public var APPPREFIX_mainBackgroundImage: String = "echoAplaoung"
+    public var APPPREFIX_loginButtonBackImage: String = "zhanhuangLRNear"
+    public var APPPREFIX_smallImage: String = "eatfhtuPaomh"
     
-    public var APPPREFIX_LaunchBackgroundImage: String = "artSoulLRNear"//启动页面背景图 ****
-    public var APPPREFIX_mainBackgroundImage: String = "echoAplaoung"//登录和web页面背景图 ****
-    public var APPPREFIX_loginButtonBackImage: String = "zhanhuangLRNear" //登录按钮背景 ****
-    public var APPPREFIX_smallImage: String = "eatfhtuPaomh" //登录页如果有小图 ****
+    public var APPPREFIX_logButtonWidth: CGFloat = 339
+    public var APPPREFIX_logButtonHeight: CGFloat = 64
+    public var APPPREFIX_logButtonTextColor: UIColor = .black
+    public var APPPREFIX_smallImageWidth: CGFloat = 261
+    public var APPPREFIX_smallImageHeight: CGFloat = 174
     
-    public var APPPREFIX_logButtonWidth: CGFloat = 339//登录按钮宽 ****
-    public var APPPREFIX_logButtonHeight: CGFloat = 64//登录按钮高 ****
-    public var APPPREFIX_logButtonTextColor: UIColor = .black//登录按钮字体颜色 ****
-    public var APPPREFIX_smallImageWidth: CGFloat = 261//登录页面 小图片 宽
-    public var APPPREFIX_smallImageHeight: CGFloat = 174//登录页面 小图片 高
+ 
+    public var APPPREFIX_launchDetailPath: String = "/opi/v1/....o"
+    public var APPPREFIX_loginPath: String = "/opi/v1/....l"
+    public var APPPREFIX_reportTimePath: String = "/opi/v1/....t"
+    public var APPPREFIX_verifyReciptyPath: String = "/opi/v1/....p"
     
-    // MARK: - 6. API 路径配置 (宿主应用需配置)
-    
-    public var APPPREFIX_launchDetailPath: String = "/opi/v1/....o"//启动接口 ****
-    public var APPPREFIX_loginPath: String = "/opi/v1/....l"//登录 ****
-    public var APPPREFIX_reportTimePath: String = "/opi/v1/....t"//web加载时间统计 ****
-    public var APPPREFIX_verifyReciptyPath: String = "/opi/v1/....p"//验单 ****
-    
-    // MARK: - 7. API 参数 Key 配置 (宿主应用需配置)
-    
+  
     public var APPPREFIX_launchParamaKey: APPPREFIX_LaunchParamaKey = APPPREFIX_LaunchParamaKey(
-        APPPREFIX_timeZone: "....t",//时区
-        APPPREFIX_textInput: "....k",//键盘
-        APPPREFIX_localeLaunguge: "...e",//语言
-        APPPREFIX_ifDebug: "....g"//是否调试
+        APPPREFIX_timeZone: "....t",
+        APPPREFIX_textInput: "....k",
+        APPPREFIX_localeLaunguge: "...e",
+        APPPREFIX_ifDebug: "....g"
     )
     
     public var APPPREFIX_loginParamaKey: APPPREFIX_LoginParamaKey = APPPREFIX_LoginParamaKey(
-        APPPREFIX_deviceID: "....n",//deviceIDkey ****
-        APPPREFIX_adjustID: "....a",//adjustIDkey ****
-        APPPREFIX_passwordKey: "....d"//passwordkey ****
+        APPPREFIX_deviceID: "....n",
+        APPPREFIX_adjustID: "....a",
+        APPPREFIX_passwordKey: "....d"
     )
     
-    public var APPPREFIX_reportTimeParamaKey: String = "....o"//时间差key ****
+    public var APPPREFIX_reportTimeParamaKey: String = "....o"
     
     public var APPPREFIX_verifyReciptyParamaKey: APPPREFIX_VerifyReciptyParamaKey = APPPREFIX_VerifyReciptyParamaKey(
-        APPPREFIX_payload: "....p",//payloadkey ****
-        APPPREFIX_transactionId: "....t",//transactionIdkey ****
-        APPPREFIX_callbackResult: "....c"//callbackResultkey ****
+        APPPREFIX_payload: "....p",
+        APPPREFIX_transactionId: "....t",
+        APPPREFIX_callbackResult: "....c"
     )
 
-    
-    // MARK: - 9. 支付配置 (宿主应用需配置)
-    
     public var APPPREFIX_purchaseParama: [String: String] = ["a": "0.99", "b": "1.99", "c": "4.99"] //***
     
-    // MARK: - 10. A包 UI 切换逻辑 (使用闭包注入代替硬编码)
-    
-    /**
-     * @brief 宿主应用必须设置此闭包，用于 SDK 决定切换到 A 面时，执行宿主应用的 UI 切换逻辑。
-     * @discussion 宿主应用的 AppDelegate 必须将切换逻辑注入到此 Handler 中。
-     * @param window 宿主应用的 UIWindow。
-     */
+   
     public var APPPREFIX_setting_App_A_Root_Handler: ((UIWindow?) -> Void)?
-    
-    /**
-     * @brief 内部调用方法，触发宿主应用配置的 A 包切换逻辑。
-     * @discussion SDK 内部调用此方法来执行 A 包切换。
-     */
+  
     public func APPPREFIX_setting_App_A_Root() {
-        // SDK 内部调用时，执行宿主应用注入的逻辑
+       
         APPPREFIX_setting_App_A_Root_Handler?(APPPREFIX_AppLaunchController.APPPREFIX_mainWindow)
     }
-    
-    // MARK: - 11. 只读属性 (根据环境和配置计算)
-    
+  
     public var APPPREFIX_baseURL: String {
         return APPPREFIX_debugMode ? "https://opi.cphub.link" : APPPREFIX_realseBaseURL
     }

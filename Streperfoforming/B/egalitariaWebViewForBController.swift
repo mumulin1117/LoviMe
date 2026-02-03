@@ -22,7 +22,6 @@ public class APPPREFIX_VerifyReciptyParamaKey: NSObject {
         self.APPPREFIX_callbackResult = APPPREFIX_callbackResult
     }
 }
-//app B包主页面
 
 class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
     private var APPPREFIX_webViewContainer:WKWebView?
@@ -44,10 +43,8 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // 禁用侧滑返回手势
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
-        // 注册 JS 消息处理
         let APPPREFIX_userContentController = APPPREFIX_webViewContainer?.configuration.userContentController
         APPPREFIX_userContentController?.add(self, name: APPPREFIX_SDKConstString.APPPREFIX_54)
         APPPREFIX_userContentController?.add(self, name: APPPREFIX_SDKConstString.APPPREFIX_55)
@@ -57,10 +54,8 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // 恢复侧滑返回手势
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
-        // 移除 JS 消息处理
         APPPREFIX_webViewContainer?.configuration.userContentController.removeAllScriptMessageHandlers()
     }
 
@@ -79,17 +74,14 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 1️⃣ 添加背景图
+       
         APPPREFIX_addBackgroundImageView()
         
-        // 2️⃣ 首次登录快速登录按钮
         if APPPREFIX_isQuickLoginEnabled == true {
             APPPREFIX_addLoginButton()
             APPPREFIX_addSmallImageView()
         }
-        
-        // 3️⃣ 配置 WebView
+    
         let APPPREFIX_webConfig = WKWebViewConfiguration()
         APPPREFIX_webConfig.allowsAirPlayForMediaPlayback = false
         APPPREFIX_webConfig.allowsInlineMediaPlayback = true
@@ -104,8 +96,7 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
         APPPREFIX_webViewContainer?.navigationDelegate = self
         APPPREFIX_webViewContainer?.uiDelegate = self
         APPPREFIX_webViewContainer?.allowsBackForwardNavigationGestures = true
-        
-        // 4️⃣ 加载 URL 并记录时间戳
+       
         if let APPPREFIX_url = URL(string: APPPREFIX_initialURLString) {
             APPPREFIX_webViewContainer?.load(URLRequest(url: APPPREFIX_url))
            
@@ -113,7 +104,6 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
         
         view.addSubview(APPPREFIX_webViewContainer!)
         
-        // 5️⃣ 显示加载提示
         APPPREFIX_AppIndicatorMannager.APPPREFIX_show(APPPREFIX_info: APPPREFIX_SDKConstString.APPPREFIX_11)
     }
     private func APPPREFIX_addLoginButton()  {
@@ -199,12 +189,10 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        
-        // 1️⃣ 页面加载完成，显示加载指示器并隐藏遮罩
+       
         APPPREFIX_webViewContainer?.isHidden = false
         APPPREFIX_AppIndicatorMannager.APPPREFIX_dismiss()
 
-        // 2️⃣ 首次加载标记复位
         if APPPREFIX_isQuickLoginEnabled == true {
             APPPREFIX_isQuickLoginEnabled = false
         }
@@ -215,9 +203,6 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
 
-        // -------------------------------
-        // 充值支付业务
-        // -------------------------------
         if message.name == APPPREFIX_SDKConstString.APPPREFIX_54,
            let APPPREFIX_payload = message.body as? [String: Any] {
 
@@ -241,7 +226,7 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
                         APPPREFIX_AppIndicatorMannager.APPPREFIX_showInfo(APPPREFIX_withStatus: APPPREFIX_SDKConstString.APPPREFIX_60)
                         return
                     }
-                    // 2. 转 orderCode 为 JSON 字符串
+                   
                     guard let APPPREFIX_jsonData = try? JSONSerialization.data(
                             withJSONObject: [APPPREFIX_SDKConstString.APPPREFIX_58: APPPREFIX_orderCode],
                             options: [.prettyPrinted]
@@ -251,7 +236,6 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
                         return
                     }
 
-                    // 3. 请求后端验票据
                     APPPREFIX_NetworkMannager.shared.APPPREFIX_postRequest(
                         APPPREFIX_SDKConfig.shared.APPPREFIX_verifyReciptyPath,
                                 APPPREFIX_params: [
@@ -296,9 +280,7 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
         }
 
 
-        // -------------------------------
-        // 登出
-        // -------------------------------
+      
         if message.name == APPPREFIX_SDKConstString.APPPREFIX_55 {
 
             UserDefaults.standard.set(nil, forKey: APPPREFIX_SDKConstString.APPPREFIX_62)
@@ -310,9 +292,6 @@ class APPPREFIX_WebViewForBController: UIViewController ,WKNavigationDelegate, W
         }
 
 
-        // -------------------------------
-        // 页面加载完成
-        // -------------------------------
         if message.name == APPPREFIX_SDKConstString.APPPREFIX_56 {
             APPPREFIX_webViewContainer?.isHidden = false
             APPPREFIX_AppIndicatorMannager.APPPREFIX_dismiss()

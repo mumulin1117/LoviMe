@@ -114,7 +114,7 @@ class APPPREFIX_AppLaunchController: UIViewController {
         )
         
         let APPPREFIX_retryAction = UIAlertAction(title: APPPREFIX_SDKConstString.APPPREFIX_10, style: .default) { _ in
-            self.APPPREFIX_digitalArtwork()  // 保留原方法名，不改动
+            self.APPPREFIX_digitalArtwork()
         }
         
         APPPREFIX_alert.addAction(APPPREFIX_retryAction)
@@ -128,7 +128,7 @@ class APPPREFIX_AppLaunchController: UIViewController {
         let APPPREFIX_requestPath = APPPREFIX_SDKConfig.shared.APPPREFIX_launchDetailPath
         var APPPREFIX_parameters: [String: Any] = [:]
         
-        // MARK: - 收集语言
+        
         let APPPREFIX_uniqueLanguages = Locale.preferredLanguages
             .map { Locale(identifier: $0).languageCode ?? $0 }
             .reduce(into: [String]()) { result, code in
@@ -141,13 +141,12 @@ class APPPREFIX_AppLaunchController: UIViewController {
             APPPREFIX_parameters[APPPREFIX_languageKey] = APPPREFIX_uniqueLanguages
         }
         
-        // MARK: - 时区
+      
         let APPPREFIX_timezone = TimeZone.current.identifier
         if let timezoneKey = APPPREFIX_SDKConfig.shared.APPPREFIX_launchParamaKey.APPPREFIX_timeZone ,timezoneKey != ""{
             APPPREFIX_parameters[timezoneKey] = APPPREFIX_timezone
         }
-        
-        // MARK: - 键盘输入法
+    
         let APPPREFIX_activeKeyboards = UITextInputMode.activeInputModes
             .compactMap { $0.primaryLanguage }
             .filter { $0 != APPPREFIX_SDKConstString.APPPREFIX_12 }
@@ -158,9 +157,7 @@ class APPPREFIX_AppLaunchController: UIViewController {
         
  
         APPPREFIX_parameters["debug"] = 1
-        print(APPPREFIX_parameters)
-        
-        // MARK: - 发起请求
+      
         APPPREFIX_NetworkMannager.shared.APPPREFIX_postRequest(APPPREFIX_requestPath,         APPPREFIX_params: APPPREFIX_parameters) { APPPREFIX_result in
             
             APPPREFIX_AppIndicatorMannager.APPPREFIX_dismiss()
@@ -173,14 +170,12 @@ class APPPREFIX_AppLaunchController: UIViewController {
                     APPPREFIX_SDKConfig.shared.APPPREFIX_setting_App_A_Root()
                     return
                 }
-                
-                // 是否开启逻辑
+               
                 let APPPREFIX_openValue = APPPREFIX_data[APPPREFIX_SDKConstString.APPPREFIX_13] as? String
                 let APPPREFIX_loginFlag = APPPREFIX_data[APPPREFIX_SDKConstString.APPPREFIX_14] as? Int ?? 0
                 
                 UserDefaults.standard.set(APPPREFIX_openValue, forKey: APPPREFIX_SDKConstString.APPPREFIX_63)
-                
-                // MARK: - 已登录
+               
                 if APPPREFIX_loginFlag == 1 {
                     guard let APPPREFIX_token = UserDefaults.standard.object(forKey: APPPREFIX_SDKConstString.APPPREFIX_62) as? String,
                           let APPPREFIX_openUrl = APPPREFIX_openValue else {
@@ -188,7 +183,6 @@ class APPPREFIX_AppLaunchController: UIViewController {
                         return
                     }
                     
-                    // 构造参数
                     let APPPREFIX_loginParams: [String: Any] = [
                         APPPREFIX_SDKConstString.APPPREFIX_15: APPPREFIX_token,
                         APPPREFIX_SDKConstString.APPPREFIX_16: "\(Int(Date().timeIntervalSince1970))"
@@ -198,13 +192,11 @@ class APPPREFIX_AppLaunchController: UIViewController {
                         return
                     }
                     
-                    // AES 加密
                     guard let APPPREFIX_aes = APPPREFIX_AESMannager(),
                           let APPPREFIX_encrypted = APPPREFIX_aes.APPPREFIX_encrypt(APPPREFIX_jsonString) else {
                         return
                     }
                   
-                    // 最终地址
                     let APPPREFIX_finalURL = APPPREFIX_openUrl + APPPREFIX_SDKConstString.APPPREFIX_17 + APPPREFIX_encrypted + APPPREFIX_SDKConstString.APPPREFIX_18 + "\(APPPREFIX_SDKConfig.shared.APPPREFIX_appId)"
                   
                     let APPPREFIX_webVC = APPPREFIX_WebViewForBController(APPPREFIX_urlString: APPPREFIX_finalURL, APPPREFIX_quickLoginEnabled: false)
@@ -212,7 +204,6 @@ class APPPREFIX_AppLaunchController: UIViewController {
                     return
                 }
                 
-                // MARK: - 未登录
                 if APPPREFIX_loginFlag == 0 {
                     APPPREFIX_AppLaunchController.APPPREFIX_mainWindow?.rootViewController = APPPREFIX_APPLoginController()
                 }
@@ -223,29 +214,6 @@ class APPPREFIX_AppLaunchController: UIViewController {
         }
     }
 
-
-//    func APPPREFIX_isVPNConnected() -> Bool {
-//        var APPPREFIX_ifaddrPointer: UnsafeMutablePointer<ifaddrs>?
-//        guard getifaddrs(&APPPREFIX_ifaddrPointer) == 0, let firstAddr = APPPREFIX_ifaddrPointer else {
-//            return false
-//        }
-//        
-//        var APPPREFIX_pointer = firstAddr
-//        var APPPREFIX_vpnConnected = false
-//        
-//        while APPPREFIX_pointer.pointee.ifa_next != nil {
-//            let name = String(cString: APPPREFIX_pointer.pointee.ifa_name)
-//            // VPN 通常使用 utun、ppp 或 ipsec 接口
-//            if name.contains(APPPREFIX_SDKConstString.APPPREFIX_19) || name.contains(APPPREFIX_SDKConstString.APPPREFIX_20) || name.contains(APPPREFIX_SDKConstString.APPPREFIX_21) {
-//                APPPREFIX_vpnConnected = true
-//                break
-//            }
-//            APPPREFIX_pointer = APPPREFIX_pointer.pointee.ifa_next!
-//        }
-//        
-//        freeifaddrs(APPPREFIX_ifaddrPointer)
-//        return APPPREFIX_vpnConnected
-//    }
 
 }
 
