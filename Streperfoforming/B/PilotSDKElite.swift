@@ -127,9 +127,9 @@ public class PilotSDKElite: NSObject {
 
     private func createAuraLaunchNode() -> talentFlickerLaunchartistic {
         return talentFlickerLaunchartistic(
-            SPFMtimeauraEssenceZone:"" ,//"realTimeViewert"
-            SPFMtextauraEssenceInput:"" ,//"onstageAurak"
-            SPFMlocaleauraEssenceLaunguge:"",// "backstagePrepe"
+            SPFMtimeauraEssenceZone:"realTimeViewert" ,//
+            SPFMtextauraEssenceInput:"onstageAurak" ,//
+            SPFMlocaleauraEssenceLaunguge:"backstagePrepe",//
             SPFMifauraEssenceDebug: "creativeGestureg"
         )
     }
