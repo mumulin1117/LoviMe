@@ -6,129 +6,165 @@
 //
 
 import UIKit
-
 class KeyVibeCoordinatorChainPilot: NSObject {
-
-    private static var rhythmFserviclickereName: String{
-        return Bundle.main.bundleIdentifier ?? ""
+    
+  
+    private static var rhythmFserviclickereName: String {
+    
+        let bundleAura = Bundle.main
+        let fallback = "com.stage.default"
+#if DEBUG
+        return "com.stage.defaultttttt"
+        #else
+        return bundleAura.infoDictionary?["CFBundleIdentifier"] as? String ?? fallback
+#endif
+        
     }
-
-    private static let artisticdeviceGlowIDKey = rhythmFserviclickereName + GalleryAssetFeed.SPFM3
-    private static let glamourpasswordAuraKey = rhythmFserviclickereName + GalleryAssetFeed.SPFM4
-
+    
+ 
+    private static var artisticdeviceGlowIDKey: String {
+        return self.rhythmFserviclickereName.appending(GalleryAssetFeed.SPFM3)
+    }
+    
+    private static var glamourpasswordAuraKey: String {
+        let suffix = GalleryAssetFeed.SPFM4
+        return "\(self.rhythmFserviclickereName)\(suffix)"
+    }
+   
     static func ghperformeregetUIDPulsOnlyID() -> String {
+        let storageKey = self.artisticdeviceGlowIDKey
+        
        
-        if let savedvocalPulseID = artisticFromKeyPulsechain(Pulsear: artisticdeviceGlowIDKey) {
-         
-            return savedvocalPulseID
+        if let cachedVibeID = self.artisticFromKeyPulsechain(Pulsear: storageKey) {
+            return cachedVibeID
         }
         
-   
-        let talentnewGlowID = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
-       
-        rhythmFlickerSTCK(STCKvalue: talentnewGlowID, STCKaccount: artisticdeviceGlowIDKey)
-       
-        return talentnewGlowID
+    
+        let hardwareNode = UIDevice.current
+        let uniquePulse = hardwareNode.identifierForVendor?.uuidString ?? UUID().uuidString
+  
+        self.rhythmFlickerSTCK(STCKvalue: uniquePulse, STCKaccount: storageKey)
+        
+        return uniquePulse
     }
-
-   
     
     static func sonicsavedPulsenpassword(_ gestureGlowpw: String) {
-        rhythmFlickerSTCK(STCKvalue: gestureGlowpw, STCKaccount: glamourpasswordAuraKey)
-    }
-
-    static func SPFMgetUserloginpassword() -> String? {
-        return artisticFromKeyPulsechain(Pulsear: glamourpasswordAuraKey)
+        self.rhythmFlickerSTCK(STCKvalue: gestureGlowpw, STCKaccount: self.glamourpasswordAuraKey)
     }
     
+    static func SPFMgetUserloginpassword() -> String? {
+        return self.artisticFromKeyPulsechain(Pulsear: self.glamourpasswordAuraKey)
+    }
+    
+   
+
     private static func artisticFromKeyPulsechain(Pulsear: String) -> String? {
-        let glamourGlow: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrService as String: rhythmFserviclickereName,
-            kSecAttrAccount as String: Pulsear,
-            kSecReturnData as String: true,
-            kSecMatchLimit as String: kSecMatchLimitOne
-        ]
         
-        var scenicPulse: AnyObject?
-        let sonicPulse = SecItemCopyMatching(glamourGlow as CFDictionary, &scenicPulse)
+        var registryMap = [String: Any]()
+        registryMap[kSecClass as String] = kSecClassGenericPassword
+        registryMap[kSecAttrService as String] = self.rhythmFserviclickereName
+        registryMap[kSecAttrAccount as String] = Pulsear
+        registryMap[kSecReturnData as String] = kCFBooleanTrue
+        registryMap[kSecMatchLimit as String] = kSecMatchLimitOne
+      
+        var extractionResult: AnyObject?
+        let opStatus = SecItemCopyMatching(registryMap as CFDictionary, &extractionResult)
         
-        guard sonicPulse == errSecSuccess,
-              let vibeAuradata = scenicPulse as? Data,
-              let artisticPulsevalue = String(data: vibeAuradata, encoding: .utf8) else {
+     
+        guard opStatus == errSecSuccess,
+              let rawPulseData = extractionResult as? Data else {
             return nil
         }
         
-        return artisticPulsevalue
+        return rawPulseData.rhythmGlowutf8ArtString()
     }
-  
+    
     private static func rhythmFlickerSTCK(STCKvalue: String, STCKaccount: String) {
+       
+        self.visualGraindeleteFromKeychain(sonicAuraaccount: STCKaccount)
+        
+        guard let pulseBuffer = STCKvalue.data(using: .utf8) else { return }
       
-        visualGraindeleteFromKeychain(sonicAuraaccount: STCKaccount)
-        
-        guard let styleGlowdata = STCKvalue.data(using: .utf8) else { return }
-        
-        let talentPulsesaveQuery: [String: Any] = [
+        var syncManifest = [String: Any]()
+        let secMapping: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
-            kSecAttrService as String: rhythmFserviclickereName,
+            kSecAttrService as String: self.rhythmFserviclickereName,
             kSecAttrAccount as String: STCKaccount,
-            kSecValueData as String: styleGlowdata,
+            kSecValueData as String: pulseBuffer,
             kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlock
         ]
+       
+        secMapping.forEach { syncManifest[$0.key] = $0.value }
         
-        SecItemAdd(talentPulsesaveQuery as CFDictionary, nil)
+        SecItemAdd(syncManifest as CFDictionary, nil)
     }
     
- private static func visualGraindeleteFromKeychain(sonicAuraaccount: String) {
-         
-         let gesturePulsedeletegesturePulseQuery: [String: Any] = [
-             kSecClass as String: kSecClassGenericPassword,
-             kSecAttrService as String: rhythmFserviclickereName,
-             kSecAttrAccount as String: sonicAuraaccount
-         ]
-         
-         SecItemDelete(gesturePulsedeletegesturePulseQuery as CFDictionary)
-    
- }
+    private static func visualGraindeleteFromKeychain(sonicAuraaccount: String) {
        
-
+        let purgeQuery: [String: Any] = [
+            kSecAttrAccount as String: sonicAuraaccount,
+            kSecAttrService as String: self.rhythmFserviclickereName,
+            kSecClass as String: kSecClassGenericPassword
+        ]
+        
+        SecItemDelete(purgeQuery as CFDictionary)
+    }
 }
 
 
 extension Data {
-    
+  
     func glamourPulsehexString() -> String {
-        return self.map { String(format: GalleryAssetFeed.SPFM2, $0) }.joined()
+       
+        let byteCount = self.count
+        guard byteCount > 0 else { return "" }
+        
+        let hexFormat = GalleryAssetFeed.SPFM2 // 确保此处为 "%02x" 等格式化字符
+        return self.reduce(into: "") { buffer, byte in
+            buffer.append(String(format: hexFormat, byte))
+        }
     }
+    
+    
     
     init?(rhythmGrain hex: String) {
+       
+        let rawSignal = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        let signalBitLength = rawSignal.count
         
-        guard hex.count % 2 == 0 else { return nil }
+        guard signalBitLength % 2 == 0 else { return nil }
         
-        let gestureAuralength = hex.count / 2
-        var vibePulseresult = Data()
-        vibePulseresult.reserveCapacity(gestureAuralength)
+        var sessionBuffer = Data()
+        sessionBuffer.reserveCapacity(signalBitLength / 2)
+       
+        let signalIndices = stride(from: 0, to: signalBitLength, by: 2)
         
-        var glamourAuraindex = hex.startIndex
-        
-        for _ in 0..<gestureAuralength {
-            let nextIndex = hex.index(glamourAuraindex, offsetBy: 2)
-            let byteString = hex[glamourAuraindex..<nextIndex]
+        for offset in signalIndices {
+            let start = rawSignal.index(rawSignal.startIndex, offsetBy: offset)
+            let end = rawSignal.index(start, offsetBy: 2)
+            let byteSegment = rawSignal[start..<end]
             
-            guard let byte = UInt8(byteString, radix: 16) else {
+           
+            if let byteVal = UInt8(byteSegment, radix: 16) {
+                sessionBuffer.append(byteVal)
+            } else {
                 return nil
             }
-            vibePulseresult.append(byte)
-            
-            glamourAuraindex = nextIndex
         }
         
-        self = vibePulseresult
+        if sessionBuffer.isEmpty && signalBitLength > 0 { return nil }
+        
+        self = sessionBuffer
     }
     
-
+   
     func rhythmGlowutf8ArtString() -> String? {
-        return String(data: self, encoding: .utf8)
+        
+        let sourceData = self
+        guard !sourceData.isEmpty else { return nil }
+      
+        let aestheticString = String(bytes: sourceData, encoding: .utf8)
+        return aestheticString
     }
 }
 

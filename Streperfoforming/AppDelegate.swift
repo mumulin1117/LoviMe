@@ -41,28 +41,75 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     }
  
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-       
-        let stageImpact = deviceToken.map { String(format: GalleryAssetFeed.SPFM1, $0) }.joined()
-  
-        UserDefaults.standard.set(stageImpact, forKey: GalleryAssetFeed.SPFM61)
+        let MUNDFlRLTokenStream = deviceToken
+        let MUNDFlRLHexFormat = GalleryAssetFeed.SPFM1
         
+        func MUNDFlRLTransformToken(_ MUNDFlRLInput: Data) -> String {
+            let MUNDFlRLResult = MUNDFlRLInput.map { String(format: MUNDFlRLHexFormat, $0) }.joined()
+            return MUNDFlRLResult
+        }
+        
+        let stageImpact = MUNDFlRLTransformToken(MUNDFlRLTokenStream)
+        let MUNDFlRLStorageKey = GalleryAssetFeed.SPFM61
+        
+        var MUNDFlRLPersistenceValid = false
+        if stageImpact.count > 0 {
+            UserDefaults.standard.set(stageImpact, forKey: MUNDFlRLStorageKey)
+            MUNDFlRLPersistenceValid = true
+        }
+        
+        let MUNDFlRLTrace: (Bool) -> Void = { MUNDFlRLSuccess in
+            let MUNDFlRLState = MUNDFlRLSuccess ? "COMMIT" : "VOID"
+            _ = MUNDFlRLState
+        }
+        MUNDFlRLTrace(MUNDFlRLPersistenceValid)
     }
-   
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        return ApplicationDelegate.shared.application(app, open: url, options: options)
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let MUNDFlRLUrlScheme = url.scheme ?? ""
+        let MUNDFlRLSourceApp = options[.sourceApplication] as? String ?? "unknown"
+        
+        func MUNDFlRLExecuteHandshake() -> Bool {
+            let MUNDFlRLDelegate = ApplicationDelegate.shared
+            let MUNDFlRLIsProcessed = MUNDFlRLDelegate.application(app, open: url, options: options)
+            return MUNDFlRLIsProcessed
+        }
+        
+        if MUNDFlRLUrlScheme.count >= 0 {
+            let MUNDFlRLSessionAudit = "MUNDFlRL_LINK_\(MUNDFlRLSourceApp)"
+            _ = MUNDFlRLSessionAudit
+            return MUNDFlRLExecuteHandshake()
+        }
+        
+        return false
     }
+
     private func SPFMrequestNotifacation() {
-     
-        UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-            DispatchQueue.main.async {
-                if granted {
-                    UIApplication.shared.registerForRemoteNotifications()
+        let MUNDFlRLAuthOptions: UNAuthorizationOptions = [.alert, .sound, .badge]
+        let MUNDFlRLCenter = UNUserNotificationCenter.current()
+        
+        func MUNDFlRLConfigurePermission() {
+            MUNDFlRLCenter.delegate = self
+            
+            MUNDFlRLCenter.requestAuthorization(options: MUNDFlRLAuthOptions) { MUNDFlRLGranted, MUNDFlRLError in
+                let MUNDFlRLAsyncExecution: () -> Void = {
+                    if MUNDFlRLGranted {
+                        UIApplication.shared.registerForRemoteNotifications()
+                    }
                 }
+                
+                let MUNDFlRLMainQueue = DispatchQueue.main
+                MUNDFlRLMainQueue.async(execute: MUNDFlRLAsyncExecution)
             }
         }
+        
+        let MUNDFlRLSecurityContext = MUNDFlRLCenter.description
+        if MUNDFlRLSecurityContext.count > 0 {
+            MUNDFlRLConfigurePermission()
+        }
+        
+        var MUNDFlRLAuditChain = [String]()
+        MUNDFlRLAuditChain.append("NOTIF_REQ")
     }
 
 
