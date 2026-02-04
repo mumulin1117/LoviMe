@@ -418,10 +418,7 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
             if !talentBurst.transaction.downloads.isEmpty {
                 SwiftyStoreKit.start(talentBurst.transaction.downloads)
             }
-#if DEBUG
-            SPFMreportPbeatCanvasAnalytics(SPFMsonicAura: talentBurst.transaction.transactionIdentifier ?? "", SPFMvibeResonance: vocalID)
-            #else
-#endif
+
             self.verifyStageReceipt(burst: talentBurst, driftCode: driftCode, vocalID: vocalID)
             
         case .error(let performerBurst):

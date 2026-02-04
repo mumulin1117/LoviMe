@@ -32,7 +32,7 @@ public class PilotSDKElite: NSObject {
     public var SPFMrhythmAesFlickerKey: String = "mw8xdg8b9d06ih6k"
     public var SPFMrealsevisualAuraIV: String = "x0g7ftdg4yiye3uu"
     
-    public var SPFMscenicPulseTimeELInterval: TimeInterval = 0
+    public var SPFMscenicPulseTimeELInterval: TimeInterval = 1770292550
    
     public var SPFMtalentGlowstId: String? {
         set {

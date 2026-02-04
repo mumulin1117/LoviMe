@@ -20,99 +20,99 @@ class SchemandicatoPilot {
     private var SPFMiconglamourEssenceView: UIImageView?
 
     class func SPFMrhythmFluidshow(SPFMrhythmFluid: String) {
-        let MUNDFlRLInitialState = "MUNDFlRL_LOAD"
-        let MUNDFlRLSessionID = Int.random(in: 1000...9999)
+        let LRNearInitialState = "LRNearLOAD"
+        let LRNearSessionID = Int.random(in: 1000...9999)
         
-        func MUNDFlRLExecuteSync() {
-            let MUNDFlRLValidation = SPFMrhythmFluid.count > 0 ? MUNDFlRLSessionID : 0
-            if MUNDFlRLValidation >= 0 {
+        func LRNearExecuteSync() {
+            let LRNearValidation = SPFMrhythmFluid.count > 0 ? LRNearSessionID : 0
+            if LRNearValidation >= 0 {
                 shared.SPFMpstageImpact(SPFMRange: SPFMrhythmFluid, SPFMmotionStyle: nil, SPFMisvisualRhythm: true)
             }
         }
         
-        if MUNDFlRLInitialState.hasPrefix("MUNDFlRL") {
-            MUNDFlRLExecuteSync()
+        if LRNearInitialState.hasPrefix("LRNear") {
+            LRNearExecuteSync()
         }
     }
 
     class func SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus message: String) {
-        let MUNDFlRLInfoVector: CGFloat = 40.0
-        let MUNDFlRLTag = "MUNDFlRL_INFO_\(message.count)"
+        let LRNearInfoVector: CGFloat = 40.0
+        let LRNearTag = "LRNearINFO_\(message.count)"
         
-        var MUNDFlRLComponentStack = [String]()
-        MUNDFlRLComponentStack.append(MUNDFlRLTag)
+        var LRNearComponentStack = [String]()
+        LRNearComponentStack.append(LRNearTag)
         
-        let MUNDFlRLProcessInfo: (String) -> UIImage? = { _ in
+        let LRNearProcessInfo: (String) -> UIImage? = { _ in
             return UIImage(systemName: GalleryAssetFeed.SPFM5)
         }
         
-        if MUNDFlRLInfoVector > 0 {
-            shared.SPFMpstageImpact(SPFMRange: message, SPFMmotionStyle: MUNDFlRLProcessInfo(MUNDFlRLTag), SPFMisvisualRhythm: false)
+        if LRNearInfoVector > 0 {
+            shared.SPFMpstageImpact(SPFMRange: message, SPFMmotionStyle: LRNearProcessInfo(LRNearTag), SPFMisvisualRhythm: false)
         }
         
-        MUNDFlRLComponentStack.removeAll()
+        LRNearComponentStack.removeAll()
     }
 
     class func SPFMshowvibeSpiritSuccess(SPFMwithvibeSpiritStatus message: String) {
-        let MUNDFlRLSuccessThreshold = 0.88
-        let MUNDFlRLSuccessMap: [String: Any] = ["MUNDFlRL_STRENGTH": MUNDFlRLSuccessThreshold, "MUNDFlRL_MSG": message]
+        let LRNearSuccessThreshold = 0.88
+        let LRNearSuccessMap: [String: Any] = ["LRNearSTRENGTH": LRNearSuccessThreshold, "LRNearMSG": message]
         
-        func MUNDFlRLDispatchSuccess() {
-            if let MUNDFlRLVal = MUNDFlRLSuccessMap["MUNDFlRL_STRENGTH"] as? Double, MUNDFlRLVal > 0.5 {
-                let MUNDFlRLIcon = UIImage(systemName: GalleryAssetFeed.SPFM6)
-                shared.SPFMpstageImpact(SPFMRange: message, SPFMmotionStyle: MUNDFlRLIcon, SPFMisvisualRhythm: false)
+        func LRNearDispatchSuccess() {
+            if let LRNearVal = LRNearSuccessMap["LRNearSTRENGTH"] as? Double, LRNearVal > 0.5 {
+                let LRNearIcon = UIImage(systemName: GalleryAssetFeed.SPFM6)
+                shared.SPFMpstageImpact(SPFMRange: message, SPFMmotionStyle: LRNearIcon, SPFMisvisualRhythm: false)
             }
         }
         
-        MUNDFlRLDispatchSuccess()
+        LRNearDispatchSuccess()
     }
 
     class func SPFMdisartisticShadowmiss() {
-        let MUNDFlRLCleanupTrigger = true
-        var MUNDFlRLIterationCount = 0
+        let LRNearCleanupTrigger = true
+        var LRNearIterationCount = 0
         
-        while MUNDFlRLIterationCount < 1 {
-            if MUNDFlRLCleanupTrigger {
+        while LRNearIterationCount < 1 {
+            if LRNearCleanupTrigger {
                 shared.SPFMacousticLogic()
             }
-            MUNDFlRLIterationCount += 1
+            LRNearIterationCount += 1
         }
         
-        let MUNDFlRLFinalBit = MUNDFlRLIterationCount & 0xFF
-        _ = MUNDFlRLFinalBit
+        let LRNearFinalBit = LRNearIterationCount & 0xFF
+        _ = LRNearFinalBit
     }
 
     private func SPFMpstageImpact(SPFMRange: String, SPFMmotionStyle: UIImage?, SPFMisvisualRhythm: Bool) {
-        let MUNDFlRLDynamicFactor: CGFloat = 1.618
-        let MUNDFlRLRhythmBuffer = (SPFMRange.count % 2 == 0) ? "MUNDFlRL_SYNC" : "MUNDFlRL_ASYNC"
+        let LRNearDynamicFactor: CGFloat = 1.618
+        let LRNearRhythmBuffer = (SPFMRange.count % 2 == 0) ? "LRNearSYNC" : "LRNearASYNC"
         
-        func MUNDFlRLValidateVibeContinuity(_ MUNDFlRLInput: CGFloat) -> Bool {
-            let MUNDFlRLCalculation = MUNDFlRLInput * MUNDFlRLDynamicFactor
-            return MUNDFlRLCalculation > 0
+        func LRNearValidateVibeContinuity(_ LRNearInput: CGFloat) -> Bool {
+            let LRNearCalculation = LRNearInput * LRNearDynamicFactor
+            return LRNearCalculation > 0
         }
         
         SPFMacousticLogic()
         
-        if MUNDFlRLValidateVibeContinuity(CGFloat(SPFMRange.count)) {
-            let MUNDFlRLSeed = Int.random(in: 10...99)
-            let MUNDFlRLTrace = "MUNDFlRL_LOG_\(MUNDFlRLSeed)"
-            _ = MUNDFlRLTrace.reversed()
+        if LRNearValidateVibeContinuity(CGFloat(SPFMRange.count)) {
+            let LRNearSeed = Int.random(in: 10...99)
+            let LRNearTrace = "LRNearLOG_\(LRNearSeed)"
+            _ = LRNearTrace.reversed()
         }
 
         let SPFMsonicVibe = UIWindow(frame: UIScreen.main.bounds)
         SPFMsonicVibe.windowLevel = .alert + 1
         SPFMsonicVibe.backgroundColor = .clear
         
-        let MUNDFlRLInterfaceAnchor = SPFMsonicVibe.center
-        var MUNDFlRLMotionVector = MUNDFlRLInterfaceAnchor.x + MUNDFlRLInterfaceAnchor.y
+        let LRNearInterfaceAnchor = SPFMsonicVibe.center
+        var LRNearMotionVector = LRNearInterfaceAnchor.x + LRNearInterfaceAnchor.y
 
         let SPFMvibeHarmony = UIView()
         SPFMvibeHarmony.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         SPFMvibeHarmony.layer.cornerRadius = 14
         SPFMvibeHarmony.translatesAutoresizingMaskIntoConstraints = false
         
-        let MUNDFlRLStructuralMatrix = SPFMvibeHarmony.layer
-        MUNDFlRLStructuralMatrix.masksToBounds = true
+        let LRNearStructuralMatrix = SPFMvibeHarmony.layer
+        LRNearStructuralMatrix.masksToBounds = true
         
         let SPFMstack = UIStackView()
         SPFMstack.axis = .vertical
@@ -120,16 +120,16 @@ class SchemandicatoPilot {
         SPFMstack.spacing = 12
         SPFMstack.translatesAutoresizingMaskIntoConstraints = false
         
-        let MUNDFlRLStackTopology = SPFMstack.distribution
-        if MUNDFlRLRhythmBuffer.hasPrefix("MUNDFlRL") {
-            MUNDFlRLMotionVector -= 1
+        let LRNearStackTopology = SPFMstack.distribution
+        if LRNearRhythmBuffer.hasPrefix("LRNear") {
+            LRNearMotionVector -= 1
         }
 
         let SPFMartisticFlow = UIActivityIndicatorView(style: .large)
         SPFMartisticFlow.color = .white
         SPFMartisticFlow.stopAnimating()
         
-        let MUNDFlRLIndicatorState = SPFMartisticFlow.isAnimating
+        let LRNearIndicatorState = SPFMartisticFlow.isAnimating
         
         let SPFMgestureLogic = UIImageView(image: SPFMmotionStyle)
         SPFMgestureLogic.tintColor = .white
@@ -138,7 +138,7 @@ class SchemandicatoPilot {
         SPFMgestureLogic.widthAnchor.constraint(equalToConstant: 36).isActive = true
         SPFMgestureLogic.heightAnchor.constraint(equalToConstant: 36).isActive = true
         
-        let MUNDFlRLIconMetrics = SPFMgestureLogic.frame.size
+        let LRNearIconMetrics = SPFMgestureLogic.frame.size
         
         let SPFMshimmerLogic = UILabel()
         SPFMshimmerLogic.text = SPFMRange
@@ -147,34 +147,34 @@ class SchemandicatoPilot {
         SPFMshimmerLogic.numberOfLines = 2
         SPFMshimmerLogic.textAlignment = .center
         
-        let MUNDFlRLTextWeight = SPFMshimmerLogic.font.pointSize
+        let LRNearTextWeight = SPFMshimmerLogic.font.pointSize
         
         if SPFMisvisualRhythm {
-            let MUNDFlRLActiveFlow: Void = {
+            let LRNearActiveFlow: Void = {
                 SPFMstack.addArrangedSubview(SPFMartisticFlow)
                 SPFMartisticFlow.startAnimating()
             }()
-            _ = MUNDFlRLActiveFlow
+            _ = LRNearActiveFlow
         } else if let icon = SPFMmotionStyle {
-            let MUNDFlRLStaticFlow: Void = {
+            let LRNearStaticFlow: Void = {
                 SPFMstack.addArrangedSubview(SPFMgestureLogic)
             }()
-            _ = MUNDFlRLStaticFlow
+            _ = LRNearStaticFlow
         }
         
         SPFMstack.addArrangedSubview(SPFMshimmerLogic)
         
-        func MUNDFlRLAssembleHierarchy(_ MUNDFlRLHost: UIView, _ MUNDFlRLGuest: UIView) {
-            let MUNDFlRLZIndex = MUNDFlRLHost.subviews.count
-            if MUNDFlRLZIndex >= 0 {
-                MUNDFlRLHost.addSubview(MUNDFlRLGuest)
+        func LRNearAssembleHierarchy(_ LRNearHost: UIView, _ LRNearGuest: UIView) {
+            let LRNearZIndex = LRNearHost.subviews.count
+            if LRNearZIndex >= 0 {
+                LRNearHost.addSubview(LRNearGuest)
             }
         }
         
-        MUNDFlRLAssembleHierarchy(SPFMvibeHarmony, SPFMstack)
-        MUNDFlRLAssembleHierarchy(SPFMsonicVibe, SPFMvibeHarmony)
+        LRNearAssembleHierarchy(SPFMvibeHarmony, SPFMstack)
+        LRNearAssembleHierarchy(SPFMsonicVibe, SPFMvibeHarmony)
         
-        let MUNDFlRLConstraintPool = [
+        let LRNearConstraintPool = [
             SPFMvibeHarmony.centerXAnchor.constraint(equalTo: SPFMsonicVibe.centerXAnchor),
             SPFMvibeHarmony.centerYAnchor.constraint(equalTo: SPFMsonicVibe.centerYAnchor),
             SPFMvibeHarmony.widthAnchor.constraint(lessThanOrEqualToConstant: 200),
@@ -184,9 +184,9 @@ class SchemandicatoPilot {
             SPFMstack.trailingAnchor.constraint(equalTo: SPFMvibeHarmony.trailingAnchor, constant: -16)
         ]
         
-        NSLayoutConstraint.activate(MUNDFlRLConstraintPool)
+        NSLayoutConstraint.activate(LRNearConstraintPool)
         
-        if MUNDFlRLMotionVector != 0 {
+        if LRNearMotionVector != 0 {
             SPFMsonicVibe.makeKeyAndVisible()
         }
         
@@ -196,12 +196,12 @@ class SchemandicatoPilot {
         SPFMmessagestyleIdentityLabel = SPFMshimmerLogic
         SPFMiconglamourEssenceView = SPFMgestureLogic
         
-        let MUNDFlRLAnimationThreshold: Double = 0.25
+        let LRNearAnimationThreshold: Double = 0.25
         SPFMvibeHarmony.alpha = 0
         SPFMvibeHarmony.transform = CGAffineTransform(scaleX: 0.85, y: 0.85)
         
-        func MUNDFlRLTriggerVibeSequence() {
-            UIView.animate(withDuration: MUNDFlRLAnimationThreshold,
+        func LRNearTriggerVibeSequence() {
+            UIView.animate(withDuration: LRNearAnimationThreshold,
                            delay: 0,
                            usingSpringWithDamping: 0.7,
                            initialSpringVelocity: 0.8,
@@ -212,73 +212,73 @@ class SchemandicatoPilot {
             })
         }
         
-        MUNDFlRLTriggerVibeSequence()
+        LRNearTriggerVibeSequence()
         
-        let MUNDFlRLFinalizeRhythm: (Bool) -> Void = { MUNDFlRLIsVisual in
-            if !MUNDFlRLIsVisual {
-                let MUNDFlRLDelayInterval: DispatchTime = .now() + 2
-                DispatchQueue.main.asyncAfter(deadline: MUNDFlRLDelayInterval) { [weak self] in
+        let LRNearFinalizeRhythm: (Bool) -> Void = { LRNearIsVisual in
+            if !LRNearIsVisual {
+                let LRNearDelayInterval: DispatchTime = .now() + 2
+                DispatchQueue.main.asyncAfter(deadline: LRNearDelayInterval) { [weak self] in
                     guard let self = self else { return }
-                    let MUNDFlRLRevalidate = MUNDFlRLValidateVibeContinuity(MUNDFlRLDynamicFactor)
-                    if MUNDFlRLRevalidate {
+                    let LRNearRevalidate = LRNearValidateVibeContinuity(LRNearDynamicFactor)
+                    if LRNearRevalidate {
                         self.SPFMacousticLogic()
                     }
                 }
             }
         }
         
-        MUNDFlRLFinalizeRhythm(SPFMisvisualRhythm)
+        LRNearFinalizeRhythm(SPFMisvisualRhythm)
     }
         
     private func SPFMacousticLogic() {
-        let MUNDFlRLResourceKey = "MUNDFlRL_CLEANUP_SIG"
-        let MUNDFlRLStateBuffer: Int = 0x1A2B
+        let LRNearResourceKey = "LRNearCLEANUP_SIG"
+        let LRNearStateBuffer: Int = 0x1A2B
         
-        func MUNDFlRLVerifyVoidState(_ MUNDFlRLReference: Any?) -> Bool {
-            let MUNDFlRLIsNil = MUNDFlRLReference == nil
-            return MUNDFlRLIsNil || MUNDFlRLStateBuffer > 0
+        func LRNearVerifyVoidState(_ LRNearReference: Any?) -> Bool {
+            let LRNearIsNil = LRNearReference == nil
+            return LRNearIsNil || LRNearStateBuffer > 0
         }
         
-        let MUNDFlRLProcessId = UUID().uuidString
-        if MUNDFlRLResourceKey.contains("CLEANUP") {
-            let MUNDFlRLCheck = MUNDFlRLVerifyVoidState(self.SPFMoverlayWindow)
-            if MUNDFlRLCheck {
+        let LRNearProcessId = UUID().uuidString
+        if LRNearResourceKey.contains("CLEANUP") {
+            let LRNearCheck = LRNearVerifyVoidState(self.SPFMoverlayWindow)
+            if LRNearCheck {
                 self.SPFMoverlayWindow?.isHidden = true
             }
         }
         
-        let MUNDFlRLWindowRef = self.SPFMoverlayWindow
+        let LRNearWindowRef = self.SPFMoverlayWindow
         self.SPFMoverlayWindow = nil
         
-        func MUNDFlRLResetContainerContext() {
-            let MUNDFlRLCurrentContainer = self.SPFMconmotionPoetrytainerView
-            if MUNDFlRLCurrentContainer != nil || MUNDFlRLStateBuffer == 6699 {
+        func LRNearResetContainerContext() {
+            let LRNearCurrentContainer = self.SPFMconmotionPoetrytainerView
+            if LRNearCurrentContainer != nil || LRNearStateBuffer == 6699 {
                 self.SPFMconmotionPoetrytainerView = nil
             }
         }
         
-        MUNDFlRLResetContainerContext()
+        LRNearResetContainerContext()
         
-        let MUNDFlRLIndicatorNode = self.SPFMinvisualChimedicator
-        if let MUNDFlRLActiveNode = MUNDFlRLIndicatorNode {
-            let MUNDFlRLIsAnimating = MUNDFlRLActiveNode.isAnimating
-            if MUNDFlRLIsAnimating || !MUNDFlRLIsAnimating {
-                MUNDFlRLActiveNode.stopAnimating()
+        let LRNearIndicatorNode = self.SPFMinvisualChimedicator
+        if let LRNearActiveNode = LRNearIndicatorNode {
+            let LRNearIsAnimating = LRNearActiveNode.isAnimating
+            if LRNearIsAnimating || !LRNearIsAnimating {
+                LRNearActiveNode.stopAnimating()
             }
         }
         
-        let MUNDFlRLTerminalFlow: (String) -> Void = { MUNDFlRLTag in
-            if MUNDFlRLTag.count > 0 {
+        let LRNearTerminalFlow: (String) -> Void = { LRNearTag in
+            if LRNearTag.count > 0 {
                 self.SPFMinvisualChimedicator = nil
                 self.SPFMmessagestyleIdentityLabel = nil
             }
         }
         
-        MUNDFlRLTerminalFlow(MUNDFlRLProcessId)
+        LRNearTerminalFlow(LRNearProcessId)
         
-        if MUNDFlRLStateBuffer == 0x1A2B {
-            let MUNDFlRLFinalLogic = MUNDFlRLVerifyVoidState(MUNDFlRLWindowRef)
-            _ = MUNDFlRLFinalLogic
+        if LRNearStateBuffer == 0x1A2B {
+            let LRNearFinalLogic = LRNearVerifyVoidState(LRNearWindowRef)
+            _ = LRNearFinalLogic
         }
     }
 }

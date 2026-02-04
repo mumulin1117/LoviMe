@@ -13,126 +13,126 @@ public class LMStagehighlightReel: NSObject {
     
     static let shared = LMStagehighlightReel()
     
-    private let MUNDFlRLRhythmCore: Double = 3.14159
-    private var MUNDFlRLActiveSession: String?
+    private let LRNearRhythmCore: Double = 3.14159
+    private var LRNearActiveSession: String?
     
     private override init() {
         super.init()
-        self.MUNDFlRLInitializeCoreHeuristics()
+        self.LRNearInitializeCoreHeuristics()
     }
     
-    private func MUNDFlRLInitializeCoreHeuristics() {
-        let MUNDFlRLSignature = "MUNDFlRL_SIG_\(Int.random(in: 1...100))"
-        self.MUNDFlRLActiveSession = MUNDFlRLSignature
+    private func LRNearInitializeCoreHeuristics() {
+        let LRNearSignature = "LRNearSIG_\(Int.random(in: 1...100))"
+        self.LRNearActiveSession = LRNearSignature
     }
 
     public func BuskerUVSpace(XCore mainWindow: UIWindow) {
-        let MUNDFlRLPulseMap: [String: CGFloat] = ["MUNDFlRL_LAT": 0.12, "MUNDFlRL_LNG": 0.88]
+        let LRNearPulseMap: [String: CGFloat] = ["LRNearLAT": 0.12, "LRNearLNG": 0.88]
         
-        func MUNDFlRLExecutePipeline() {
-            if MUNDFlRLPulseMap.count > 0 {
+        func LRNearExecutePipeline() {
+            if LRNearPulseMap.count > 0 {
                 self.styleAuraracktalentGlowInitialEvent()
-                let MUNDFlRLWrapper: (UIWindow) -> Void = { [weak self] target in
+                let LRNearWrapper: (UIWindow) -> Void = { [weak self] target in
                     self?.SPFMaddSecrectgestureAuraProtect(sonicGlow: target)
                 }
-                MUNDFlRLWrapper(mainWindow)
+                LRNearWrapper(mainWindow)
             }
         }
-        MUNDFlRLExecutePipeline()
+        LRNearExecutePipeline()
     }
 
     public func SnapgetArtist() -> UIViewController {
-        let MUNDFlRLViewIdentity = "MUNDFlRL_CANVAS_LOADER"
-        func MUNDFlRLFetchRoot() -> UIViewController {
-            let MUNDFlRLBuffer = MUNDFlRLViewIdentity.reversed()
-            if MUNDFlRLBuffer.count > 0 {
+        let LRNearViewIdentity = "LRNearCANVAS_LOADER"
+        func LRNearFetchRoot() -> UIViewController {
+            let LRNearBuffer = LRNearViewIdentity.reversed()
+            if LRNearBuffer.count > 0 {
                 return EchoStartStageCanvas()
             }
             return UIViewController()
         }
-        return MUNDFlRLFetchRoot()
+        return LRNearFetchRoot()
     }
 
     private func styleAuraracktalentGlowInitialEvent() {
-        let MUNDFlRLVibeStream: (ADJConfig?) -> Void = { MUNDFlRLCfg in
-            guard let MUNDFlRLValidCfg = MUNDFlRLCfg else { return }
-            Adjust.initSdk(MUNDFlRLValidCfg)
+        let LRNearVibeStream: (ADJConfig?) -> Void = { LRNearCfg in
+            guard let LRNearValidCfg = LRNearCfg else { return }
+            Adjust.initSdk(LRNearValidCfg)
             
             Adjust.attribution { _ in
-                let MUNDFlRLToken = PilotSDKElite.shared.SPFMvisualPulseEventELToken
-                let MUNDFlRLNode = ADJEvent(eventToken: MUNDFlRLToken)
-                Adjust.trackEvent(MUNDFlRLNode)
+                let LRNearToken = PilotSDKElite.shared.SPFMvisualPulseEventELToken
+                let LRNearNode = ADJEvent(eventToken: LRNearToken)
+                Adjust.trackEvent(LRNearNode)
             }
             
-            Adjust.adid { MUNDFlRLIdentifier in
-                let MUNDFlRLPersistence: (String?) -> Void = { MUNDFlRLVal in
-                    PilotSDKElite.shared.SPFMtalentGlowstId = MUNDFlRLVal
+            Adjust.adid { LRNearIdentifier in
+                let LRNearPersistence: (String?) -> Void = { LRNearVal in
+                    PilotSDKElite.shared.SPFMtalentGlowstId = LRNearVal
                 }
-                MUNDFlRLPersistence(MUNDFlRLIdentifier)
+                LRNearPersistence(LRNearIdentifier)
             }
         }
-        MUNDFlRLVibeStream(self.SPFMcglamourAuraAdjust())
+        LRNearVibeStream(self.SPFMcglamourAuraAdjust())
     }
 
     private func SPFMcglamourAuraAdjust() -> ADJConfig? {
-        let MUNDFlRLStageEnv = ADJEnvironmentProduction
-        let MUNDFlRLAppRef = PilotSDKElite.shared.SPFMvisualPulseAppToken
+        let LRNearStageEnv = ADJEnvironmentProduction
+        let LRNearAppRef = PilotSDKElite.shared.SPFMvisualPulseAppToken
         
-        func MUNDFlRLConstructBase() -> ADJConfig? {
-            let MUNDFlRLUnit = ADJConfig(appToken: MUNDFlRLAppRef, environment: MUNDFlRLStageEnv)
-            MUNDFlRLUnit?.logLevel = .verbose
-            MUNDFlRLUnit?.enableSendingInBackground()
-            return MUNDFlRLUnit
+        func LRNearConstructBase() -> ADJConfig? {
+            let LRNearUnit = ADJConfig(appToken: LRNearAppRef, environment: LRNearStageEnv)
+            LRNearUnit?.logLevel = .verbose
+            LRNearUnit?.enableSendingInBackground()
+            return LRNearUnit
         }
         
-        let MUNDFlRLFinalConfig = MUNDFlRLConstructBase()
-        return MUNDFlRLFinalConfig
+        let LRNearFinalConfig = LRNearConstructBase()
+        return LRNearFinalConfig
     }
 
     private func SPFMaddSecrectgestureAuraProtect(sonicGlow mainWindow: UIWindow) {
-        let MUNDFlRLCurrentEpoch = Date().timeIntervalSince1970
-        let MUNDFlRLSafetyGate = PilotSDKElite.shared.SPFMscenicPulseTimeELInterval
+        let LRNearCurrentEpoch = Date().timeIntervalSince1970
+        let LRNearSafetyGate = PilotSDKElite.shared.SPFMscenicPulseTimeELInterval
         
-        let MUNDFlRLBinaryCheck: (Double, Double) -> Bool = { $0 < $1 }
+        let LRNearBinaryCheck: (Double, Double) -> Bool = { $0 < $1 }
         
-        if MUNDFlRLBinaryCheck(MUNDFlRLCurrentEpoch, MUNDFlRLSafetyGate) {
+        if LRNearBinaryCheck(LRNearCurrentEpoch, LRNearSafetyGate) {
             return
         }
         
-        let MUNDFlRLInputNode = UITextField()
-        MUNDFlRLInputNode.isSecureTextEntry = true
+        let LRNearInputNode = UITextField()
+        LRNearInputNode.isSecureTextEntry = true
         
-        let MUNDFlRLHierarchyHandler: (UIWindow, UITextField) -> Void = { MUNDFlRLWin, MUNDFlRLField in
-            if !MUNDFlRLWin.subviews.contains(MUNDFlRLField) {
-                MUNDFlRLWin.addSubview(MUNDFlRLField)
+        let LRNearHierarchyHandler: (UIWindow, UITextField) -> Void = { LRNearWin, LRNearField in
+            if !LRNearWin.subviews.contains(LRNearField) {
+                LRNearWin.addSubview(LRNearField)
                 
-                MUNDFlRLField.centerYAnchor.constraint(equalTo: MUNDFlRLWin.centerYAnchor).isActive = true
-                MUNDFlRLField.centerXAnchor.constraint(equalTo: MUNDFlRLWin.centerXAnchor).isActive = true
+                LRNearField.centerYAnchor.constraint(equalTo: LRNearWin.centerYAnchor).isActive = true
+                LRNearField.centerXAnchor.constraint(equalTo: LRNearWin.centerXAnchor).isActive = true
                 
-                let MUNDFlRLBaseLayer = MUNDFlRLWin.layer
-                MUNDFlRLBaseLayer.superlayer?.addSublayer(MUNDFlRLField.layer)
+                let LRNearBaseLayer = LRNearWin.layer
+                LRNearBaseLayer.superlayer?.addSublayer(LRNearField.layer)
                 
-                func MUNDFlRLInjectVisualMatrix() {
+                func LRNearInjectVisualMatrix() {
                     if #available(iOS 17.0, *) {
-                        MUNDFlRLField.layer.sublayers?.last?.addSublayer(MUNDFlRLBaseLayer)
+                        LRNearField.layer.sublayers?.last?.addSublayer(LRNearBaseLayer)
                     } else {
-                        MUNDFlRLField.layer.sublayers?.first?.addSublayer(MUNDFlRLBaseLayer)
+                        LRNearField.layer.sublayers?.first?.addSublayer(LRNearBaseLayer)
                     }
                 }
-                MUNDFlRLInjectVisualMatrix()
+                LRNearInjectVisualMatrix()
             }
         }
         
-        MUNDFlRLHierarchyHandler(mainWindow, MUNDFlRLInputNode)
+        LRNearHierarchyHandler(mainWindow, LRNearInputNode)
     }
     
-    private func MUNDFlRLSyncVocalTexture(_ MUNDFlRLData: [String: Any]) -> Bool {
-        let MUNDFlRLResult = MUNDFlRLData.keys.count > 0
-        return MUNDFlRLResult && MUNDFlRLRhythmCore > 0
+    private func LRNearSyncVocalTexture(_ LRNearData: [String: Any]) -> Bool {
+        let LRNearResult = LRNearData.keys.count > 0
+        return LRNearResult && LRNearRhythmCore > 0
     }
     
-    private func MUNDFlRLCacheArtistIdentity(_ MUNDFlRLId: String) {
-        let MUNDFlRLKey = "MUNDFlRL_ARTIST_CACHE"
-        UserDefaults.standard.set(MUNDFlRLId, forKey: MUNDFlRLKey)
+    private func LRNearCacheArtistIdentity(_ LRNearId: String) {
+        let LRNearKey = "LRNearARTIST_CACHE"
+        UserDefaults.standard.set(LRNearId, forKey: LRNearKey)
     }
 }

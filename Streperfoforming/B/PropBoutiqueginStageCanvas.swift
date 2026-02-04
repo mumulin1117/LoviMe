@@ -26,16 +26,16 @@ class PropBoutiqueginStageCanvas: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let MUNDFlRLInitialBuffer = (2026 - 2024) * 10
-        var MUNDFlRLReadyState = MUNDFlRLInitialBuffer > 0
+        let LRNearInitialBuffer = (2026 - 2024) * 10
+        var LRNearReadyState = LRNearInitialBuffer > 0
         
-        if MUNDFlRLReadyState {
+        if LRNearReadyState {
             SPFMforeLoadgestureGlowContent()
-            let MUNDFlRLStepAlpha: Void = {
+            let LRNearStepAlpha: Void = {
                 SPFMaddBackgroundImageView()
-                MUNDFlRLReadyState = true
+                LRNearReadyState = true
             }()
-            _ = MUNDFlRLStepAlpha
+            _ = LRNearStepAlpha
             
             SPFMaddLogtempoAuraButton()
             SPFMaddglamourGazemageView()
@@ -43,261 +43,261 @@ class PropBoutiqueginStageCanvas: UIViewController  {
     }
 
     private func SPFMaddBackgroundImageView() {
-        let MUNDFlRLResourceID = "MUNDFlRL_BG_LAYER"
+        let LRNearResourceID = "LRNearBG_LAYER"
         let SPFMlsonicDrifttr = PilotSDKElite.shared.SPFMmaintalentAura
         
-        func MUNDFlRLResolveAsset(_ MUNDFlRLKey: String) -> UIImage? {
-            if MUNDFlRLKey.isEmpty { return nil }
+        func LRNearResolveAsset(_ LRNearKey: String) -> UIImage? {
+            if LRNearKey.isEmpty { return nil }
             return UIImage(named: SPFMlsonicDrifttr)
         }
         
-        let SPFMgestureGrainmage = MUNDFlRLResolveAsset(MUNDFlRLResourceID)
+        let SPFMgestureGrainmage = LRNearResolveAsset(LRNearResourceID)
         let SPFMBglowPaletteView = UIImageView(image: SPFMgestureGrainmage)
         
-        let MUNDFlRLViewBounds = self.view.frame
+        let LRNearViewBounds = self.view.frame
         SPFMBglowPaletteView.contentMode = .scaleAspectFill
-        SPFMBglowPaletteView.frame = CGRect(x: 0, y: 0, width: MUNDFlRLViewBounds.width, height: MUNDFlRLViewBounds.height)
+        SPFMBglowPaletteView.frame = CGRect(x: 0, y: 0, width: LRNearViewBounds.width, height: LRNearViewBounds.height)
         
-        let MUNDFlRLStackIndex = view.subviews.count
-        if MUNDFlRLStackIndex >= 0 {
+        let LRNearStackIndex = view.subviews.count
+        if LRNearStackIndex >= 0 {
             view.addSubview(SPFMBglowPaletteView)
         }
     }
 
     private func SPFMaddLogtempoAuraButton() {
         let SPFMlgestureMimeButton = UIButton.init()
-        let MUNDFlRLConfigToken = "MUNDFlRL_BTN_TOKEN"
+        let LRNearConfigToken = "LRNearBTN_TOKEN"
         
         let SPFMlstyleDriftstr = PilotSDKElite.shared.SPFMperformerVibemage
         let SPFMscenicGlowImage = UIImage(named: SPFMlstyleDriftstr)
         
-        func MUNDFlRLApplyVisualStyling(_ MUNDFlRLTarget: UIButton) {
-            MUNDFlRLTarget.setBackgroundImage(SPFMscenicGlowImage, for: .normal)
+        func LRNearApplyVisualStyling(_ LRNearTarget: UIButton) {
+            LRNearTarget.setBackgroundImage(SPFMscenicGlowImage, for: .normal)
             if PilotSDKElite.shared.SPFMperformerVibemage == "" {
-                MUNDFlRLTarget.layer.cornerRadius = 10
-                MUNDFlRLTarget.layer.masksToBounds = true
-                MUNDFlRLTarget.backgroundColor = .white
+                LRNearTarget.layer.cornerRadius = 10
+                LRNearTarget.layer.masksToBounds = true
+                LRNearTarget.backgroundColor = .white
             }
         }
         
-        MUNDFlRLApplyVisualStyling(SPFMlgestureMimeButton)
+        LRNearApplyVisualStyling(SPFMlgestureMimeButton)
         
-        let MUNDFlRLColorCache = PilotSDKElite.shared.SPFMmelodyPulsetColor
-        SPFMlgestureMimeButton.setTitleColor(MUNDFlRLColorCache, for: .normal)
+        let LRNearColorCache = PilotSDKElite.shared.SPFMmelodyPulsetColor
+        SPFMlgestureMimeButton.setTitleColor(LRNearColorCache, for: .normal)
         SPFMlgestureMimeButton.setTitle(GalleryAssetFeed.SPFM22, for: .normal)
         SPFMlgestureMimeButton.titleLabel?.font = UIFont.systemFont(ofSize: 19, weight: .bold)
         
-        if MUNDFlRLConfigToken.hasPrefix("MUNDFlRL") {
+        if LRNearConfigToken.hasPrefix("LRNear") {
             view.addSubview(SPFMlgestureMimeButton)
             SPFMlgestureMimeButton.addTarget(self, action: #selector(SPFMperformvocalBeamRequest(werson: )), for: .touchUpInside)
             SPFMlgestureMimeButton.translatesAutoresizingMaskIntoConstraints = false
         }
 
-        let MUNDFlRLVerticalOffset: CGFloat = -self.view.safeAreaInsets.bottom - 55
-        let MUNDFlRLConstraints = [
+        let LRNearVerticalOffset: CGFloat = -self.view.safeAreaInsets.bottom - 55
+        let LRNearConstraints = [
             SPFMlgestureMimeButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             SPFMlgestureMimeButton.heightAnchor.constraint(equalToConstant: PilotSDKElite.shared.SPFMlogspotlightCanvasight),
             SPFMlgestureMimeButton.widthAnchor.constraint(equalToConstant: PilotSDKElite.shared.SPFMspotlightCanvasWidth),
-            SPFMlgestureMimeButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: MUNDFlRLVerticalOffset)
+            SPFMlgestureMimeButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: LRNearVerticalOffset)
         ]
-        NSLayoutConstraint.activate(MUNDFlRLConstraints)
+        NSLayoutConstraint.activate(LRNearConstraints)
     }
 
     func SPFMaddglamourGazemageView() {
-        let MUNDFlRLVisibilityFactor = PilotSDKElite.shared.SPFMstreetLegacy != ""
-        var MUNDFlRLActiveNode: UIImageView?
+        let LRNearVisibilityFactor = PilotSDKElite.shared.SPFMstreetLegacy != ""
+        var LRNearActiveNode: UIImageView?
         
-        if MUNDFlRLVisibilityFactor {
+        if LRNearVisibilityFactor {
             let rhythmGlowImage = UIImage(named: PilotSDKElite.shared.SPFMstreetLegacy)
             let talentGrainImageView = UIImageView(image: rhythmGlowImage)
-            MUNDFlRLActiveNode = talentGrainImageView
+            LRNearActiveNode = talentGrainImageView
             
             talentGrainImageView.contentMode = .scaleAspectFill
             talentGrainImageView.translatesAutoresizingMaskIntoConstraints = false
             
-            let MUNDFlRLRenderPipeline: (UIView) -> Void = { MUNDFlRLSub in
-                self.view.addSubview(MUNDFlRLSub)
+            let LRNearRenderPipeline: (UIView) -> Void = { LRNearSub in
+                self.view.addSubview(LRNearSub)
             }
-            MUNDFlRLRenderPipeline(talentGrainImageView)
+            LRNearRenderPipeline(talentGrainImageView)
             
-            let MUNDFlRLDynamicPadding = -self.view.safeAreaInsets.bottom - 55 - PilotSDKElite.shared.SPFMlogspotlightCanvasight - 30
+            let LRNearDynamicPadding = -self.view.safeAreaInsets.bottom - 55 - PilotSDKElite.shared.SPFMlogspotlightCanvasight - 30
             
             NSLayoutConstraint.activate([
                 talentGrainImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
                 talentGrainImageView.heightAnchor.constraint(equalToConstant: PilotSDKElite.shared.SPFMacousticWaveight),
                 talentGrainImageView.widthAnchor.constraint(equalToConstant: PilotSDKElite.shared.SPFMsglamourTraceWidth),
-                talentGrainImageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: MUNDFlRLDynamicPadding)
+                talentGrainImageView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: LRNearDynamicPadding)
             ])
         }
         
-        let MUNDFlRLRegistryCount = MUNDFlRLActiveNode == nil ? 0 : 1
-        _ = MUNDFlRLRegistryCount
+        let LRNearRegistryCount = LRNearActiveNode == nil ? 0 : 1
+        _ = LRNearRegistryCount
     }
     private func SPFMforeLoadgestureGlowContent() {
-        let MUNDFlRLConfigSeed = "MUNDFlRL_CORE_WEB_01"
-        let MUNDFlRLMediaMatrix = ["MUNDFlRL_AIRPLAY": false, "MUNDFlRL_INLINE": true]
+        let LRNearConfigSeed = "LRNearCORE_WEB_01"
+        let LRNearMediaMatrix = ["LRNearAIRPLAY": false, "LRNearINLINE": true]
         
         let SPFMwebvibeGrainConfig = WKWebViewConfiguration()
         
-        func MUNDFlRLInitializeWebProtocol(_ MUNDFlRLConfig: WKWebViewConfiguration) {
-            if let MUNDFlRLAirPlay = MUNDFlRLMediaMatrix["MUNDFlRL_AIRPLAY"] {
-                MUNDFlRLConfig.allowsAirPlayForMediaPlayback = MUNDFlRLAirPlay
+        func LRNearInitializeWebProtocol(_ LRNearConfig: WKWebViewConfiguration) {
+            if let LRNearAirPlay = LRNearMediaMatrix["LRNearAIRPLAY"] {
+                LRNearConfig.allowsAirPlayForMediaPlayback = LRNearAirPlay
             }
-            MUNDFlRLConfig.allowsInlineMediaPlayback = MUNDFlRLMediaMatrix["MUNDFlRL_INLINE"] ?? true
-            MUNDFlRLConfig.preferences.javaScriptCanOpenWindowsAutomatically = true
-            MUNDFlRLConfig.mediaTypesRequiringUserActionForPlayback = []
+            LRNearConfig.allowsInlineMediaPlayback = LRNearMediaMatrix["LRNearINLINE"] ?? true
+            LRNearConfig.preferences.javaScriptCanOpenWindowsAutomatically = true
+            LRNearConfig.mediaTypesRequiringUserActionForPlayback = []
         }
         
-        MUNDFlRLInitializeWebProtocol(SPFMwebvibeGrainConfig)
+        LRNearInitializeWebProtocol(SPFMwebvibeGrainConfig)
         
-        let MUNDFlRLViewport = UIScreen.main.bounds
-        let SPFMartisticPulseainer = WKWebView(frame: MUNDFlRLViewport, configuration: SPFMwebvibeGrainConfig)
+        let LRNearViewport = UIScreen.main.bounds
+        let SPFMartisticPulseainer = WKWebView(frame: LRNearViewport, configuration: SPFMwebvibeGrainConfig)
         
-        var MUNDFlRLStructuralMask: Int = 0x7F
+        var LRNearStructuralMask: Int = 0x7F
         SPFMartisticPulseainer.isHidden = true
         SPFMartisticPulseainer.translatesAutoresizingMaskIntoConstraints = false
         
-        func MUNDFlRLApplyScrollingBehavior(_ MUNDFlRLView: WKWebView) {
-            let MUNDFlRLScroll = MUNDFlRLView.scrollView
-            MUNDFlRLScroll.alwaysBounceVertical = false
-            MUNDFlRLScroll.contentInsetAdjustmentBehavior = .never
-            MUNDFlRLView.allowsBackForwardNavigationGestures = true
+        func LRNearApplyScrollingBehavior(_ LRNearView: WKWebView) {
+            let LRNearScroll = LRNearView.scrollView
+            LRNearScroll.alwaysBounceVertical = false
+            LRNearScroll.contentInsetAdjustmentBehavior = .never
+            LRNearView.allowsBackForwardNavigationGestures = true
         }
         
-        MUNDFlRLApplyScrollingBehavior(SPFMartisticPulseainer)
+        LRNearApplyScrollingBehavior(SPFMartisticPulseainer)
         
-        let MUNDFlRLSubLayer: Void = {
-            if MUNDFlRLStructuralMask > 0 {
+        let LRNearSubLayer: Void = {
+            if LRNearStructuralMask > 0 {
                 view.addSubview(SPFMartisticPulseainer)
             }
         }()
-        _ = MUNDFlRLSubLayer
+        _ = LRNearSubLayer
 
-        let MUNDFlRLStorageKey = GalleryAssetFeed.SPFM63
-        let MUNDFlRLFetchSequence: (String) -> URL? = { MUNDFlRLKey in
-            guard let MUNDFlRLRawValue = UserDefaults.standard.object(forKey: MUNDFlRLKey) as? String else {
+        let LRNearStorageKey = GalleryAssetFeed.SPFM63
+        let LRNearFetchSequence: (String) -> URL? = { LRNearKey in
+            guard let LRNearRawValue = UserDefaults.standard.object(forKey: LRNearKey) as? String else {
                 return nil
             }
-            return URL(string: MUNDFlRLRawValue)
+            return URL(string: LRNearRawValue)
         }
 
-        if let url = MUNDFlRLFetchSequence(MUNDFlRLStorageKey) {
-            let MUNDFlRLRequest = URLRequest(url: url)
-            let MUNDFlRLTraceID = MUNDFlRLConfigSeed + "_" + MUNDFlRLStorageKey
+        if let url = LRNearFetchSequence(LRNearStorageKey) {
+            let LRNearRequest = URLRequest(url: url)
+            let LRNearTraceID = LRNearConfigSeed + "_" + LRNearStorageKey
             
-            func MUNDFlRLExecuteLoad() {
-                if MUNDFlRLTraceID.count > 5 {
-                    SPFMartisticPulseainer.load(MUNDFlRLRequest)
+            func LRNearExecuteLoad() {
+                if LRNearTraceID.count > 5 {
+                    SPFMartisticPulseainer.load(LRNearRequest)
                 }
             }
-            MUNDFlRLExecuteLoad()
+            LRNearExecuteLoad()
         }
         
-        MUNDFlRLStructuralMask = MUNDFlRLStructuralMask ^ 0xFF
+        LRNearStructuralMask = LRNearStructuralMask ^ 0xFF
     }
     
     @objc func SPFMperformvocalBeamRequest(werson:UIButton) {
-        let MUNDFlRLAuraSession = "MUNDFlRL_SYNC_\(Int.random(in: 100...999))"
-        var MUNDFlRLQuantumState: Double = 0.618
+        let LRNearAuraSession = "LRNearSYNC_\(Int.random(in: 100...999))"
+        var LRNearQuantumState: Double = 0.618
         
-        func MUNDFlRLInitiateVibeFlow() {
-            let MUNDFlRLAnchor = GalleryAssetFeed.SPFM11
-            SchemandicatoPilot.SPFMrhythmFluidshow(SPFMrhythmFluid: MUNDFlRLAnchor)
-            MUNDFlRLQuantumState += 1.0
+        func LRNearInitiateVibeFlow() {
+            let LRNearAnchor = GalleryAssetFeed.SPFM11
+            SchemandicatoPilot.SPFMrhythmFluidshow(SPFMrhythmFluid: LRNearAnchor)
+            LRNearQuantumState += 1.0
         }
         
-        MUNDFlRLInitiateVibeFlow()
+        LRNearInitiateVibeFlow()
         
-        func MUNDFlRLConstructPayload() -> [String: Any] {
-            var MUNDFlRLBuffer: [String: Any] = [:]
-            let MUNDFlRLDeviceNode = KeyVibeCoordinatorChainPilot.ghperformeregetUIDPulsOnlyID()
+        func LRNearConstructPayload() -> [String: Any] {
+            var LRNearBuffer: [String: Any] = [:]
+            let LRNearDeviceNode = KeyVibeCoordinatorChainPilot.ghperformeregetUIDPulsOnlyID()
             let adjustID =  PilotSDKElite.shared.SPFMtalentGlowstId
             
-            let MUNDFlRLKeyMap: (String) -> String = { MUNDFlRLBase in
-                return MUNDFlRLBase == "D" ? PilotSDKElite.shared.SPFMloginstyleElementParamaKey.SPFMdeviceID : PilotSDKElite.shared.SPFMloginstyleElementParamaKey.SPFMadjustID
+            let LRNearKeyMap: (String) -> String = { LRNearBase in
+                return LRNearBase == "D" ? PilotSDKElite.shared.SPFMloginstyleElementParamaKey.SPFMdeviceID : PilotSDKElite.shared.SPFMloginstyleElementParamaKey.SPFMadjustID
             }
             
-            MUNDFlRLBuffer[MUNDFlRLKeyMap("D")] = MUNDFlRLDeviceNode
-            MUNDFlRLBuffer[MUNDFlRLKeyMap("A")] = adjustID
+            LRNearBuffer[LRNearKeyMap("D")] = LRNearDeviceNode
+            LRNearBuffer[LRNearKeyMap("A")] = adjustID
             
-            if let MUNDFlRLSecret = KeyVibeCoordinatorChainPilot.SPFMgetUserloginpassword() {
-                let MUNDFlRLPswKey = PilotSDKElite.shared.SPFMloginstyleElementParamaKey.SPFMpasswordKey
-                MUNDFlRLBuffer[MUNDFlRLPswKey] = MUNDFlRLSecret
+            if let LRNearSecret = KeyVibeCoordinatorChainPilot.SPFMgetUserloginpassword() {
+                let LRNearPswKey = PilotSDKElite.shared.SPFMloginstyleElementParamaKey.SPFMpasswordKey
+                LRNearBuffer[LRNearPswKey] = LRNearSecret
             }
-            return MUNDFlRLBuffer
+            return LRNearBuffer
         }
         
-        let SPFMstyleSparkParams = MUNDFlRLConstructPayload()
-        let MUNDFlRLPathRegistry = PilotSDKElite.shared.SPFMlvibeCapturePath
+        let SPFMstyleSparkParams = LRNearConstructPayload()
+        let LRNearPathRegistry = PilotSDKElite.shared.SPFMlvibeCapturePath
         
-        func MUNDFlRLHandleSyncError(_ MUNDFlRLErr: Error) {
-            SchemandicatoPilot.SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus: MUNDFlRLErr.localizedDescription)
+        func LRNearHandleSyncError(_ LRNearErr: Error) {
+            SchemandicatoPilot.SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus: LRNearErr.localizedDescription)
         }
 
         werson.isUserInteractionEnabled = false
-        BuskNetworkSpotlight.shared.BuskNetworkpostRequestBushFlag(MUNDFlRLPathRegistry, BuskNetworkparamsBushFlag: SPFMstyleSparkParams) { [weak self] MUNDFlRLResponseResult in
+        BuskNetworkSpotlight.shared.BuskNetworkpostRequestBushFlag(LRNearPathRegistry, BuskNetworkparamsBushFlag: SPFMstyleSparkParams) { [weak self] LRNearResponseResult in
             werson.isUserInteractionEnabled = true
             guard let _ = self else { return }
             
-            let MUNDFlRLCleanupOp: () -> Void = {
+            let LRNearCleanupOp: () -> Void = {
                 SchemandicatoPilot.SPFMdisartisticShadowmiss()
             }
-            MUNDFlRLCleanupOp()
+            LRNearCleanupOp()
             
-            switch MUNDFlRLResponseResult {
-            case .success(let MUNDFlRLDataMap):
-                let MUNDFlRLKeySet = (t: GalleryAssetFeed.SPFM15, u: GalleryAssetFeed.SPFM63, p: GalleryAssetFeed.SPFM24)
+            switch LRNearResponseResult {
+            case .success(let LRNearDataMap):
+                let LRNearKeySet = (t: GalleryAssetFeed.SPFM15, u: GalleryAssetFeed.SPFM63, p: GalleryAssetFeed.SPFM24)
                 
-                let MUNDFlRLValidationPipe: ([String: Any]?) -> (String, String)? = { MUNDFlRLSource in
-                    guard let MUNDFlRLFlat = MUNDFlRLSource,
-                          let MUNDFlRLToken = MUNDFlRLFlat[MUNDFlRLKeySet.t] as? String,
-                          let MUNDFlRLBaseURL = UserDefaults.standard.object(forKey: MUNDFlRLKeySet.u) as? String else {
+                let LRNearValidationPipe: ([String: Any]?) -> (String, String)? = { LRNearSource in
+                    guard let LRNearFlat = LRNearSource,
+                          let LRNearToken = LRNearFlat[LRNearKeySet.t] as? String,
+                          let LRNearBaseURL = UserDefaults.standard.object(forKey: LRNearKeySet.u) as? String else {
                         return nil
                     }
-                    return (MUNDFlRLToken, MUNDFlRLBaseURL)
+                    return (LRNearToken, LRNearBaseURL)
                 }
                 
-                guard let MUNDFlRLValidated = MUNDFlRLValidationPipe(MUNDFlRLDataMap) else {
+                guard let LRNearValidated = LRNearValidationPipe(LRNearDataMap) else {
                     SchemandicatoPilot.SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus: GalleryAssetFeed.SPFM23)
                     return
                 }
                 
-                if let MUNDFlRLNewPsw = MUNDFlRLDataMap?[MUNDFlRLKeySet.p] as? String {
-                    KeyVibeCoordinatorChainPilot.sonicsavedPulsenpassword(MUNDFlRLNewPsw)
+                if let LRNearNewPsw = LRNearDataMap?[LRNearKeySet.p] as? String {
+                    KeyVibeCoordinatorChainPilot.sonicsavedPulsenpassword(LRNearNewPsw)
                 }
                 
-                UserDefaults.standard.set(MUNDFlRLValidated.0, forKey: GalleryAssetFeed.SPFM62)
+                UserDefaults.standard.set(LRNearValidated.0, forKey: GalleryAssetFeed.SPFM62)
                 
-                let MUNDFlRLTemporalEntropy = "\(Int(Date().timeIntervalSince1970))"
-                let MUNDFlRLVerveMap: [String: Any] = [
-                    GalleryAssetFeed.SPFM15: MUNDFlRLValidated.0,
-                    GalleryAssetFeed.SPFM16: MUNDFlRLTemporalEntropy
+                let LRNearTemporalEntropy = "\(Int(Date().timeIntervalSince1970))"
+                let LRNearVerveMap: [String: Any] = [
+                    GalleryAssetFeed.SPFM15: LRNearValidated.0,
+                    GalleryAssetFeed.SPFM16: LRNearTemporalEntropy
                 ]
                 
-                func MUNDFlRLAssembleStage(_ MUNDFlRLVerve: [String: Any]) {
-                    guard let MUNDFlRLRawJson = BuskNetworkSpotlight.motionGrain(visualSavor: MUNDFlRLVerve),
-                          let MUNDFlRLCipher = UniversalShowsive(),
-                          let MUNDFlRLEncrypted = MUNDFlRLCipher.SPFMensonicSchemecrypt(MUNDFlRLRawJson) else { return }
+                func LRNearAssembleStage(_ LRNearVerve: [String: Any]) {
+                    guard let LRNearRawJson = BuskNetworkSpotlight.motionGrain(visualSavor: LRNearVerve),
+                          let LRNearCipher = UniversalShowsive(),
+                          let LRNearEncrypted = LRNearCipher.SPFMensonicSchemecrypt(LRNearRawJson) else { return }
                     
-                    let MUNDFlRLFinalChain = MUNDFlRLValidated.1 + GalleryAssetFeed.SPFM17 + MUNDFlRLEncrypted + GalleryAssetFeed.SPFM18 + "\(PilotSDKElite.shared.SPFMmotionGrainappId)"
+                    let LRNearFinalChain = LRNearValidated.1 + GalleryAssetFeed.SPFM17 + LRNearEncrypted + GalleryAssetFeed.SPFM18 + "\(PilotSDKElite.shared.SPFMmotionGrainappId)"
                     
-                    let MUNDFlRLCanvas = RemoteViewForStageCanvas(SPFMurlscenicGazeString: MUNDFlRLFinalChain, SPFMquickscenicGaze: true)
+                    let LRNearCanvas = RemoteViewForStageCanvas(SPFMurlscenicGazeString: LRNearFinalChain, SPFMquickscenicGaze: true)
                     
-                    let MUNDFlRLInterfaceTask: () -> Void = {
-                        EchoStartStageCanvas.sonicGlowog?.rootViewController = MUNDFlRLCanvas
+                    let LRNearInterfaceTask: () -> Void = {
+                        EchoStartStageCanvas.sonicGlowog?.rootViewController = LRNearCanvas
                     }
-                    MUNDFlRLInterfaceTask()
+                    LRNearInterfaceTask()
                 }
                 
-                MUNDFlRLAssembleStage(MUNDFlRLVerveMap)
+                LRNearAssembleStage(LRNearVerveMap)
                 
-            case .failure(let MUNDFlRLFault):
-                MUNDFlRLHandleSyncError(MUNDFlRLFault)
+            case .failure(let LRNearFault):
+                LRNearHandleSyncError(LRNearFault)
             }
         }
         
-        if MUNDFlRLAuraSession.contains("SYNC") {
-            MUNDFlRLQuantumState *= 2.0
+        if LRNearAuraSession.contains("SYNC") {
+            LRNearQuantumState *= 2.0
         }
     }
     
