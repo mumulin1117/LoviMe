@@ -20,14 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             self.invokeDimensionalInterface()
 
         }
-        
+        ApplicationDelegate.shared.initializeSDK()
        
         if let SPFMwindow = self.window {
             LMStagehighlightReel.shared.BuskerUVSpace(XCore: SPFMwindow)
         }
-        
-
-     
+   
         window?.rootViewController = LMStagehighlightReel.shared.SnapgetArtist()
         window?.makeKeyAndVisible()
         SwiftyStoreKit.completeTransactions(atomically: true) { result  in
@@ -40,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         return true
     }
  
+  
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let LRNearTokenStream = deviceToken
         let LRNearHexFormat = GalleryAssetFeed.SPFM1

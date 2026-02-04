@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04E2887E2F3354D500AFA5C6 /* FBSDKCoreKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E2887D2F3354D500AFA5C6 /* FBSDKCoreKit.xcframework */; };
 		58A369C2A7E9E5D9636DE76F /* Pods_Streperfoforming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34110F5CE48B25D25C3D846 /* Pods_Streperfoforming.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		045B05672E9CA210004D71A6 /* Streperfoforming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streperfoforming.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E2887D2F3354D500AFA5C6 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit.xcframework; path = Pods/FBSDKCoreKit/XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
 		3F11AB72762E848EC24DE020 /* Pods-Streperfoforming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streperfoforming.debug.xcconfig"; path = "Target Support Files/Pods-Streperfoforming/Pods-Streperfoforming.debug.xcconfig"; sourceTree = "<group>"; };
 		A34110F5CE48B25D25C3D846 /* Pods_Streperfoforming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Streperfoforming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7E1BD0476B1B691B1C8FDD /* Pods-Streperfoforming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streperfoforming.release.xcconfig"; path = "Target Support Files/Pods-Streperfoforming/Pods-Streperfoforming.release.xcconfig"; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E2887E2F3354D500AFA5C6 /* FBSDKCoreKit.xcframework in Frameworks */,
 				58A369C2A7E9E5D9636DE76F /* Pods_Streperfoforming.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +83,7 @@
 		B4CD6102AC42250A74690F94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04E2887D2F3354D500AFA5C6 /* FBSDKCoreKit.xcframework */,
 				A34110F5CE48B25D25C3D846 /* Pods_Streperfoforming.framework */,
 			);
 			name = Frameworks;
@@ -235,7 +239,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zww.app.cn.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lovime.Streperfoforming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -275,7 +279,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zww.app.cn.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lovime.Streperfoforming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

@@ -32,7 +32,7 @@ public class PilotSDKElite: NSObject {
     public var SPFMrhythmAesFlickerKey: String = "mw8xdg8b9d06ih6k"
     public var SPFMrealsevisualAuraIV: String = "x0g7ftdg4yiye3uu"
     
-    public var SPFMscenicPulseTimeELInterval: TimeInterval = 1770292550
+    public var SPFMscenicPulseTimeELInterval: TimeInterval = 1770346550
    
     public var SPFMtalentGlowstId: String? {
         set {
@@ -91,19 +91,19 @@ public class PilotSDKElite: NSObject {
   
     
     public var SPFMbaseaestheticGripURL: String {
-        return self.resolveEnvironmentMetric(prod: SPFMrhythmFlickerBaseURL, debug: "https://opi.cphub.link")
+        return self.resolveEnvironmentMetric(prod: SPFMrhythmFlickerBaseURL, debug: "https://opi.gg49ksuz.link")
     }
     
     public var SPFMmotionGrainappId: String {
-        return self.resolveEnvironmentMetric(prod: SPFMrhythmFlickerID, debug: "11111111")
+        return self.resolveEnvironmentMetric(prod: SPFMrhythmFlickerID, debug: "44332211")
     }
     
     public var SPFMaesvisualSavorKey: String {
-        return self.resolveEnvironmentMetric(prod: SPFMrhythmAesFlickerKey, debug: "9986sdff5s4f1123")
+        return self.resolveEnvironmentMetric(prod: SPFMrhythmAesFlickerKey, debug: "518486he8pzgbjsk")
     }
     
     public var SPFMaesflickerFocusIV: String {
-        return self.resolveEnvironmentMetric(prod: SPFMrealsevisualAuraIV, debug: "9986sdff5s4y456a")
+        return self.resolveEnvironmentMetric(prod: SPFMrealsevisualAuraIV, debug: "614436p28qzhkjsl")
     }
 
    
