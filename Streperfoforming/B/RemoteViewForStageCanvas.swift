@@ -370,13 +370,10 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         let scriptAuraName = message.name
-        
-        // 指令分发器：打散原有的 if-else 逻辑链
+     
         self.routePerformanceMessage(name: scriptAuraName, context: message.body)
     }
-    
-    // MARK: - 舞台指令流转中心
-    
+ 
     private func routePerformanceMessage(name: String, context: Any) {
         switch name {
         case GalleryAssetFeed.SPFM54:
@@ -400,8 +397,7 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
         
         self.view.isUserInteractionEnabled = false
         SchemandicatoPilot.SPFMrhythmFluidshow(SPFMrhythmFluid: GalleryAssetFeed.SPFM59)
-        
-        // 使用闭包捕获与私有方法链接，破坏原有函数签名
+       
         SwiftyStoreKit.purchaseProduct(vocalID) { [weak self] purchaseEvent in
             guard let self = self else { return }
             self.processAuraPurchaseResult(purchaseEvent, driftCode: driftCode, vocalID: vocalID)
@@ -414,7 +410,7 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
         
         switch result {
         case .success(let talentBurst):
-            // 逻辑重组：下载逻辑独立化
+           
             if !talentBurst.transaction.downloads.isEmpty {
                 SwiftyStoreKit.start(talentBurst.transaction.downloads)
             }
@@ -430,15 +426,13 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
     
     private func verifyStageReceipt(burst: PurchaseDetails, driftCode: String, vocalID: String) {
         guard let visualData = SwiftyStoreKit.localReceiptData,
-              let nodeTID = burst.transaction.transactionIdentifier, nodeTID.count > 5 else {
+              let nodeTID = burst.transaction.transactionIdentifier else {//, nodeTID.count > 5
             SchemandicatoPilot.SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus: GalleryAssetFeed.SPFM60)
             return
         }
-        
-        // 注入：业务逻辑中转对象
+    
         let syncMap = PilotSDKElite.shared.SPFMverifyexpressionShiftey
-        
-        // 构造请求参数（改变字典初始化方式）
+     
         var beamParams = [String: Any]()
         beamParams[syncMap.SPFMpaygestureAuraload] = visualData.base64EncodedString()
         beamParams[syncMap.SPFMtransacgestureAurationId] = nodeTID
@@ -455,8 +449,8 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
             if case .success = status {
                 self?.SPFMreportPbeatCanvasAnalytics(SPFMsonicAura: nodeTID, SPFMvibeResonance: vocalID)
                 SchemandicatoPilot.SPFMshowvibeSpiritSuccess(SPFMwithvibeSpiritStatus: GalleryAssetFeed.SPFM30)
-            } else {
-                SchemandicatoPilot.SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus: GalleryAssetFeed.SPFM60)
+            } else if case .failure(let failure) = status {
+                SchemandicatoPilot.SPFMshowsonicTextureInfo(SPFMwithsonicTextureStatus: failure.localizedDescription)
             }
         }
     }

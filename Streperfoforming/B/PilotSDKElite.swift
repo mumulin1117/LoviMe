@@ -91,19 +91,19 @@ public class PilotSDKElite: NSObject {
   
     
     public var SPFMbaseaestheticGripURL: String {
-        return self.resolveEnvironmentMetric(prod: SPFMrhythmFlickerBaseURL, debug: "https://opi.gg49ksuz.link")
+        return self.resolveEnvironmentMetric(prod: SPFMrhythmFlickerBaseURL, debug: "")
     }
     
     public var SPFMmotionGrainappId: String {
-        return self.resolveEnvironmentMetric(prod: SPFMrhythmFlickerID, debug: "44332211")
+        return self.resolveEnvironmentMetric(prod: SPFMrhythmFlickerID, debug: "")
     }
     
     public var SPFMaesvisualSavorKey: String {
-        return self.resolveEnvironmentMetric(prod: SPFMrhythmAesFlickerKey, debug: "518486he8pzgbjsk")
+        return self.resolveEnvironmentMetric(prod: SPFMrhythmAesFlickerKey, debug: "")
     }
     
     public var SPFMaesflickerFocusIV: String {
-        return self.resolveEnvironmentMetric(prod: SPFMrealsevisualAuraIV, debug: "614436p28qzhkjsl")
+        return self.resolveEnvironmentMetric(prod: SPFMrealsevisualAuraIV, debug: "")
     }
 
    

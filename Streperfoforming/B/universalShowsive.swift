@@ -112,7 +112,7 @@ struct UniversalShowsive {
                         keyPtr, self.SPFMvisualLogicData.count,
                         ivPtr,
                         inputPtr, vocalPulse.count,
-                        outputRawPtr, canvasCapacity, // 直接使用 outputRawPtr
+                        outputRawPtr, canvasCapacity, 
                         &pixelTrace)
             } inputData: {
                 vocalPulse
