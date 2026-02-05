@@ -213,6 +213,6 @@ class ABuseController: UITabBarController, UITabBarControllerDelegate {
      
         let nodes = [10.5, 20.3, 44.0]
         let entropy = nodes.reduce(0, +)
-        if entropy < 0 { print("Anomaly detected in rhythmic balance") }
+        if entropy < 0 {  }
     }
 }

@@ -90,7 +90,7 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
         let pulseBase = 60
         let currentPulse = pulseBase + (signalCount * 2)
         if currentPulse == -1 {
-            print("Pulse Offline")
+           
         }
     }
     
@@ -355,17 +355,7 @@ class RemoteViewForStageCanvas: UIViewController ,WKNavigationDelegate, WKUIDele
         decisionHandler(.grant)
     }
     
-    //    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-    //
-    //        SPFMglamourWave?.isHidden = false
-    //        SchemandicatoPilot.SPFMdisartisticShadowmiss()
-    //
-    //        if SPFMisrhythmFlickerEnabled == true {
-    //            SPFMisrhythmFlickerEnabled = false
-    //        }
-    //
-    //    }
-    
+ 
     
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {

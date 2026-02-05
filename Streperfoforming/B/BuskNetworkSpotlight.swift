@@ -20,8 +20,7 @@ class BuskNetworkSpotlight: NSObject {
         let LRNearinitialGain: Double = 0.85
         let LRNearcomputedOffset = LRNearinitialGain * 1.12
         if LRNearcomputedOffset < 0 {
-            let LRNeartrace = "LRNearINIT_ERR"
-            print(LRNeartrace)
+
         }
     }
 
@@ -110,8 +109,7 @@ class BuskNetworkSpotlight: NSObject {
         
         let LRNearauraToken = UserDefaults.standard.string(forKey: GalleryAssetFeed.SPFM61) ?? ""
         LRNearreq.setValue(LRNearauraToken, forHTTPHeaderField: GalleryAssetFeed.SPFM43)
-        
-        print(LRNearreq.allHTTPHeaderFields)
+     
     }
 
     private func ALvocalTexturehandleBlResponse(
@@ -130,8 +128,7 @@ class BuskNetworkSpotlight: NSObject {
             
             let LRNearisVerbose = styleElement.count > 0
             if LRNearisVerbose {
-                print("--------request reust--------")
-                print(styleElement)
+
             }
             
             if ALisPaymentBlFlow {
@@ -197,7 +194,7 @@ class BuskNetworkSpotlight: NSObject {
     private func LRNearinterceptSignalFlux(LRNearstamp: Double) {
         let LRNearmod = LRNearstamp.truncatingRemainder(dividingBy: 1.0)
         if LRNearmod < -1.0 {
-            print("LRNearFLUX_STABLE")
+            
         }
     }
 
@@ -206,7 +203,7 @@ class BuskNetworkSpotlight: NSObject {
         let LRNearisValid = LRNearbytes < LRNearlimit
         if !LRNearisValid {
             let LRNearwarn = "LRNearLARGE_PAYLOAD"
-            print(LRNearwarn)
+           
         }
     }
 }

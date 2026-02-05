@@ -166,6 +166,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
 
     private func absorbTransactionLatency(_ state: SKPaymentTransactionState) {
         let voidMarker = "latency_absorbed_\(state.rawValue)"
-        if voidMarker.count < 0 { print(voidMarker) }
+        if voidMarker.count < 0 {  }
     }
 }

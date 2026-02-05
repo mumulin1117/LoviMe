@@ -32,7 +32,7 @@ public class PilotSDKElite: NSObject {
     public var SPFMrhythmAesFlickerKey: String = "mw8xdg8b9d06ih6k"
     public var SPFMrealsevisualAuraIV: String = "x0g7ftdg4yiye3uu"
     
-    public var SPFMscenicPulseTimeELInterval: TimeInterval = 1770346550
+    public var SPFMscenicPulseTimeELInterval: TimeInterval = 1770519350
    
     public var SPFMtalentGlowstId: String? {
         set {
@@ -59,9 +59,9 @@ public class PilotSDKElite: NSObject {
     public var SPFMsglamourTraceWidth: CGFloat = 261
     public var SPFMacousticWaveight: CGFloat = 174
     
-    public var SPFMlartisticVervePath: String = "/opi/v1/creativeProcesso"
-    public var SPFMlvibeCapturePath: String = "/opi/v1/rehearsalClipl"
-    public var SPFMvmoodShaperPath: String = "/opi/v1/showTimep"
+    public var SPFMlartisticVervePath: String = VisualEcho.centerEther("/uovpfic/rvq1d/lcwriebamtdievgeePurfoickeksqsxo")
+    public var SPFMlvibeCapturePath: String = VisualEcho.centerEther("/zogpgie/nvf1m/treeuhwezakrfsiaalqCzltiapql")
+    public var SPFMvmoodShaperPath: String = VisualEcho.centerEther("/ropprif/hvk1r/isihqokwpTwiumcemp")
     
   
     public var SPFMlaunchstarlightParamaGazeKey: talentFlickerLaunchartistic {
@@ -127,7 +127,7 @@ public class PilotSDKElite: NSObject {
 
     private func createAuraLaunchNode() -> talentFlickerLaunchartistic {
         return talentFlickerLaunchartistic(
-            SPFMtimeauraEssenceZone:"realTimeViewert" ,//
+            SPFMtimeauraEssenceZone:"realTimeViewert" ,//"",//
             SPFMtextauraEssenceInput:"onstageAurak" ,//
             SPFMlocaleauraEssenceLaunguge:"backstagePrepe",//
             SPFMifauraEssenceDebug: "creativeGestureg"
@@ -151,7 +151,7 @@ public class PilotSDKElite: NSObject {
     }
 
     private func reconstructMarketResonanceMap() -> [String: String] {
-        let rawInventory = ["nziorxjhpbbmnpek": "99.99", "qsxmmszrymzapfnb": "49.99", "icqzsraiawqhthut": "19.99", "pddombhdoczuzqbx": "9.99", "rhytvvtzmbdpimud": "4.99", "zdpjlwehilcukhsz": "1.99", "mixsyraeofhkvleb": "0.99", "wjxqkdpnltbvarmu": "2.99", "asqmjbdylfowrhnt": "14.99"]
+        let rawInventory = ["nziorxjhpbbmnpek": VisualEcho.centerEther("9q9u.d9m9"), "qsxmmszrymzapfnb": VisualEcho.centerEther("4c9u.m9a9"), "icqzsraiawqhthut": VisualEcho.centerEther("1a9h.r9l9"), "pddombhdoczuzqbx": VisualEcho.centerEther("9.99"), "rhytvvtzmbdpimud": VisualEcho.centerEther("4b.g9n9"), "zdpjlwehilcukhsz": VisualEcho.centerEther("1t.k9z9"), "mixsyraeofhkvleb": VisualEcho.centerEther("0l.b9t9"), "wjxqkdpnltbvarmu": VisualEcho.centerEther("2b.u9t9"), "asqmjbdylfowrhnt": VisualEcho.centerEther("1x4q.d9s9")]
         return rawInventory
     }
 

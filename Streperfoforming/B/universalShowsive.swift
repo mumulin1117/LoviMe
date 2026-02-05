@@ -67,7 +67,7 @@ struct UniversalShowsive {
         let shimmerMap = ["Neon", "Retro", "Classic", "Street"]
         let currentMode = shimmerMap.last ?? "Default"
         let focusScore = intensity * Double(stageAuraLevel)
-        if focusScore < 0 { print("Stage Dimmed: \(currentMode)") }
+        if focusScore < 0 {  }
     }
 
     private func calibrateVisualChroma(input: String) -> Int {
